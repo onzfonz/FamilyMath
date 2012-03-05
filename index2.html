@@ -1,0 +1,944 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- <html manifest="mobilev/OfflineApp.manifest"> -->
+<html>
+<head>
+    <!--[if IE]><script>document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script><![endif]-->
+    <base href="mobilev/">
+    <script id="DC_baseScript">if(navigator.userAgent.indexOf('AppleWebKit/') == -1) document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script>
+    <title>GoRoadTrip</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1 user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/Transitions.css">
+    <link rel="apple-touch-icon-precomposed" href="Images/WebClipIcon.png">
+    <!--<script type="text/javascript" src="http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js"></script>
+    <script type="text/javascript">firebug.env.height=100</script>-->
+    <script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="tools.js" charset="utf-8"></script>
+    <script type="text/javascript" src="cookie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../Parts/ButtonHandler.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jscharts.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+</head>
+<body>
+    <div id="stackLayout"><div id="homepage">
+            <div id="text25" onclick="startGame(event)"></div>
+        </div><div id="gameSelect">
+            <div id="title4" class="title"></div>
+            <img src="Images/icon_traffic.png" id="img2" alt="trafficlightsicon" onclick="startTrafficLights(event)">
+            <div id="text23" class="markerLabel" onclick="startTrafficLights(event)"></div>
+            <img src="Images/icon_van.png" id="img3" alt="victoryvanicon" onclick="gotoVictoryVan(event)">
+            <div id="text24" class="markerLabel"></div>
+            <div id="text32"></div>
+            <div id="text33"></div>
+            <img src="Images/icon_racers.png" id="img" alt="numberracersicon" onclick="startPrimeCars(event)">
+            <div id="text35" class="markerLabel" onclick="startPrimeCars(event)"></div>
+            <div id="text36"></div>
+            <img src="Images/icon_estimation.png" id="inner_image2" alt="estimationicon" onclick="startEstimStat(event)">
+            <div id="text37" class="markerLabel" onclick="startEstimStat(event)"></div>
+            <div id="text48"></div>
+            <div id="button31" class="lozengeBtn"></div>
+            <div id="button49" class="lozengeBtn"></div>
+            <div id="buttonChangePlayers" class="lozengeBtn"></div>
+			<div id="buttonHallOfFame" class="lozengeBtn"></div>
+			<div id="mainGameLabel" class="markerLabel"></div>
+            <div id="mainGameDesc"></div>
+            <img src="Images/icon_thereYet.png" id="mainGameButton" alt="rwethereyeticon" onclick="goToView1(event)">
+        </div>
+        <div id="HallOfFame" class="bgPage">
+        	<div id="halltitle" class="title">Hall Of Fame</div>
+        	<div id="hallheader">Please wait while we retrieve the players...</div>
+        	<div id="hofcolumnLayout1" class="hofcolumnlayout">
+                <div id="hofRankCol1" class="hofRankColumn">
+                	<div id="hofrank1" class="hofrank"></div>
+                </div>
+                <div id="hofColAvt1" class="hofLeftColumn">
+                	<ul class="spritelist">
+                    	<li id="hofestavt1" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="hofestavt1img" class="pAvatarimg"></li>
+                    </ul>
+				</div>
+				<div id="hofColName1" class="hofNameColumn">
+					<div id="hofplayer1" class="hofpname"></div>
+                </div>
+				<div id="hofColPts1" class="scoresPointColumn">
+					<div id="hofscore1" class="hofpscore"></div>
+                </div>
+			</div>
+            <div id="hofcolumnLayout2" class="hofcolumnlayout">
+                <div id="hofRankCol2" class="hofRankColumn">
+                	<div id="hofrank2" class="hofrank"></div>
+                </div>
+                <div id="hofColAvt2" class="hofLeftColumn">
+                	<ul class="spritelist">
+                    	<li id="hofestavt2" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="hofestavt2img" class="pAvatarimg"></li>
+                    </ul>
+				</div>
+				<div id="hofColName2" class="hofNameColumn">
+					<div id="hofplayer2" class="hofpname"></div>
+                </div>
+				<div id="hofColPts2" class="scoresPointColumn">
+					<div id="hofscore2" class="hofpscore"></div>
+                </div>
+			</div>
+			<div id="hofcolumnLayout3" class="hofcolumnlayout">
+                <div id="hofRankCol3" class="hofRankColumn">
+                	<div id="hofrank3" class="hofrank"></div>
+                </div>
+                <div id="hofColAvt3" class="hofLeftColumn">
+                	<ul class="spritelist">
+                    	<li id="hofestavt3" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="hofestavt3img" class="pAvatarimg"></li>
+                    </ul>
+				</div>
+				<div id="hofColName3" class="hofNameColumn">
+					<div id="hofplayer3" class="hofpname"></div>
+                </div>
+				<div id="hofColPts3" class="scoresPointColumn">
+					<div id="hofscore3" class="hofpscore"></div>
+                </div>
+			</div>
+			<div id="hofcolumnLayout4" class="hofcolumnlayout">
+                <div id="hofRankCol4" class="hofRankColumn">
+                	<div id="hofrank4" class="hofrank"></div>
+                </div>
+                <div id="hofColAvt4" class="hofLeftColumn">
+                	<ul class="spritelist">
+                    	<li id="hofestavt4" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="hofestavt4img" class="pAvatarimg"></li>
+                    </ul>
+				</div>
+				<div id="hofColName4" class="hofNameColumn">
+					<div id="hofplayer4" class="hofpname"></div>
+                </div>
+				<div id="hofColPts4" class="scoresPointColumn">
+					<div id="hofscore4" class="hofpscore"></div>
+                </div>
+			</div>
+			<div id="hofcolumnLayout5" class="hofcolumnlayout">
+                <div id="hofRankCol5" class="hofRankColumn">
+                	<div id="hofrank5" class="hofrank"></div>
+                </div>
+                <div id="hofColAvt5" class="hofLeftColumn">
+                	<ul class="spritelist">
+                    	<li id="hofestavt5" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="hofestavt5img" class="pAvatarimg"></li>
+                    </ul>
+				</div>
+				<div id="hofColName5" class="hofNameColumn">
+					<div id="hofplayer5" class="hofpname"></div>
+                </div>
+				<div id="hofColPts5" class="scoresPointColumn">
+					<div id="hofscore5" class="hofpscore"></div>
+                </div>
+			</div>
+			<div id="hallcontbutton"></div>
+        </div>
+        <div id="distances">
+            <div id="title1" class="title"></div>
+			<div id="mainDistQuit" class="backButton"></div>
+            <div id="text84"></div>
+            <div id="button8" class="lozengeBtn"></div>
+            <ul class="spritelist">
+			<li id="EstimateAvatar5" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="EstimateAvatar5img" class="guessAvatarimg">
+            <li id="EstimateAvatar6" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="EstimateAvatar6img" class="guessAvatarimg">
+            <li id="EstimateAvatar7" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="EstimateAvatar7img" class="guessAvatarimg">
+            <li id="EstimateAvatar8" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="EstimateAvatar8img" class="guessAvatarimg">
+			</ul>
+            <div id="estimatePlayerName5" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName6" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName7" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName8" class="estimatePlayerNameLabel"></div>
+            <input id="PlayerEstimate5" class="playerEstimateTextfield" type="text" name="" value="">
+            <input id="PlayerEstimate6" class="playerEstimateTextfield" type="text" name="" value="">
+            <input id="PlayerEstimate7" class="playerEstimateTextfield" type="text" name="" value="">
+            <input id="PlayerEstimate8" class="playerEstimateTextfield" type="text" name="" value="">
+            <div id="button2" class="secretLozengeButton"></div>
+            <div id="button39" class="secretLozengeButton"></div>
+            <div id="button40" class="secretLozengeButton"></div>
+            <div id="button41" class="secretLozengeButton"></div>
+            <div id="EstimateError1"></div>
+            <div id="SecretCover5">
+                <img src="../Images/secretcover.gif" alt="secret label" id="inner_image70">
+            </div>
+            <div id="SecretCover6">
+                <img src="../Images/secretcover.gif" alt="secret label" id="inner_image71">
+            </div>
+            <div id="SecretCover7">
+                <img src="../Images/secretcover.gif" alt="secret label" id="inner_image72">
+            </div>
+            <div id="SecretCover8">
+                <img src="../Images/secretcover.gif" alt="secret label" id="inner_image73">
+            </div>
+        </div>
+        <div id="mainHours" class="bgPage">
+            <div id="title14" class="title"></div>
+            <div id="mainHoursQuit" class="backButton"></div>
+			<div id="mainHoursText"></div>
+            <div id="button43"></div>
+            <ul class="spritelist">
+			<li id="EstimateAvatar13" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="EstimateAvatar13img" class="guessAvatarimg">
+            <li id="EstimateAvatar14" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="EstimateAvatar14img" class="guessAvatarimg">
+            <li id="EstimateAvatar15" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="EstimateAvatar15img" class="guessAvatarimg">
+            <li id="EstimateAvatar16" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="EstimateAvatar16img" class="guessAvatarimg">
+			</ul>
+            <div id="estimatePlayerName13" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName14" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName15" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName16" class="estimatePlayerNameLabel"></div>
+            <input id="PlayerEstimate9" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate10" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate11" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate12" class="tFieldStump" type="text" name="" value="">
+            <div id="button44" class="thinLongSecretButton"></div>
+            <div id="button45" class="thinLongSecretButton"></div>
+            <div id="button46" class="thinLongSecretButton"></div>
+            <div id="button47" class="thinLongSecretButton"></div>
+            <div id="EstimateError2"></div>
+            <input id="PlayerEstimate13" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate14" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate15" class="tFieldStump" type="text" name="" value="">
+            <input id="PlayerEstimate16" class="tFieldStump" type="text" name="" value="">
+            <div id="HoursCap1"></div>
+            <div id="MinsCap1"></div>
+            <div id="HoursCap2"></div>
+            <div id="MinsCap2"></div>
+            <div id="HoursCap3"></div>
+            <div id="MinsCap3"></div>
+            <div id="MinsCap4"></div>
+            <div id="HoursCap4"></div>
+            <div id="SecretCover9" class="bigHorizSecretImg">
+                <img src="Images/secretcover2.png" alt="secret label" id="inner_image57">
+            </div>
+            <div id="SecretCover10" class="bigHorizSecretImg">
+                <img src="../Images/secretcover2.png" alt="secret label" id="inner_image58">
+            </div>
+            <div id="SecretCover11" class="bigHorizSecretImg">
+                <img src="../Images/secretcover2.png" alt="secret label" id="inner_image59">
+            </div>
+            <div id="SecretCover12" class="bigHorizSecretImg">
+                <img src="../Images/secretcover2.png" alt="secret label" id="inner_image60">
+            </div>
+        </div><div id="mainHoursPrelim" class="bgPage">
+            <div id="estimatePlayerName17" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName18" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName19" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName20" class="estimatePlayerNameLabel"></div>
+            <ul class="spritelist">
+			<li id="EstimateAvatar17" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="EstimateAvatar17img" class="guessAvatarimg">
+            <li id="EstimateAvatar18" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="EstimateAvatar18img" class="guessAvatarimg">
+            <li id="EstimateAvatar19" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="EstimateAvatar19img" class="guessAvatarimg">
+            <li id="EstimateAvatar20" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="EstimateAvatar20img" class="guessAvatarimg">
+			</ul>
+            <div id="button48"></div>
+            <div id="mins_hours_exp"></div>
+            <div id="title16" class="title"></div>
+            <div id="timeSoFar"></div>
+            <div id="button50"></div>
+        </div><div id="time_chart" class="bgPage">
+            <div id="chart_canvas" style="width: 100%; height: 380px; ">
+            </div>
+            <div id="title17" class="title"></div>
+            <div id="chart_desc"></div>
+            <div id="backButton15" class="backButton"></div>
+        </div><div id="distancesAnswer" class="bgPage">
+            <div id="title2" class="title"></div>
+            <div id="miles_answer"></div>
+            <div id="estimatePlayerName9" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName10" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName11" class="estimatePlayerNameLabel"></div>
+            <div id="estimatePlayerName12" class="estimatePlayerNameLabel"></div>
+            <ul class="spritelist">
+			<li id="EstimateAvatar9" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="EstimateAvatar9img" class="guessAvatarimg">
+            <li id="EstimateAvatar10" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="EstimateAvatar10img" class="guessAvatarimg">
+            <li id="EstimateAvatar11" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="EstimateAvatar11img" class="guessAvatarimg">
+            <li id="EstimateAvatar12" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="EstimateAvatar12img" class="guessAvatarimg">
+			</ul>
+            <div id="button42"></div>
+        </div><div id="trafficLights">
+            <div id="tl">
+                <div id="GuessSelection">
+                    <div id="text49"></div>
+                    <div id="text50"></div>
+                    <select id="adjectivepopup" apple-style-relative="height: 20px;" onchange="disableInvalidNouns(event)">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <select id="nounpopup" apple-style-relative="height: 20px;" onchange="disableInvalidAdjs(event)">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <div id="checkbox">
+                        <input type="checkbox" name="Checkbox" checked="checked" id="secretmode">
+                        <div id="div2"> Keep estimates secret </div>
+                    </div>
+                    <select id="estimatetimepopup" apple-style-relative="height: 20px;">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <div id="ambuttonEst1" class="backButton"></div>
+                    <div id="title13" class="title"></div>
+                    <div id="button16"></div>
+                    <div id="forwardButtonEst1" class="lozengeBtn"></div>
+                </div>
+                <div id="MakeEstimatesSecret">
+                    <div id="estSecTitle" class="title">Secret Guess</div>
+					<div id="text51"></div>
+                    <ul class="spritelist">
+						<li id="EstimateAvatar1" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="EstimateAvatar1img" class="guessAvatarimg">
+            			<li id="EstimateAvatar2" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="EstimateAvatar2img" class="guessAvatarimg">
+            			<li id="EstimateAvatar3" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="EstimateAvatar3img" class="guessAvatarimg">
+            			<li id="EstimateAvatar4" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="EstimateAvatar4img" class="guessAvatarimg">
+					</ul>
+                    <input id="PlayerEstimate1" type="text" name="" value="" class="playerEstimateTextfield">
+                    <input id="PlayerEstimate2" type="text" name="" value="" class="playerEstimateTextfield">
+                    <input id="PlayerEstimate3" type="text" name="" value="" class="playerEstimateTextfield">
+                    <input id="PlayerEstimate4" type="text" name="" value="" class="playerEstimateTextfield">
+                    <div id="estimatePlayerName1" class="estimatePlayerNameLabel"></div>
+                    <div id="estimatePlayerName2" class="estimatePlayerNameLabel"></div>
+                    <div id="estimatePlayerName3" class="estimatePlayerNameLabel"></div>
+                    <div id="estimatePlayerName4" class="estimatePlayerNameLabel"></div>
+                    <div id="button18" class="secretLozengeButton"></div>
+                    <div id="button19" class="secretLozengeButton"></div>
+                    <div id="button32" class="secretLozengeButton"></div>
+                    <div id="button20" class="secretLozengeButton"></div>
+                    <div id="EstimateError"></div>
+                    <div id="SecretCover1">
+                        <img src="Images/secretcover.gif" alt="secret label" id="inner_image53">
+                    </div>
+                    <div id="SecretCover2">
+                        <img src="Images/secretcover.gif" alt="secret label" id="inner_image54">
+                    </div>
+                    <div id="SecretCover3">
+                        <img src="Images/secretcover.gif" alt="secret label" id="inner_image55">
+                    </div>
+                    <div id="SecretCover4">
+                        <img src="Images/secretcover.gif" alt="secret label" id="inner_image56">
+                    </div>
+                    <div id="forwardButton4"></div>
+                    <div id="backButton12" class="backButton"></div>
+                    <div id="button10" class="lozengeBtn"></div>
+                </div>
+                <div id="MakeEstimatesOpen">
+                    <div id="estOpenTitle" class="title">Guess</div>
+					<ul class="spritelist">
+						<li id="OpenEstimateAvatar1" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="OpenEstimateAvatar1img" class="guessAvatarimg">
+            			<li id="OpenEstimateAvatar2" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="OpenEstimateAvatar2img" class="guessAvatarimg">
+            			<li id="OpenEstimateAvatar3" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="OpenEstimateAvatar3img" class="guessAvatarimg">
+            			<li id="OpenEstimateAvatar4" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="OpenEstimateAvatar4img" class="guessAvatarimg">
+					</ul>
+                    <div id="OpenestimatePlayerName1" class="estimatePlayerNameLabel"></div>
+                    <input id="OpenPlayerEstimate1" type="text" name="" value="" class="playerEstimateTextfield">
+                    <div id="OpenestimatePlayerName2" class="estimatePlayerNameLabel"></div>
+                    <input id="OpenPlayerEstimate2" type="text" name="" value="" class="playerEstimateTextfield">
+                    <div id="OpenestimatePlayerName3" class="estimatePlayerNameLabel"></div>
+                    <input id="OpenPlayerEstimate3" type="text" name="" value="" class="playerEstimateTextfield">
+                    <div id="OpenestimatePlayerName4" class="estimatePlayerNameLabel"></div>
+                    <input id="OpenPlayerEstimate4" type="text" name="" value="" class="playerEstimateTextfield">
+                    <div id="OpenEstimateError"></div>
+                    <div id="backButton13" class="backButton"></div>
+                    <div id="button7" class="lozengeBtn"></div>
+                    <div id="forwardButton5"></div>
+                    <div id="text2"></div>
+                </div>
+                <div id="EstimationHints">
+                    <div id="text118" class="paraText15px"></div>
+                    <div id="text119" class="title"></div>
+                    <div id="text120" class="paraText15px"></div>
+                    <div id="text121" class="paraText15px"></div>
+                    <div id="text122" class="paraText15px"></div>
+                    <div id="text123" class="paraText15px"></div>
+                    <div id="text124" class="paraText15px"></div>
+                    <div id="text125" class="paraText17pt"></div>
+                    <div id="text52" class="paraText15px"></div>
+                    <div id="text83" class="paraText15px"></div>
+                    <div id="backButton10" class="backButton"></div>
+                </div>
+                <div id="ContestBegun">
+                    <div id="Houses">
+                        <img src="Images/house_white.gif" alt="houses" id="inner_image25">
+                    </div>
+                    <div id="Cars">
+                        <img src="Images/car_white.gif" alt="cars" id="inner_image26">
+                    </div>
+                    <div id="Motorcycles">
+                        <img src="Images/motorcycle_white.gif" alt="motorcycles" id="inner_image39">
+                    </div>
+                    <div id="Trucks">
+                        <img src="Images/truck_white.gif" alt="trucks" id="inner_image52">
+                    </div>
+                    <div id="GasStations">
+                        <img src="Images/Gas%20Station.gif" alt="gas stations" id="inner_image65">
+                    </div>
+                    <div id="Clouds">
+                        <img src="Images/Cloud.gif" alt="clouds" id="inner_image64">
+                    </div>
+                    <div id="Trees">
+                        <img src="Images/Tree.gif" alt="trees" id="inner_image63">
+                    </div>
+                    <div id="Restaurants">
+                        <img src="Images/Restaurant.gif" alt="restaurants" id="inner_image62">
+                    </div>
+                    <div id="People">
+                        <img src="Images/People.gif" alt="people" id="inner_image61">
+                    </div>
+                    <div id="text127"></div>
+                    <div id="text126"></div>
+                    <div id="box"></div>
+                    <div id="timer">
+                        <div id="timer-bg"></div>
+                        <div id="countdown-label">
+                            <div id="label-minutes"></div>
+                            <div id="label-seconds"></div>
+                        </div><div id="countdown-time">
+                            <ul class="spritelist">
+								<li id="esmintens" class="ESspriteDigits"><img src="Images/sprite_LCD_Digits.jpg" alt="lcd digit" id="esmintensimg" class="ESspriteDigitsimg"></li>
+								<li id="esminones" class="ESspriteDigits"><img src="Images/sprite_LCD_Digits.jpg" alt="lcd digit" id="esminonesimg" class="ESspriteDigitsimg"></li>
+								<li id="essectens" class="ESspriteDigits"><img src="Images/sprite_LCD_Digits.jpg" alt="lcd digit" id="essectensimg" class="ESspriteDigitsimg"></li>
+								<li id="essecones" class="ESspriteDigits"><img src="Images/sprite_LCD_Digits.jpg" alt="lcd digit" id="esseconesimg" class="ESspriteDigitsimg"></li>
+							</ul>
+                            <div id="timer-colons">
+                                <div id="colon3">:</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="button3"></div>
+                    <div id="button9"></div>
+                    <div id="backButton11" class="backButton"></div>
+                    <div id="rectangleShape">
+                        <div id="EstimateCounter1"></div>
+                    </div>
+                </div>
+                <div id="EstimationResults">
+                    <div id="text140"></div>
+                    <div id="text144" class="paraText17pt"></div>
+                    <div id="text146"></div>
+                    <div id="text147" class="title"></div>
+                    <div id="PlayerEstimated1" class="paraText15px"></div>
+                    <div id="PlayerEstimated2" class="paraText15px"></div>
+                    <div id="PlayerEstimated3" class="paraText15px"></div>
+                    <div id="PlayerEstimated4" class="paraText15px"></div>
+                    <ul class="spritelist">
+                    	<li id="winnerAvatar1" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar1" id="winnerAvatar1img" class="guessAvatarimg"></li>
+                    	<li id="winnerAvatar2" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar2" id="winnerAvatar2img" class="guessAvatarimg"></li>
+                    	<li id="winnerAvatar3" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar3" id="winnerAvatar3img" class="guessAvatarimg"></li>
+                    	<li id="winnerAvatar4" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar4" id="winnerAvatar4img" class="guessAvatarimg"></li>
+                    </ul>
+					<div id="winnerAnnouncement" class="paraText17pt"></div>
+                    <div id="winnerExplanation"></div>
+                    <div id="rectangleShape1">
+                        <div id="EstimateCounter2"></div>
+                    </div>
+                    <div id="button37"></div>
+                    <div id="button38"></div>
+                    <div id="forwardButtonEst2"></div>
+                </div>		
+				<div id="estBon" class="bgPage">
+					<div id="estBonTitle" class="title">Bonus Round</div>
+					<ul class="spritelist">
+						<li id="estBonusAvatar" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="estBonusAvatarimg" class="guessAvatarimg"></li>
+					</ul>
+					<div id="estBonusName" class="paraText17pt"></div>
+					<div id="estBonusAnswerLabel" class="paraText17pt">Answer</div>
+					<div id="estBonusQuest" class="paraText15px"></div>
+					<input type="text" class="tFieldStump" id="estBonusResp" name="" value="">
+					<div id="estBonusNext" class="button2_template"></div>
+				</div>
+				<div id="estBonRes" class="bgPage">
+					<div id="estBonResTitle" class="title">Oops!</div>
+					<ul class="spritelist">
+						<li id="estBonusResAvatar" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="estBonusResAvatarimg" class="guessAvatarimg"></li>
+					</ul>
+					<div id="estBonusResName" class="paraText17pt"></div>
+					<div id="estBonusResQuest" class="paraText15px"></div>
+					<div id="estBonusResExpl" class="paraText15px"></div>
+					<div id="estBonusResPtsMsg" class="paraText17pt"></div>
+					<div id="estBonusResNext" class="button2_template"></div>
+				</div>
+                <div id="inputNumber">
+                    <div id="title6" class="title"></div>
+					<div id="backButton17" class="backButton"></div>
+                    <div id="text34" class="paraText15px"></div>
+                    <select apple-style-relative="height: 20px;" id="vgPlayerPopup">
+                    </select>
+                    <div id="text9" class="paraText15px"></div>
+                    <input type="text" name="" value="" id="inputField">
+                    <div id="errorText"></div>
+                    <div id="text38" class="paraText15px"></div>
+                    <div id="button15"></div>
+                    <div id="forwardButton6"></div>
+                </div><div id="guessInput" class="bgPage">
+                    <div id="title9" class="title"></div>
+                    <div id="tlBackBtn" class="backButton"></div>
+					<div id="text11" class="paraText17pt"></div>
+                    <ul class="spritelist">
+                    	<li id="currPlayerAvatar" class="avatarsprite"><img src="Images/avatar_sprite.png" alt="avatar" id="currPlayerAvatarimg" class="avatarspriteimg"></li>
+                    </ul>
+					<div id="guessjackpottext" class="paraText17pt"></div>
+                    <input type="text" name="" value="" id="numberInput">
+                    <div id="guessErrorText" class="paraText17pt"></div>
+                    <div id="text5" class="paraText17pt"></div>
+                    <ul>
+					<li id="histavatar1" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon1" id="histavatar1img" class="histavatarspriteimg">
+                    <li id="histavatar2" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon2" id="histavatar2img" class="histavatarspriteimg">
+                    <li id="histavatar3" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon3" id="histavatar3img" class="histavatarspriteimg">
+                    <li id="histavatar4" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon4" id="histavatar4img" class="histavatarspriteimg">
+                    <li id="histavatar5" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon5" id="histavatar5img" class="histavatarspriteimg">
+                    <li id="histavatar6" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon6" id="histavatar6img" class="histavatarspriteimg">
+                    <li id="histavatar7" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon7" id="histavatar7img" class="histavatarspriteimg">
+                    <li id="histavatar8" class="histavatarsprite"><img src="Images/avatar_sprite.png" alt="avataricon8" id="histavatar8img" class="histavatarspriteimg">
+                    </ul>
+					<ul>
+                    <li id="histchallenge1" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge1img" class="histchallengespriteimg">
+                    <li id="histchallenge2" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge2img" class="histchallengespriteimg">
+                    <li id="histchallenge3" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge3img" class="histchallengespriteimg">
+                    <li id="histchallenge4" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge4img" class="histchallengespriteimg">
+                    <li id="histchallenge5" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge5img" class="histchallengespriteimg">
+                    <li id="histchallenge6" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge6img" class="histchallengespriteimg">
+                    <li id="histchallenge7" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge7img" class="histchallengespriteimg">
+					<li id="histchallenge8" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="histchallenge8img" class="histchallengespriteimg">
+                    </ul>
+                    <div id="indicator10" class="tlindicator"></div>
+                    <div id="indicator11" class="tlindicator"></div>
+                    <div id="indicator12" class="tlindicator"></div>
+                    <div id="indicator20" class="tlindicator"></div>
+                    <div id="indicator21" class="tlindicator"></div>
+					<div id="indicator22" class="tlindicator"></div>
+                    <div id="indicator30" class="tlindicator"></div>
+                    <div id="indicator31" class="tlindicator"></div>
+                    <div id="indicator32" class="tlindicator"></div>
+                    <div id="indicator40" class="tlindicator"></div>
+                    <div id="indicator41" class="tlindicator"></div>
+                    <div id="indicator42" class="tlindicator"></div>
+                    <div id="indicator50" class="tlindicator"></div>
+                    <div id="indicator51" class="tlindicator"></div>
+                    <div id="indicator52" class="tlindicator"></div>
+                    <div id="indicator60" class="tlindicator"></div>
+                    <div id="indicator61" class="tlindicator"></div>
+                    <div id="indicator62" class="tlindicator"></div>
+                    <div id="indicator70" class="tlindicator"></div>
+                    <div id="indicator71" class="tlindicator"></div>
+                    <div id="indicator72" class="tlindicator"></div>
+                    <div id="indicator80" class="tlindicator"></div>
+                    <div id="indicator81" class="tlindicator"></div>
+                    <div id="indicator82" class="tlindicator"></div>
+                    <div id="EHist1" class="tlHistLabels"></div>
+                    <div id="EHist2" class="tlHistLabels"></div>
+                    <div id="EHist3" class="tlHistLabels"></div>
+                    <div id="EHist4" class="tlHistLabels"></div>
+                    <div id="EHist5" class="tlHistLabels"></div>
+                    <div id="EHist6" class="tlHistLabels"></div>
+                    <div id="EHist7" class="tlHistLabels"></div>
+                    <div id="EHist8" class="tlHistLabels"></div>
+                    <div id="DHist1" class="tlHistInds"></div>
+                    <div id="DHist2" class="tlHistInds"></div>
+                    <div id="DHist3" class="tlHistInds"></div>
+                    <div id="DHist4" class="tlHistInds"></div>
+                    <div id="DHist5" class="tlHistInds"></div>
+                    <div id="DHist6" class="tlHistInds"></div>
+                    <div id="DHist7" class="tlHistInds"></div>
+                    <div id="DHist8" class="tlHistInds"></div>
+                    <div id="button11"></div>
+                    <div id="button" class="lozengeBtn"></div>
+                </div><div id="TLpassScreen"  class="bgPage">
+                    <div id="title8" class="title"></div>
+                    <div id="psp2txt3"></div>
+                    <ul class="spritelist">
+                    	<li id="TLnextAvatar" class="avatarsprite"><img src="Images/avatar_sprite.png" alt="avatar" id="TLnextAvatarimg" class="avatarspriteimg"></li>
+                    </ul>
+					<div id="TLnextName"></div>
+                    <div id="lastGuessText"></div>
+                    <div id="light1"></div>
+                    <div id="light2"></div>
+                    <div id="light3"></div>
+                    <div id="lastGuessNum"></div>
+                    <ul>
+					<li id="lastchallengelight" class="histchallengesprite"><img src="Images/challengelightsprite35.png" alt="light" id="lastchallengelightimg" class="histchallengespriteimg">
+                    </ul>
+					<div id="button4" class="lozengeBtn"></div>
+                </div><div id="winScreen">
+                    <div id="winText"></div>
+                    <ul class="spritelist">
+					<li id="winAvatar" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="winAvatarimg" class="pAvatarimg">
+                    </ul>
+                    <div id="indicator1"></div>
+                    <div id="indicator2"></div>
+                    <div id="indicator"></div>
+                    <div id="originalNumText"></div>
+                    <div id="title11" class="title"></div>
+                    <div id="button6"></div>
+                </div>
+				<div id="tlHome" class="bgPage">
+                    <div id="title5" class="title"></div>
+                    <div id="TLradioButton1" onclick="changeTLmode(event)">
+                        <input type="radio" name="Radio" checked="unchecked" id="TLhardmode">
+                    </div>
+                    <div id="TLradioButton" onclick="changeTLmode(event)">
+                        <input type="radio" name="Radio" checked="checked" id="TLeasymode">
+                    </div>
+                    <div id="text104" onclick="changeTLmodeToEasy(event)"></div>
+                    <div id="text105" onclick="changeTLmodeToHard(event)"></div>
+                    <div id="ambutton1" class="backButton"></div>
+                    <div id="psrulesbutton2" class="lozengeBtn"></div>
+					<div id="tlinstrbtn" class="lozengeBtn"></div>
+                </div>
+				<div id="tlInstructions" class="bgPage">
+					<div id="tlInstrTitle" class="title">How To Play?</div>
+					<div id="ambutton1a" class="backButton"></div>
+					<div id="text1"></div>
+                    <div id="text19"></div>
+                    <div id="text21"></div>
+                    <div id="indicator3" class="tlinstrind"></div>
+                    <div id="text26"></div>
+                    <div id="indicator4" class="tlinstrind"></div>
+                    <div id="indicator5" class="tlinstrind"></div>
+                    <div id="text27"></div>
+					<div id="text6"></div>
+                    <div id="challengemodetext1"></div>
+                    <div id="challengemodetext2"></div>
+                    <img src="Images/challengelights210.png" alt="lights" id="challengemodeimage">
+                    <div id="text28"></div>
+                    <div id="text29"></div>
+                    <div id="text31"></div>
+				</div>
+			</div>
+        </div>
+        <div id="PCcontent" class="bgPage">
+            <div id="br_notPrimeButton1"></div>
+            <div id="br_primeButton1"></div>
+            <div id="button5"></div>
+            <div id="title7" class="title"></div>
+            <div id="br_pointsText"></div>
+            <ul class="spritelist">
+            	<li id="br_Car" class="carsprite"><img src="Images/numbercarsprite.png" alt="car" id="br_Carimg" class="carspriteimg"></li>
+            </ul>
+            <div id="br_carNumberText"></div>
+            <div id="br_mistakesText"></div>
+            <div id="br_message"></div>
+        </div>
+       <div id="PCpassScreen">
+            <div id="backButton18" class="backButton"></div>
+			<div id="title10" class="title"></div>
+            <div id="psp2txt2"></div>
+           	<ul class="spritelist">
+               	<li id="PCnextAvatar" class="avatarsprite"><img src="Images/avatar_sprite.png" alt="avatar" id="PCnextAvatarimg" class="avatarspriteimg"></li>
+            </ul>
+			
+            <div id="PCnextName"></div>
+            <div id="forwardButton2"></div>
+        </div>
+		<div id="PChome">
+            <div id="title12" class="title"></div>
+            <div id="text12"></div>
+            <div id="br_primeCarsInstructions"></div>
+            <div id="PCradio1">
+                <input type="radio" name="PCgame" checked="checked" id="PCrad1" value="1">
+                <div id="div3" onclick="changePCmodeToPrime(event)">Prime Numbers</div>
+            </div>
+            <div id="PCradio2">
+                <input type="radio" name="PCgame" id="PCrad2" value="2">
+                <div id="div5" onclick="changePCmodeToEven(event)">Even or Odd</div>
+            </div>
+            <div id="PCradio3">
+                <input type="radio" name="PCgame" id="PCrad3" value="3">
+                <div id="div6" onclick="changePCmodeToMultiple(event)">Multiples Of</div>
+            </div>
+            <select id="PCmultValue" apple-style-relative="height: 20px;">
+                <option>2</option>
+				<option id="option" selected>3</option>
+                <option id="option1">4</option>
+                <option id="option2">5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <div id="forwardButton3"></div>
+            <div id="backButton9" class="backButton"></div>
+        </div>
+        <div id="players">
+            <div id="title3" class="title"></div>
+            <div id="text14"></div>
+            <select apple-style-relative="height: 20px;" id="popup" onchange="selectPlayers(event)">
+                <option id="text15a">1</option>
+				<option selected id="text15">2</option>
+                <option id="text16">3</option>
+                <option id="text17">4</option>
+            </select>
+            <div id="text13"></div>
+            <input type="text" name="" value="Player 1" id="name1" class="nameText" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 2" id="name2" class="nameText" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 3" id="name3" class="nameText" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 4" id="name4" class="nameText" onfocus="VPclearTextField(event)">
+            <ul class="spritelist">
+                    <li id="avatar1" class="avatarSelect" onclick="selectAvatar1(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar1img" class="avatarSelectimg"></li>
+                    <li id="avatar2" class="avatarSelect" onclick="selectAvatar2(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar2img" class="avatarSelectimg"></li>
+                    <li id="avatar3" class="avatarSelect" onclick="selectAvatar3(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar3img" class="avatarSelectimg"></li>
+                    <li id="avatar4" class="avatarSelect" onclick="selectAvatar4(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar4img" class="avatarSelectimg"></li>
+            </ul>
+            <div id="button21" class="lozengeBtn"></div>
+        </div>
+        <div id="scores">
+            <div id="scorestxt" class="title"></div>
+            <div id="amcolumnLayout48">
+                <div id="columnLayout86" class="scoresLeftColumn">
+                	<div id="amcolumn61">
+                        <ul class="spritelist">
+                    		<li id="p1avatar" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="p1avatarimg" class="pAvatarimg"></li>
+                    	</ul>
+                    </div>
+				</div>
+				<div id="columnLayout87" class="scoresNameColumn">
+					<div id="amcolumn62">
+                        <div id="player1"></div>
+                    </div>
+				</div>
+				<div id="columnLayout88" class="scoresPointColumn">
+					<div id="amcolumn63">
+						<div id="score1"></div>
+                    </div>
+				</div>
+				<div id="columnLayoutA4" class="scoresRankColumn">
+					<div id="ranktitle1" class="ranktitle"></div>
+						</div>
+				<div id="columnLayoutA5" class="scoresCarColumn">
+					<ul class = "spritelist">
+						<li id="spritelevel1" class="scorelevelsprite"><img src="Images/carlevelsprite.png" alt="car" id="spritelevel1img" class="scorelevelspriteimg"></li>
+					</ul>
+				</div>
+			</div>
+            <div id="amcolumnLayout53">
+                <div id="columnLayout89" class="scoresLeftColumn">
+                	<div id="amcolumn65">
+                        <ul class="spritelist">
+                    		<li id="p2avatar" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="p2avatarimg" class="pAvatarimg"></li>
+                    	</ul>
+                    </div></div><div id="columnLayout90" class="scoresNameColumn"><div id="amcolumn66">
+                        <div id="player2"></div>
+                    </div></div><div id="columnLayout91" class="scoresPointColumn"><div id="amcolumn67">
+                        <div id="score2"></div>
+					</div></div>
+				<div id="columnLayoutB4" class="scoresRankColumn">
+					<div id="ranktitle2" class="ranktitle"></div>
+				</div>
+				<div id="columnLayoutB5" class="scoresCarColumn">
+						<ul class = "spritelist">
+							<li id="spritelevel2" class="scorelevelsprite"><img src="Images/carlevelsprite.png" alt="car" id="spritelevel2img" class="scorelevelspriteimg"></li>
+						</ul>
+                    </div></div>
+            <div id="amcolumnLayout58">
+                <div id="columnLayout92" class="scoresLeftColumn"><div id="amcolumn69">
+                        <ul class="spritelist">
+                    		<li id="p3avatar" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="p3avatarimg" class="pAvatarimg"></li>
+                    	</ul>
+                </div></div><div id="columnLayout93" class="scoresNameColumn"><div id="amcolumn70">
+                        <div id="player3"></div>
+                    </div></div><div id="columnLayout94"><div id="amcolumn71">
+                        <div id="score3"></div>
+						</div></div>
+						<div id="columnLayoutC4" class="scoresRankColumn">
+                        	<div id="ranktitle3" class="ranktitle"></div>
+						</div>
+						<div id="columnLayoutC5" class="scoresCarColumn">
+						<ul class = "spritelist">
+							<li id="spritelevel3" class="scorelevelsprite"><img src="Images/carlevelsprite.png" alt="car" id="spritelevel3img" class="scorelevelspriteimg"></li>
+						</ul>
+                    </div></div>
+            <div id="amcolumnLayout63">
+                <div id="columnLayout95" class="scoresLeftColumn"><div id="amcolumn73">
+                        <ul class="spritelist">
+                    		<li id="p4avatar" class="pAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="p4avatarimg" class="pAvatarimg"></li>
+                    	</ul>
+                    </div></div><div id="columnLayout96" class="scoresNameColumn"><div id="amcolumn74">
+                        <div id="player4"></div>
+                    </div></div><div id="columnLayout97"><div id="amcolumn75">
+                        	<div id="score4"></div>
+						</div></div>
+						<div id="columnLayoutB4" class="scoresRankColumn">
+                        	<div id="ranktitle4" class="ranktitle"></div>
+						</div>
+						<div id="columnLayoutD5" class="scoresCarColumn">
+							<ul class = "spritelist">
+								<li id="spritelevel4" class="scorelevelsprite"><img src="Images/carlevelsprite.png" alt="car" id="spritelevel4img" class="scorelevelspriteimg"></li>
+							</ul>
+						
+                    </div></div>
+            <div id="scorecontbutton"></div>
+        </div>
+        <div id="users">
+        	<input type="text" name="" value="" id="firstname" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="" id="lastname" onfocus="VPclearTextField(event)">
+            <div id="text97"></div>
+            <div id="text98"></div>
+            <div id="text91"></div>
+            <div id="forwardButton1" class="lozengeBtn"></div>
+        </div>
+        <div id="avatarSelect">
+            <div id="title15" class="title"></div>
+            <div id="text129"></div>
+            <ul class="spritelist">
+                    <li id="avatar9" class="avatarSelect" onclick="changeAvatar1(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar9img" class="avatarSelectimg"></li>
+                    <li id="avatar10" class="avatarSelect" onclick="changeAvatar2(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar10img" class="avatarSelectimg"></li>
+                    <li id="avatar11" class="avatarSelect" onclick="changeAvatar3(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar11img" class="avatarSelectimg"></li>
+                    <li id="avatar12" class="avatarSelect" onclick="changeAvatar4(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar12img" class="avatarSelectimg"></li>
+					<li id="avatar13" class="avatarSelect" onclick="changeAvatar5(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar13img" class="avatarSelectimg"></li>
+                    <li id="avatar14" class="avatarSelect" onclick="changeAvatar6(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar14img" class="avatarSelectimg"></li>
+                    <li id="avatar15" class="avatarSelect" onclick="changeAvatar7(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar15img" class="avatarSelectimg"></li>
+                    <li id="avatar16" class="avatarSelect" onclick="changeAvatar8(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar16img" class="avatarSelectimg"></li>
+					<li id="avatar17" class="avatarSelect" onclick="changeAvatar9(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar17img" class="avatarSelectimg"></li>
+                    <li id="avatar18" class="avatarSelect" onclick="changeAvatar10(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar18img" class="avatarSelectimg"></li>
+                    <li id="avatar19" class="avatarSelect" onclick="changeAvatar11(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar19img" class="avatarSelectimg"></li>
+                    <li id="avatar20" class="avatarSelect" onclick="changeAvatar12(event)"><img src="Images/avatar_sprite.png" alt="avatar" id="avatar20img" class="avatarSelectimg"></li>
+            </ul>
+            <div id="backButton7" class="backButton"></div>
+        </div><div id="api_view1">
+            <div id="view1title" class="title">We There Yet?</div>
+            <div id="map_start"></div>
+            <div id="map_canvas" style="width: 100%; height: 330px; position: absolute; top: 129px;">
+            </div>
+            <input id="map_destination" type="text" name="" value="">
+            <div id="backButton16" class="backButton"></div>
+            <div id="forwardButton"></div>
+        </div><div id="api_view2">
+        	<div id="trip_title" class="title">Your Trip</div>
+            <div id="backButton14" class="backButton"></div>
+            <div id="destination_miles"></div>
+            <div id="forwardButton7"></div>
+        </div><div id="continue_trip" class="bgPage">
+            <div id="destination_miles1"></div>
+            <div id="cont_message"></div>
+            <div id="title18" class="title"></div>
+            <div id="forwardButton8"></div>
+            <div id="button51"></div>
+        </div>
+        <div id="victoryVanStart" class="bgPage">
+            <div id="vstarttitle" class="title"></div>
+            <div id="vstartinstruct" class="paraText17pt"></div>
+			<div id="vvduration" class="paraText17pt">Length:</div>
+			<select apple-style-relative="height: 20px;" id="vvpopup" onchange="selectPlayers(event)">
+                <option value="60" id="vvtext1">1 minute</option>
+				<option value="120" selected id="vvtext2">2 minutes</option>
+                <option value="180" id="vvtext3">3 minutes</option>
+                <option value="240" id="vvtext4">4 minutes</option>
+				<option value="360" id="vvtext5">6 minutes</option>
+                <option value="480" id="vvtext6">8 minutes</option>
+            </select>
+            <div id="vstartnext"></div>
+            <div id="vstartback" class="backButton"></div>
+        </div><div id="vVanAgeQuestions" class="bgPage">
+            <div id="vstarttitle1" class="title"></div>
+            <div id="vstartback2" class="backButton"></div>
+			<ul class="spritelist">
+			<li id="vvEstimateAvatar1" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player1avatar" id="vvEstimateAvatar1img" class="guessAvatarimg">
+            <li id="vvEstimateAvatar2" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player2avatar" id="vvEstimateAvatar2img" class="guessAvatarimg">
+            <li id="vvEstimateAvatar3" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player3avatar" id="vvEstimateAvatar3img" class="guessAvatarimg">
+            <li id="vvEstimateAvatar4" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="player4avatar" id="vvEstimateAvatar4img" class="guessAvatarimg">
+			</ul>
+            <input id="vvPlayerEstimate1" class="tFieldStump" type="text" name="" value="">
+            <input id="vvPlayerEstimate2" class="tFieldStump" type="text" name="" value="">
+            <input id="vvPlayerEstimate3" class="tFieldStump" type="text" name="" value="">
+            <input id="vvPlayerEstimate4" class="tFieldStump" type="text" name="" value="">
+            <div id="vvestimatePlayerName1" class="estimatePlayerNameLabel"></div>
+            <div id="vvestimatePlayerName2" class="estimatePlayerNameLabel"></div>
+            <div id="vvestimatePlayerName3" class="estimatePlayerNameLabel"></div>
+            <div id="vvestimatePlayerName4" class="estimatePlayerNameLabel"></div>
+            <div id="EstimateError30"></div>
+            <div id="vvagequestionfwd"></div>
+            <div id="vvagemessage"></div>
+            <input id="vvdriversAge" class="tFieldStump" type="text" name="" value="">
+            <div id="vvageDriverName"></div>
+        </div><div id="vvQuestionTemplate" class="bgPage">
+            <div id="vvQTitle" class="title"></div>
+            <div id="vvQQuestion" class="paraText17pt"></div>
+            <input id="vvQAnswerText" type="text" name="" value="">
+            <div id="vvQAnswerLabel"></div>
+            <div id="vvQuestionRadio" class="vvqrad">
+                <input type="radio" name="Radio" checked="checked" id="vvqradio" class="vvqradiv">
+                <div id="vvqradiodiv">Option 1</div>
+            </div>
+            <div id="vvQuestionRadio1" class="vvqrad">
+                <input type="radio" name="Radio" checked="checked" id="vvqradio1" class="vvqradiv">
+                <div id="vvqradiodiv1">Option 2</div>
+            </div>
+            <div id="vvQuestionRadio2" class="vvqrad">
+                <input type="radio" name="Radio" checked="checked" id="vvqradio2" class="vvqradiv">
+                <div id="vvqradiodiv2">Option 3</div>
+            </div>
+            <div id="vvQuestionRadio3" class="vvqrad">
+                <input type="radio" name="Radio" checked="checked" id="vvqradio3" class="vvqradiv">
+                <div id="vvqradiodiv3">Option 4</div>
+            </div>
+            <div id="vvQuestionRadio4" class="vvqrad">
+                <input type="radio" name="Radio" checked="checked" id="vvqradio4" class="vvqradiv">
+                <div id="vvqradiodiv4">Option 5</div>
+            </div>
+            <div id="vvQSendAnswer"></div>
+            <div id="vvQTimeLeftText"></div>
+            <div id="vvQColon" class="vvTimer"></div>
+            <div id="vvQMinID" class="vvTimer"></div>
+            <div id="vvQSecsID" class="vvTimer"></div>
+        </div>
+		<div id="vvPassPhoneTo" class="bgPage">
+            <div id="vvPassTitle" class="title"></div>
+			<div id="vvPassQuit" class="backButton"></div>
+            <div id="vvPassTo" class="paraText17pt"></div>
+            <ul class="spritelist">
+                <li id="vvnextAvatar" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="avatar" id="vvnextAvatarimg" class="guessAvatarimg"></li>
+            </ul>
+            <div id="vvPassButton"></div>
+            <div id="vvPassPlayerName" class="paraText17pt"></div>
+            <div id="vvPassRightWrong"></div>
+            <div id="vvPassLastProblem"></div>
+            <div id="vvPassYourAnswer"></div>
+            <div id="vvPassCorrectAnswer"></div>
+            <div id="vvPassTimeLeftText"></div>
+			<div id="vvPassStatsCorrect" class="paraText17pt"></div>
+			<div id="vvPassStatsPoints" class="paraText17pt"></div>
+            <div id="vvPassColon" class="vvTimer"></div>
+            <div id="vvPassMinID" class="vvTimer"></div>
+            <div id="vvPassSecsID" class="vvTimer"></div>
+        </div>
+		<div id="vvSocialQuestionTemplate"></div>
+		<div id="vvGameFinished" class="bgPage">
+            <div id="vvFinishTitle" class="title"></div>
+            <div id="vvFinishMessage" class="paraText17pt"></div>
+            <div id="vvFinishNumCorrect" class="paraText17pt"></div>
+            <div id="vvFinishMVPText" class="paraText17pt"></div>
+            <div id="vvFinishSpiritText" class="paraText17pt"></div>
+            <ul class="spritelist">
+            	<li id="vvFinishMVP" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="mvp" id="vvFinishMVPimg" class="guessAvatarimg"></li>
+				<li id="vvFinishSpirit" class="guessAvatar"><img src="Images/avatar_sprite.png" alt="spirit" id="vvFinishSpiritimg" class="guessAvatarimg"></li>
+            </ul>
+            <div id="vvFinishMVPName" class="paraText17pt"></div>
+            <div id="vvFinishSpiritName" class="paraText17pt"></div>
+            <div id="vvFinishContinue"></div>
+        </div>
+	</div>
+</body>
+</html>

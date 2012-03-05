@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Victory Van Question Upload</title>
+		<script language="Javascript">
+			
+		var url = "uploadquestion.php";
+		var curQID = 1;
+		
+		function validateForm(form) {
+			var q = get("q").value;
+			var op1 = get("op1").value;
+			var op2 = get("op2").value;
+			var op3 = get("op3").value;
+			var op4 = get("op4").value;
+			var answer = get("answer").value;
+			var radGroup = document.forms[0].qLevel;
+			//var qLevel = getCheckedValue(radGroup);	
+			
+			return (validateQuestion(q) &&
+					validateAnswerAndOptions(op1, op2, op3, op4, answer) && 
+					validateLevel(radGroup));
+		}
+
+		function validateQuestion(quest) {
+			if(quest.length < 3) {
+				alert("Please enter a longer question");
+				return false;
+			}
+			return true;
+		}
+
+		function validateAnswerAndOptions(op1, op2, op3, op4, answer) {
+			if(answer.length < 1) {
+				alert("Please enter an answer for the question");
+				return false;
+			}
+			if(op1.length < 1) {
+				if(!otherOpsAreEmpty(op2, op3, op4)) {
+					alert("If option 1 is blank, all the other options must be blank");
+					return false;
+				}
+				return true;
+			}
+			if(optionMatchesAnswer(op1, op2, op3, op4, answer)) {
+				return false;
+			}
+			return true;
+		}
+
+		function optionMatchesAnswer(op1, op2, op3, op4, answer) {
+			var options = [op1, op2, op3, op4];
+			var otherOpsShouldBeEmpty = false;
+			for(i in options) {
+				var op = options[i];
+				if(op.length < 1) {
+					otherOpsShouldBeEmpty = true;
+				}else if(otherOpsShouldBeEmpty) {
+					alert("Blank options should only be at the end");
+					return true;
+				}else{
+					if(answer == op) {
+						alert("Please do not include the answer in the options list");
+						return true;
+					}					
+				}
+			}
+			return false;
+		}
+		
+		function otherOpsAreEmpty(v1, v2, v3) {
+			return ((v1.length < 1) && (v2.length < 1) && (v3.length < 1));
+		}	
+
+		function validateLevel(lev) {
+			return oneRadioChecked(lev, "Please select a level for the questions");
+		}
+
+		function oneRadioChecked(radios, message) {
+			for(var i = 0; i < radios.length; i++) {
+				if(radios[i].checked) return true;
+			}
+			alert(message);
+			return false;
+		}
+
+		function isAlphaWord(field, message) {
+			var word_exp = new RegExp(/^[a-zA-Z ]{2,}$/i);
+			var is_word = word_exp.test(field);
+			//var is_city = form.city.value != '' && form.city.value.length >= 2;
+			if(!is_word) {
+				alert(message);
+			}
+			return is_word;
+		}
+
+		function isInteger(s){
+			var i;
+
+		    for (i = 0; i < s.length; i++){   
+		        // Check that current character is number.
+		        var c = s.charAt(i);
+		        if (((c < "0") || (c > "9"))) return false;
+		    }
+		    // All characters are numbers.
+		    return true;
+		}
+
+		function loadLevel() {
+			if(localStorage.curLevel != null && localStorage.curLevel.length > 1) {
+				document.getElementById("qLevel").value = parseInt(localStorage.curLevel);
+			}
+		}
+		
+		function showLevel() {
+			var val = get("method").value;
+			var instr = "Enter in each question one by one in the form below";
+			var lab = "Add";
+			showBrowseControls("hidden");
+			if (val == "browse") {
+				instr = "Look through questions loaded";
+				lab = "Go";
+				fetchQuestionJS(curQID);
+				showBrowseControls("visible");
+			} else if (val == "edit") {
+				instr = "Edit this particular question and click to save";
+				lab = "Save";
+			}
+			changeText("instructions", instr);
+			changeButtonLabel("formBtn", lab);
+		}
+		
+		function changeDB() {
+			
+		}
+		
+		function showBrowseControls(showLabel) {
+			get("nextBtn").style.visibility = showLabel;
+			get("prevBtn").style.visibility = showLabel;
+			get("idText").style.visibility = showLabel;
+		}
+		
+		function get(elem) {
+			return document.getElementById(elem);
+		}
+		
+		function changeText(elem, text) {
+			get(elem).innerHTML = text;
+		}
+		
+		function changeButtonLabel(elem, label) {
+			get(elem).value = label;
+		}
+		
+		function performAction(form) {
+			var val = get("method").value;
+			if(val == "browse") {
+				var newID = parseInt(get("idText").value);
+				if (newID >= 0) {
+					curQID = newID;
+					fetchQuestionJS(newID);
+				}
+			}else if(val == "add") {
+				addQuestionJS(form);
+			}else if(val == "edit") {
+				editQuestionJS(form);
+			}
+		}
+		
+		function nextQuestion(form) {
+			curQID++;
+			fetchQuestionJS(curQID);
+		}
+		
+		function prevQuestion(form) {
+			if (curQID > 0) {
+				curQID--;
+			}
+			fetchQuestionJS(curQID);
+		}
+		
+		function fetchQuestionJS(num) {
+			transmitToPHPDB(displayItem, "cat=browse&qid="+num);
+		}
+		
+		function addQuestionJS(form) {
+			sendQuestionJS(form, true);
+		}
+		
+		function editQuestionJS(form) {
+			sendQuestionJS(form, false);
+		}
+		
+		function sendQuestionJS(form, isAdd) {
+			var cat="edit&qid="+curQID;
+			fn = displayItem;
+			if(validateForm(form)) {
+				var q = getEncodedValue("q");
+				var op1 = getEncodedValue("op1");
+				var op2 = getEncodedValue("op2");
+				var op3 = getEncodedValue("op3");
+				var op4 = getEncodedValue("op4");
+				var answer = getEncodedValue("answer");
+				var radGroup = document.forms[0].qLevel;
+				var qLevel = getCheckedValue(radGroup);
+				if(isAdd) {
+					cat = "add";
+					fn = doNothing;
+				}
+				transmitToPHPDB(fn, "cat="+cat+"&q="+q+"&op1="+op1+"&op2="+op2+"&op3="+op3+"&op4="+op4+"&answer="+answer+"&qLevel="+qLevel);
+			}
+		}
+		
+		function transmitToPHPDB(fn, paramString) {
+			var dbname = get("database").value;
+			transmitToPHP(fn, paramString + "&tablename="+dbname);
+		}
+		
+		function getEncodedValue(id) {
+			return encodeURIComponent(get(id).value);
+		}
+		
+		function doNothing() {}
+		
+		function transmitToPHP(fn, paramString) {
+			xmlhttp=fetchXmlObject();
+			if(xmlhttp==null) {
+				return;
+			}
+			xmlhttp.onreadystatechange=fn;
+			sendInfoToPHP(xmlhttp, url, paramString);
+		}
+		
+		function displayItem() {
+	 		if(serverReturnedAResponse()) {
+		    	var responseFields = xmlhttp.responseText.split('|');
+		    	fillForm(responseFields);
+			}
+		}
+		
+		function fillForm(arr){
+			var oldID = curQID;
+			curQID = parseInt(arr[0]);
+			if(curQID == -1) {
+				curQID = 0;
+				changeText("questionID", "ID# " + oldID + " does not exist, resetting to 0")
+				return;
+			}
+			changeText("questionID", arr[0]);
+			get("q").value = arr[1];
+			get("op1").value = arr[2];
+			get("op2").value = arr[3];
+			get("op3").value = arr[4];
+			get("op4").value = arr[5];
+			get("answer").value = arr[6];
+			var radGroup = document.forms[0].qLevel;
+			setCheckedValue(radGroup, arr[7]);
+		}
+		
+		function serverReturnedAResponse() {
+ 		    return (xmlhttp.readyState==4 && xmlhttp.status==200);
+		}
+		
+		function sendInfoToPHP(xmlobj, url, params) {
+			xmlobj.open("POST",url,true);
+			//Send the proper header information along with the request
+			xmlobj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlobj.send(params);
+		}
+
+		function prepareXmlObject(str, element) {
+			if(str.length==0) {
+				changeText(element, "");
+				return null;
+			}
+			return fetchXmlObject();
+		}
+
+		function fetchXmlObject() {
+			xmlhttp=GetXmlHttpObject();
+		 	if(xmlhttp==null) {
+				alert ("Your browser does not support XMLHTTP!");
+			}
+			return xmlhttp;
+		}
+		
+		function GetXmlHttpObject() {
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				return new XMLHttpRequest();
+			}
+			if (window.ActiveXObject) {
+				// code for IE6, IE5
+				return new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			return null;
+		}
+		
+		// return the value of the radio button that is checked
+		// return an empty string if none are checked, or
+		// there are no radio buttons
+		function getCheckedValue(radioObj) {
+			if(!radioObj)
+				return "";
+			var radioLength = radioObj.length;
+			if(radioLength == undefined)
+				if(radioObj.checked)
+					return radioObj.value;
+				else
+					return "";
+			for(var i = 0; i < radioLength; i++) {
+				if(radioObj[i].checked) {
+					return radioObj[i].value;
+				}
+			}
+			return "";
+		}
+
+		// set the radio button with the given value as being checked
+		// do nothing if there are no radio buttons
+		// if the given value does not exist, all the radio buttons
+		// are reset to unchecked
+		function setCheckedValue(radioObj, newValue) {
+			newValue = parseInt(newValue.charAt(0));
+			if(!radioObj)
+				return;
+			var radioLength = radioObj.length;
+			if(radioLength == undefined) {
+				radioObj.checked = (radioObj.value == newValue.toString());
+				return;
+			}
+			for(var i = 0; i < radioLength; i++) {
+				radioObj[i].checked = false;
+				if(radioObj[i].value == newValue.toString()) {
+					radioObj[i].checked = true;
+				}
+			}
+		}
+		
+		</script>
+		<style type="text/css">
+  			body { color: black; background: white; }
+			.inputtext { width: 800px; }
+			#prevBtn { visibility: hidden; }
+			#nextBtn { visibility: hidden; }
+			#idText { visibility: hidden; }
+		</style>
+	</head>
+	<body onload="loadLevel()">
+		<h2>Input Form for Victory Van v3</h2>
+		<p id="instructions">Enter in each question one by one in the form below</p>
+		Question Database:
+		<select id="database" onchange="changeDB()">
+			<option value="questions">Victory Van</option>
+			<option selected value="controlqs">Control Condition</option>
+		</select>
+		<br>
+		<select id="method" onchange="showLevel()">
+			<option selected value="add">Add A Question</option>
+			<option value="browse">Browse Questions</option>
+			<option value="edit">Edit A Question</option>
+		</select>
+		<br><br>
+	<form id="form" name="form">
+		ID: #: <div id="questionID"></div><br>
+		VVan Question?: <input type="text" name="q" id="q" class="inputtext"></input><br></br>
+		Wrong Option 1: <input type="text" name="op1" id="op1" class="inputtext"></input><br></br>
+		Wrong Option 2: <input type="text" name="op2" id="op2" class="inputtext"></input><br></br>
+		Wrong Option 3: <input type="text" name="op3" id="op3" class="inputtext"></input><br></br>
+		Wrong Option 4: <input type="text" name="op4" id="op4" class="inputtext"></input><br></br>
+		Actual Answer?: <input type="text" name="answer" id="answer" class="inputtext"></input><br></br>
+		Level:<br></br>
+		<input type="radio" name="qLevel" value="1">A</input><br></br>
+		<input type="radio" name="qLevel" value="2">A/B</input><br></br>
+		<input type="radio" name="qLevel" value="3">B</input><br></br>
+		<input type="radio" name="qLevel" value="4">B/C</input><br></br>
+		<input type="radio" name="qLevel" value="5" checked>C</input><br></br>
+		<input type="radio" name="qLevel" value="6">C/D</input><br></br>
+		<input id="nextBtn" type="button" value="Next" onclick="nextQuestion(this)"></input><br>
+		<input id="prevBtn" type="button" value="Previous" onclick="prevQuestion(this)"></input><br>
+		Get Question ID <input type="text" name="idText" id="idText"></input>
+		<input id="formBtn" type="button" value="add" onclick="performAction(this)"></input><br>	
+	</form>
+	</body>
+</html>

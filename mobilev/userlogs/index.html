@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>User Logs</title>
+		<script language="Javascript">
+			
+		var url = "checkusertime.php";
+		var curQID = 1;
+		
+		function validateForm(form) {
+			var fname = get("fname").value;
+			var lname = get("lname").value;
+			//var qLevel = getCheckedValue(radGroup);	
+			
+			return (isAlphaWord(fname) && isAlphaWord(lname));
+		}
+
+		function otherOpsAreEmpty(v1, v2, v3) {
+			return ((v1.length < 1) && (v2.length < 1) && (v3.length < 1));
+		}	
+
+		function oneRadioChecked(radios, message) {
+			for(var i = 0; i < radios.length; i++) {
+				if(radios[i].checked) return true;
+			}
+			alert(message);
+			return false;
+		}
+
+		function isAlphaWord(field, message) {
+			var word_exp = new RegExp(/^[a-zA-Z ]{2,}$/i);
+			return word_exp.test(field);
+			
+		}
+
+		function isInteger(s){
+			var i;
+
+		    for (i = 0; i < s.length; i++){   
+		        // Check that current character is number.
+		        var c = s.charAt(i);
+		        if (((c < "0") || (c > "9"))) return false;
+		    }
+		    // All characters are numbers.
+		    return true;
+		}
+				
+		function showBrowseControls(showLabel) {
+			get("nextBtn").style.visibility = showLabel;
+			get("prevBtn").style.visibility = showLabel;
+			get("idText").style.visibility = showLabel;
+		}
+		
+		function get(elem) {
+			return document.getElementById(elem);
+		}
+		
+		function changeText(elem, text) {
+			get(elem).innerHTML = text;
+		}
+		
+		function appendText(elem, text) {
+			get(elem).innerHTML = get(elem).innerHTML + text;
+		}
+		
+		function changeButtonLabel(elem, label) {
+			get(elem).value = label;
+		}
+		
+		function performAction(form) {
+			if(!validateForm(form)) {
+				changeText("error", "Please enter both a first and last name");
+				return false;
+			}
+			var fname = getEncodedValue("fname");
+			var lname = getEncodedValue("lname");
+			fn = displayLog;
+			var cat = "userlog";
+			checkUserLogJS(cat, fn, fname, lname);
+		}
+		
+		function checkUserLogJS(cat, fn, fname, lname) {
+			transmitToPHPDB(fn, "cat="+cat+"&fname="+fname+"&lname="+lname);
+		}
+		
+		function fetchQuestionJS(num) {
+			transmitToPHPDB(displayItem, "cat=browse&qid="+num);
+		}
+		
+		function addQuestionJS(form) {
+			sendQuestionJS(form, true);
+		}
+		
+		function editQuestionJS(form) {
+			sendQuestionJS(form, false);
+		}
+		
+		function transmitToPHPDB(fn, paramString) {
+			var dbname = get("database").value;
+			transmitToPHP(fn, paramString + "&dbname="+dbname);
+		}
+		
+		function getEncodedValue(id) {
+			return encodeURIComponent(get(id).value);
+		}
+		
+		function doNothing() {}
+		
+		function transmitToPHP(fn, paramString) {
+			xmlhttp=fetchXmlObject();
+			if(xmlhttp==null) {
+				return;
+			}
+			xmlhttp.onreadystatechange=fn;
+			sendInfoToPHP(xmlhttp, url, paramString);
+		}
+		
+		function displayItem() {
+	 		if(serverReturnedAResponse()) {
+		    	var responseFields = xmlhttp.responseText.split('|');
+		    	fillForm(responseFields);
+			}
+		}
+		
+		function displayLog() {
+			if(serverReturnedAResponse()) {
+				var responseFields = xmlhttp.responseText.split('|');
+				changeText("uid", responseFields[0]);
+				changeText("timespent", responseFields[1]);
+				changeText("results", "");
+				displayDetails("results", responseFields, responseFields[2]);
+			}
+		}
+		
+		function displayDetails(contents, data, numItems) {
+			for(var i = 0; i < numItems; i++) {
+				appendText(contents, data[i+3]+"<br>");
+			}
+		}
+				
+		function serverReturnedAResponse() {
+ 		    return (xmlhttp.readyState==4 && xmlhttp.status==200);
+		}
+		
+		function sendInfoToPHP(xmlobj, url, params) {
+			xmlobj.open("POST",url,true);
+			//Send the proper header information along with the request
+			xmlobj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlobj.send(params);
+		}
+
+		function prepareXmlObject(str, element) {
+			if(str.length==0) {
+				changeText(element, "");
+				return null;
+			}
+			return fetchXmlObject();
+		}
+
+		function fetchXmlObject() {
+			xmlhttp=GetXmlHttpObject();
+		 	if(xmlhttp==null) {
+				alert ("Your browser does not support XMLHTTP!");
+			}
+			return xmlhttp;
+		}
+		
+		function GetXmlHttpObject() {
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				return new XMLHttpRequest();
+			}
+			if (window.ActiveXObject) {
+				// code for IE6, IE5
+				return new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			return null;
+		}
+		
+		// return the value of the radio button that is checked
+		// return an empty string if none are checked, or
+		// there are no radio buttons
+		function getCheckedValue(radioObj) {
+			if(!radioObj)
+				return "";
+			var radioLength = radioObj.length;
+			if(radioLength == undefined)
+				if(radioObj.checked)
+					return radioObj.value;
+				else
+					return "";
+			for(var i = 0; i < radioLength; i++) {
+				if(radioObj[i].checked) {
+					return radioObj[i].value;
+				}
+			}
+			return "";
+		}
+
+		// set the radio button with the given value as being checked
+		// do nothing if there are no radio buttons
+		// if the given value does not exist, all the radio buttons
+		// are reset to unchecked
+		function setCheckedValue(radioObj, newValue) {
+			newValue = parseInt(newValue.charAt(0));
+			if(!radioObj)
+				return;
+			var radioLength = radioObj.length;
+			if(radioLength == undefined) {
+				radioObj.checked = (radioObj.value == newValue.toString());
+				return;
+			}
+			for(var i = 0; i < radioLength; i++) {
+				radioObj[i].checked = false;
+				if(radioObj[i].value == newValue.toString()) {
+					radioObj[i].checked = true;
+				}
+			}
+		}
+		
+		</script>
+		<style type="text/css">
+  			body { color: black; background: white; }
+			.inputtext { width: 800px; }
+			#prevBtn { visibility: hidden; }
+			#nextBtn { visibility: hidden; }
+			#idText { visibility: hidden; }
+		</style>
+	</head>
+	<body>
+		<h2>Input Form for Victory Van v3</h2>
+		<p id="instructions">Select a user who's log you'd like to see, the times are still approximate.</p>
+		Condition:
+		<select id="database">
+			<option selected value="goroadtrip">GoRoadTrip</option>
+			<option value="homework">Homework</option>
+		</select>
+		<br>
+		<br>
+	<form id="form" name="form">
+		First Name: <input type="text" name="firstname" id="fname" class="inputtext"></input><br></br>
+		Last Name: <input type="text" name="lastname" id="lname" class="inputtext"></input><br></br>
+		UserID: <div id="uid"></div><br>
+		Time Spent: <div id="timespent"></div><br>
+		<div id="error" class="error"></div>
+		<input id="formBtn" type="button" value="check logs" onclick="performAction(this)"></input><br>	
+		<div id="results"></div>
+	</form>
+	</body>
+</html>

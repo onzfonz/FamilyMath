@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Victory Van Question Upload</title>
+		<script language="Javascript">
+		function validateForm(form) {
+			return (validateQuestion(form.q.value) &&
+					validateAnswerAndOptions(form.op1.value, form.op2.value, form.op3.value, form.op4.value, form.answer.value) && 
+					validateLevel(form.qLevel));
+		}
+
+		function validateQuestion(quest) {
+			if(quest.length < 3) {
+				alert("Please enter a longer question");
+				return false;
+			}
+			return true;
+		}
+
+		function validateAnswerAndOptions(op1, op2, op3, op4, answer) {
+			if(answer.length < 1) {
+				alert("Please enter an answer for the question");
+				return false;
+			}
+			if(op1.length < 1) {
+				if(!otherOpsAreEmpty(op2, op3, op4)) {
+					alert("If option 1 is blank, all the other options must be blank");
+					return false;
+				}
+				return true;
+			}
+			if(optionMatchesAnswer(op1, op2, op3, op4, answer)) {
+				return false;
+			}
+			return true;
+		}
+
+		function optionMatchesAnswer(op1, op2, op3, op4, answer) {
+			var options = [op1, op2, op3, op4];
+			var otherOpsShouldBeEmpty = false;
+			for(i in options) {
+				var op = options[i];
+				if(op.length < 1) {
+					otherOpsShouldBeEmpty = true;
+				}else if(otherOpsShouldBeEmpty) {
+					alert("Blank options should only be at the end");
+					return true;
+				}else{
+					if(answer == op) {
+						alert("Please do not include the answer in the options list");
+						return true;
+					}					
+				}
+			}
+			return false;
+		}
+		
+		function otherOpsAreEmpty(v1, v2, v3) {
+			return ((v1.length < 1) && (v2.length < 1) && (v3.length < 1));
+		}	
+
+		function validateLevel(lev) {
+			return oneRadioChecked(lev, "Please select a level for the questions");
+		}
+
+		function oneRadioChecked(radios, message) {
+			for(var i = 0; i < radios.length; i++) {
+				if(radios[i].checked) return true;
+			}
+			alert(message);
+			return false;
+		}
+
+		function isAlphaWord(field, message) {
+			var word_exp = new RegExp(/^[a-zA-Z ]{2,}$/i);
+			var is_word = word_exp.test(field);
+			//var is_city = form.city.value != '' && form.city.value.length >= 2;
+			if(!is_word) {
+				alert(message);
+			}
+			return is_word;
+		}
+
+		function isInteger(s){
+			var i;
+
+		    for (i = 0; i < s.length; i++){   
+		        // Check that current character is number.
+		        var c = s.charAt(i);
+		        if (((c < "0") || (c > "9"))) return false;
+		    }
+		    // All characters are numbers.
+		    return true;
+		}
+
+		function loadLevel() {
+			if(localStorage.curLevel != null && localStorage.curLevel.length > 1) {
+				document.getElementById("qLevel").value = parseInt(localStorage.curLevel);
+			}
+		}
+		
+		</script>
+	</head>
+	<body onload="loadLevel()">
+		<h2>Input Form for Victory Van</h2>
+		<p>Enter in each question one by one in the form below</p>
+	<form id="form" name="form" onSubmit="return validateForm(this)" action="uploadquestion.php" method="post">
+		VVan Question?: <input type="text" name="q" id="q"></input><br></br>
+		Wrong Option 1: <input type="text" name="op1" id="op1"></input><br></br>
+		Wrong Option 2: <input type="text" name="op2" id="op2"></input><br></br>
+		Wrong Option 3: <input type="text" name="op3" id="op3"></input><br></br>
+		Wrong Option 4: <input type="text" name="op4" id="op4"></input><br></br>
+		Actual Answer?: <input type="text" name="answer" id="answer"></input><br></br>
+		Level:<br></br>
+		<input type="radio" name="qLevel" value="1">A</input><br></br>
+		<input type="radio" name="qLevel" value="2">A/B</input><br></br>
+		<input type="radio" name="qLevel" value="3">B</input><br></br>
+		<input type="radio" name="qLevel" value="4">B/C</input><br></br>
+		<input type="radio" name="qLevel" value="5" checked>C</input><br></br>
+		<input type="radio" name="qLevel" value="6">C/D</input><br></br>
+		<input type="submit"></input>		
+	</form>"
+	</body>
+</html>

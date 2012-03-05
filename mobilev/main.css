@@ -1,0 +1,4666 @@
+body {
+	font-family: Helvetica;
+	color: rgb(0, 0, 1);
+	background-color: rgb(255, 255, 254);
+	background-image: url(Images/backgroundStripes.png);
+	font-size: 16px;
+	min-height: 416px;
+	margin: 0px;
+	background-repeat: repeat;
+}
+
+#stackLayout {
+	overflow: hidden;
+	z-index: 0;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-left-radius: 0px 0px;
+	border-bottom-right-radius: 0px 0px;
+	background-color: rgb(255, 255, 255);
+	background-attachment: fixed;
+	position: absolute;
+	left: 0px;
+	margin-top: 0px;
+	top: 0px;
+	width: 320px;
+	height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#homepage {
+	display: none;
+	position: relative;
+	margin-left: 0px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-left-radius: 0px 0px;
+	border-bottom-right-radius: 0px 0px;
+	background-image: url(Images/popart.jpg);
+	width: 320px;
+	margin-right: 0px;
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+#distances {
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.button2_template {
+	font-weight: 700;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	width: 70px;
+	position: absolute;
+	top: 7px;
+	left: 5px;
+}
+
+#estBonusResNext, #estBonusNext {
+	top: 350px;
+	left: 200px;
+}
+
+#estBonusName, #estBonusResName {
+	height: 30px;
+	top: 70px;
+	left: 80px;
+}
+
+#estBonusAnswerLabel {
+	height: 30px;
+	top: 283px;
+	left: 85px;
+}
+
+#estBonusQuest, #estBonusResQuest {
+	top: 130px;
+	height: 150px;
+}
+
+#estBonusResExpl {
+	top: 250px;
+	height: 100px;
+}
+
+#text9 {
+	width: 201px;
+	left: 19px;
+	top: 170px;
+}
+
+#inputField {
+	width: 70px;
+	font-family: HelveticaNeue;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	display: block;
+	font-size: 30px;
+	position: absolute;
+	left: 201px;
+	top: 157px;
+	margin-top: 0px;
+}
+
+#errorText {
+	color: rgb(255, 0, 0);
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	height: 60px;
+	width: 208px;
+	position: absolute;
+	top: 295px;
+	left: 100px;
+	margin-top: 0px;
+}
+
+#numberInput {
+	font-family: HelveticaNeue;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	display: block;
+	width: 70px;
+	font-size: 20pt;
+	left: 51px;
+	top: 300px;
+}
+
+#guessjackpottext {
+	text-align: center;
+	left: 10px;
+	top: 190px;
+	width: 150px;
+}
+
+#guessErrorText {
+	margin-top: -2px;
+	margin-left: 63px;
+	margin-right: 66px;
+	min-height: 23px;
+}
+
+#winScreen {
+	display: none;
+	position: relative;
+	background-image: url(Images/traffic_bg_2.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#players {
+	display: none;
+	position: relative;
+	font-size: 16px;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#title3 {
+	position: relative;
+	margin-left: 0px;
+	margin-top: 13px;
+	width: 320px;
+	margin-right: 0px;
+	height: 29px;
+}
+
+#text14 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: left;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 100px;
+	min-height: 26px;
+	padding: 0px;
+}
+
+#popup, #vvpopup {
+	-webkit-appearance: menulist-button;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 11px;
+	width: 42px;
+	margin-top: 0px;
+	position: absolute;
+	height: 26px;
+	left: 220px;
+	top: 51px;
+}
+
+#vvpopup {
+	width: 80px;
+	top: 370px;
+	left: 105px;
+}
+
+#vvduration {
+	top: 375px;
+	left: 40px;
+}
+
+#text13 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 13px;
+	margin-left: 7px;
+	margin-top: 8px;
+	width: 311px;
+	margin-right: 2px;
+	height: 34px;
+}
+
+.nameText {
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	display: block;
+	position: absolute;
+	margin-top: 0px;
+	width: 86px;
+	left: 128px;
+}
+
+#name1 {
+	top: 147px;
+}
+
+#name2 {
+	top: 201px;
+}
+
+#name3 {
+	top: 255px;
+	visibility: hidden;
+}
+
+#name4 {
+	top: 309px;
+	visibility: hidden;
+}
+
+#gameSelect {
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#title4 {
+	margin-left: 0px;
+	top: 130px;
+	width: 320px;
+	color: blue;
+}
+
+#img2 {
+	position: absolute;
+	left: 30px;
+	top: 50px;
+}
+
+#mainIconImg {
+	width: 57px;
+	height: 57px;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	left: 107px;
+	top: 290px;
+}
+
+.markerLabel {
+	font-family: 'Marker Felt';
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12pt;
+	text-align: center;
+	width: 86px;
+	height: 40px;
+}
+
+#text23 {
+	left: 17px;
+	top: 110px;
+}
+
+#img3 {
+	position: absolute;
+	left: 220px;
+	top: 50px;
+}
+
+#text24 {
+	left: 205px;
+	top: 110px;
+}
+
+#text25 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 12px;
+	position: relative;
+	margin-left: 0px;
+	margin-right: -1px;
+	min-height: 17px;
+	margin-top: 8px;
+}
+
+#trafficLights {
+	display: none;
+	position: relative;
+}
+
+#text1 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 10px;
+	margin-top: 75px;
+	height: 20px;
+	width: 310px;
+	margin-right: 0px;
+}
+
+#text19 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 10px;
+	margin-top: 12px;
+	font-size: 14px;
+	height: 20px;
+	width: 310px;
+	margin-right: 0px;
+}
+
+#text21 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 10px;
+	font-size: 14px;
+	margin-top: 3px;
+	width: 310px;
+	margin-right: 0px;
+	height: 20px;
+}
+
+#text26 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	margin-left: 79px;
+	position: relative;
+	height: 34px;
+	width: 221px;
+	margin-right: 20px;
+	margin-top: 28px;
+}
+
+.tlinstrind {
+	width: 48px;
+	height: 48px;
+	margin-top: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;	
+	left: 29px;
+}
+
+#indicator3 {
+	top: 173px;
+}
+
+#indicator4 {
+	top: 228px;
+}
+
+#indicator5 {
+	top: 282px;
+}
+
+#text27 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	margin-left: 79px;
+	position: relative;
+	margin-top: 21px;
+	height: 34px;
+	width: 221px;
+	margin-right: 20px;
+}
+
+#text28 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	margin-top: 27px;
+	margin-left: 79px;
+	position: relative;
+	height: 21px;
+	width: 221px;
+	margin-right: 20px;
+}
+
+#text29 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 14px;
+	position: absolute;
+	left: 10px;
+	margin-top: 0px;
+	height: 32px;
+	width: 310px;
+	top: 153px;
+}
+
+#text30 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 14px;
+	margin-left: 10px;
+	position: relative;
+	margin-top: 20px;
+	height: 32px;
+	width: 310px;
+	margin-right: 0px;
+	visibility: hidden;
+}
+
+#text31 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 14px;
+	top: 25px;
+	margin-left: 10px;
+	position: relative;
+	height: 32px;
+	width: 310px;
+	margin-right: 0px;
+}
+
+#inputNumber {
+	display: none;
+	position: relative;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-left-radius: 0px 0px;
+	border-bottom-right-radius: 0px 0px;
+	font-size: 16px;
+	background-image: url(Images/traffic_bg_2.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#text32 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12px;
+	width: 54px;
+	height: 97px;
+	left: 261px;
+	top: 66px;
+	visibility: hidden;
+}
+
+#text33 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12px;
+	left: 101px;
+	width: 74px;
+	height: 69px;
+	top: 74px;
+	visibility: hidden;
+}
+
+#text34 {
+	left: 9px;
+	top: 94px;
+}
+
+#vgPlayerPopup {
+	height: 20px;
+	-webkit-appearance: menulist-button;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 140px;
+	position: absolute;
+	left: 28px;
+	top: 120px;
+	margin-top: 0px;
+}
+
+#text38 {
+	left: 9px;
+	top: 230px;
+}
+
+#PCcontent {
+	background-image: url(Images/primeGame_bg_01.jpg);
+}
+
+#content1 {
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	background-image: url(Images/primeGame_bg_01.jpg);
+	margin-left: 0px;
+	margin-top: 0px;
+	background-attachment: fixed;
+	width: 320px;
+	margin-right: 0px;
+	height: 460px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#br_pointsText {
+	font-size: 27px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	position: absolute;
+	margin-top: 0px;
+	min-height: 27px;
+	left: 18px;
+	top: 280px;
+	right: 10px;
+}
+
+#br_Car {
+	position: relative;
+	margin-left: 248px;
+	margin-top: 186px;
+}
+
+#br_carNumberText {
+	font-size: 19px;
+	text-overflow: ellipsis;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-right: 0px;
+	margin-left: 305px;
+	margin-top: -35px;
+	min-height: 20px;
+	text-align: center;
+}
+
+#br_mistakesText {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 104px;
+	left: 37px;
+	right: 36px;
+	color: #AAFFAA;
+	text-align: center;
+	text-shadow: none;
+	font-weight: 700;
+	font-size: 48px;
+}
+
+#img {
+	position: absolute;
+	left: 27px;
+	top: 178px;
+}
+
+#text35 {
+	left: 15px;
+	top: 235px;
+}
+
+#text36 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12px;
+	left: 101px;
+	width: 54px;
+	height: 67px;
+	top: 175px;
+	visibility: hidden;
+}
+
+#text11 {
+	top: 87px;
+	left: 81px;
+}
+
+#title7 {
+	margin-left: 0px;
+	width: 230px;
+	color: yellow;
+}
+
+#light1 {
+	width: 48px;
+	height: 48px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	top: 251px;
+	left: 58px;
+}
+
+#light2 {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	left: 135px;
+	top: 251px;
+}
+
+#light3 {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 251px;
+	left: 213px;
+}
+
+#lastGuessText {
+	position: absolute;
+	font-size: 21px;
+	text-align: center;
+	width: 300px;
+	top: 206px;
+	left: 10px;
+	height: 24px;
+}
+
+#currPlayerAvatar {
+	left: 20px;
+	top: 70px;
+}
+
+#PCnextAvatar {
+	left: 130px;
+	top: 80px;
+}
+
+#indicator {
+	width: 48px;
+	height: 48px;
+	margin-top: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	left: 58px;
+	top: 191px;
+}
+
+#indicator1 {
+	width: 48px;
+	height: 48px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	margin-left: 135px;
+	margin-top: 15px;
+}
+
+#indicator2 {
+	width: 48px;
+	height: 48px;
+	margin-top: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	left: 212px;
+	top: 191px;
+}
+
+#originalNumText {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 40px;
+	text-align: center;
+	top: 258px;
+	width: 238px;
+	height: 20px;
+}
+
+#winText {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 21px;
+	margin-left: 8px;
+	margin-top: 47px;
+	height: 40px;
+	width: 302px;
+	margin-right: 10px;
+}
+
+#title11 {
+	margin-top: 0px;
+	top: 13px;
+}
+
+#PChome {
+	display: none;
+	position: relative;
+	background-image: url(Images/primeGame_bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#PCpassScreen {
+	display: none;
+	position: relative;
+	background-image: url(Images/primeGame_bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#br_primeCarsInstructions {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: justify;
+	font-size: 16px;
+	margin-top: 18px;
+	margin-left: 10px;
+	width: 293px;
+	margin-right: 17px;
+	height: 74px;
+	visibility: hidden;
+}
+
+#text12 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 17px;
+	margin-left: 12px;
+	width: 310px;
+	margin-right: -2px;
+	height: 20px;
+	visibility: hidden;
+}
+
+#text39 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 11px;
+	margin-left: 12px;
+	margin-right: 15px;
+	height: 100px;
+	width: 305px;
+	visibility: hidden;
+}
+
+#scores {
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#player1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	margin-left: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: left;
+	font-weight: 700;
+	font-size: 12pt;
+	margin-top: 28px;
+	margin-right: 0px;
+	min-height: 20px;
+}
+
+#score1, #score2, #score3, #score4, .ranktitle {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	margin-left: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 6px;
+	margin-right: 10px;
+	min-height: 20px;
+	font-weight: 700;
+	font-size: 12pt;
+	text-align: center;
+	margin-top: 28px;
+}
+
+.ranktitle {
+	margin-top: 50px;
+	text-align: right;
+	margin-left: 4px;
+	margin-right: 0px;
+}
+
+#amcolumnLayout48{
+	display: table;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 0px;
+	margin-top: 10px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-left-radius: 0px 0px;
+	border-bottom-right-radius: 0px 0px;
+	height: 70px;
+	width: 320px;
+}
+
+#amcolumnLayout53{
+	display: table;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 0px;
+	margin-top: 6px;
+	height: 70px;
+	width: 320px;
+}
+
+#amcolumnLayout58{
+	display: table;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 6px;
+	margin-left: 0px;
+	height: 70px;
+	width: 320px;
+}
+
+#amcolumnLayout63{
+	display: table;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 6px;
+	margin-left: 0px;
+	height: 70px;
+	width: 320px;
+}
+
+.hofcolumnlayout {
+	display: table;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 0px;
+	height: 60px;
+	width: 320px;
+}
+
+#columnLayout97 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 31.56%;
+}
+
+#scorecontbutton, #hallcontbutton {
+	font-weight: 700;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 105px;
+	margin-left: 107px;
+	margin-top: 13px;
+}
+
+#p4scoregauge {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	visibility: hidden;
+	margin-left: 25px;
+}
+
+#p1scoregauge {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	visibility: hidden;
+	margin-top: 0px;
+	margin-left: 26px;
+}
+
+#p2scoregauge {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	visibility: hidden;
+	margin-left: 26px;
+}
+
+#p3scoregauge {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	visibility: hidden;
+	margin-left: 25px;
+	margin-top: 0px;
+}
+
+.pAvatar, .scorelevelsprite {
+	width: 57px;
+	height: 57px;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	overflow: hidden;
+	margin-left: 9px;
+	margin-top: 6px;
+	border-top-left-radius: 0px 0px;
+	border-top-right-radius: 0px 0px;
+	border-bottom-left-radius: 0px 0px;
+	border-bottom-right-radius: 0px 0px;
+	visibility: hidden;
+}
+
+.scorelevelsprite {
+	width: 100px;
+	height: 65px;
+}
+
+.pAvatarimg {
+	width: 57px;
+	position: absolute;
+}
+
+.scorelevelspriteimg {
+	width: 100px;
+	position: absolute;
+}
+
+
+#winAvatar {
+	visibility: visible;
+	height: 88px;
+	width: 85px;
+	margin-left: 117px;
+	margin-top: 1px;
+}
+
+#winAvatarimg {
+	width: 85px;
+}
+
+#TLnextAvatar {
+	top: 110px;
+	margin-left: 135px;
+}
+
+#firstname {
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	display: block;
+	position: absolute;
+	margin-top: 0px;
+	width: 78px;
+	top: 185px;
+	left: 41px;
+}
+
+#lastname {
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	display: block;
+	margin-top: 0px;
+	position: absolute;
+	width: 78px;
+	left: 195px;
+	top: 185px;
+}
+
+#users {
+	display: none;
+	position: relative;
+	background-attachment: fixed;
+	background-image: url(Images/bg_01.jpg);
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#columnLayout22 {
+	display: table;
+	overflow: hidden;
+	height: 40px;
+	position: absolute;
+	margin-top: 0px;
+	right: 318px;
+	bottom: 420px;
+	width: 312px;
+	left: 4px;
+	top: 168px;
+	text-align: center;
+}
+
+#text48 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12px;
+	left: 260px;
+	height: 87px;
+	width: 54px;
+	top: 170px;
+	visibility: hidden;
+}
+
+#mainGameDesc {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 12px;
+	left: 180px;
+	height: 87px;
+	width: 84px;
+	top: 290px;
+	visibility: hidden;
+}
+
+#GuessSelection {
+	display: none;
+	position: relative;
+	width: 320px;
+	background-image: url(Images/Pondering_bg.jpg);
+	min-height: 416px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#EstimationResults {
+	display: none;
+	position: relative;
+	width: 320px;
+	background-image: url(Images/estimationbg2.jpg);
+	visibility: visible;
+	min-height: 416px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#ContestBegun {
+	display: none;
+	position: relative;
+	width: 320px;
+	background-image: url(Images/Contest_Begun_Bg.jpg);
+	min-height: 416px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#text49 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 77px;
+	top: 243px;
+	height: 17px;
+	width: 161px;
+}
+
+#text50 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 87px;
+	top: 300px;
+}
+
+#adjectivepopup {
+	height: 20px;
+	-webkit-appearance: menulist-button;
+	position: absolute;
+	margin-top: 0px;
+	width: 113px;
+	left: 9px;
+	top: 270px;
+}
+
+#nounpopup {
+	height: 20px;
+	-webkit-appearance: menulist-button;
+	position: absolute;
+	margin-top: 0px;
+	left: 137px;
+	width: 151px;
+	top: 270px;
+}
+
+#checkbox {
+	width: 80px;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	height: 18px;
+	position: absolute;
+	margin-top: 0px;
+	left: 15px;
+	top: 359px;
+}
+
+#div2 {
+	position: absolute;
+	text-align: left;
+	vertical-align: middle;
+	top: 0px;
+	font-size: 15px;
+	left: 20px;
+	right: -103px;
+	bottom: -3px;
+}
+
+#estimatetimepopup {
+	height: 20px;
+	-webkit-appearance: menulist-button;
+	position: absolute;
+	margin-top: 0px;
+	width: 142px;
+	left: 73px;
+	top: 326px;
+}
+
+#text51 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 17px;
+	font-weight: 700;
+	top: 57px;
+	left: 14px;
+	right: 12px;
+}
+
+#estimatePlayerName1 {
+	top: 115px;
+}
+
+#estimatePlayerName2 {
+	top: 185px;
+}
+
+#estimatePlayerName3 {
+	top: 255px;
+}
+
+#estimatePlayerName4 {
+	top: 325px;
+}
+
+#div3 {
+	display: table-cell;
+	min-height: 0px;
+	right: 0px;
+	bottom: 442px;
+	width: 320px;
+	position: absolute;
+	top: 2px;
+	left: 18px;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0px;
+}
+
+#div9 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 11%;
+}
+
+#div11 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 13%;
+}
+
+#div12 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 12%;
+}
+
+#OpenestimatePlayerName1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 76px;
+	top: 123px;
+	right: 97px;
+	bottom: 302px;
+	visibility: hidden;
+}
+
+#OpenPlayerEstimate1 {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	width: 42px;
+	left: 200px;
+	top: 121px;
+	visibility: hidden;
+}
+
+#OpenPlayerEstimate2 {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	width: 42px;
+	left: 200px;
+	top: 187px;
+	visibility: hidden;
+}
+
+#OpenestimatePlayerName2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 76px;
+	top: 189px;
+	right: 97px;
+	bottom: 236px;
+	visibility: hidden;
+}
+
+#OpenestimatePlayerName3 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 76px;
+	top: 265px;
+	right: 97px;
+	bottom: 160px;
+	visibility: hidden;
+}
+
+#OpenPlayerEstimate3 {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	width: 42px;
+	left: 200px;
+	top: 264px;
+	visibility: hidden;
+}
+
+#OpenestimatePlayerName4 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	left: 76px;
+	top: 337px;
+	right: 97px;
+	bottom: 88px;
+	visibility: hidden;
+}
+
+#OpenPlayerEstimate4 {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	width: 42px;
+	left: 200px;
+	top: 335px;
+	visibility: hidden;
+}
+
+#text118 {
+	font-weight: 700;
+	top: 145px;
+}
+
+#text120 {
+	text-align: center;
+	top: 59px;
+}
+
+#text121 {
+	font-weight: 700;
+	top: 77px;
+	text-align: center;
+}
+
+#text122 {
+	text-align: center;
+	top: 94px;
+}
+
+#text123 {
+	font-weight: 700;
+	text-align: center;
+	top: 112px;
+}
+
+#text124 {
+	left: 22px;
+	top: 169px;
+}
+
+#text125 {
+	color: rgb(67, 133, 75);
+	text-align: center;
+	top: 385px;
+}
+
+#text52 {
+	left: 22px;
+	top: 244px;
+}
+
+#text83 {
+	left: 22px;
+	top: 287px;
+}
+
+#text126 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 90px;
+	top: 122px;
+}
+
+#text127 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-weight: 700;
+	text-align: center;
+	left: 74px;
+	top: 283px;
+	right: 47px;
+	bottom: 157px;
+}
+
+#estimation {
+	margin-right: 0px;
+	min-height: 0px;
+}
+
+#estimationstack {
+	margin-right: 0px;
+	width: 320px;
+	min-height: 0px;
+}
+
+#text140 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 72px;
+	left: 24px;
+}
+
+#text144 {
+	left: 209px;
+	top: 71px;
+}
+
+#PlayerEstimated1 {
+	left: 100px;
+	top: 134px;
+}
+
+
+#PlayerEstimated2 {
+	left: 100px;
+	top: 153px;
+}
+
+#PlayerEstimated3 {
+	left: 100px;
+	top: 172px;
+}
+
+#PlayerEstimated4 {
+	left: 100px;
+	top: 193px;
+}
+
+#text146 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-weight: 700;
+	left: 94px;
+	top: 217px;
+}
+
+#winnerExplanation {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 15px;
+	left: 24px;
+	color: rgb(60, 135, 225);
+	top: 322px;
+	right: 5px;
+	visibility: hidden;
+}
+
+#Cars {
+	width: 200px;
+	height: 146px;
+	position: absolute;
+	margin-top: 0px;
+	left: 0px;
+	top: 300px;
+	visibility: hidden;
+}
+
+#colon3 {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	color: rgb(255, 255, 255);
+	top: 60px;
+	left: 203px;
+	right: -24px;
+	bottom: -75px;
+}
+
+#countdown-time {
+	position: absolute;
+	width: 183px;
+	top: 2px;
+	left: -101px;
+}
+
+#timer {
+	position: absolute;
+	height: 47px;
+	width: 90px;
+	top: 308px;
+	right: 84px;
+	margin-left: auto;
+	margin-
+	border-
+	border-width
+	:
+	1px;
+}
+
+#timer-colons {
+	visibility: visible;
+	top: 1px;
+	left: 0px;
+}
+
+#label-minutes {
+	position: absolute;
+	color: rgb(179, 179, 179);
+	width: 35px;
+	text-align: center;
+	top: 61px;
+	left: 67px;
+	font-size: 11px;
+}
+
+#label-seconds {
+	position: absolute;
+	color: rgb(179, 179, 179);
+	width: 35px;
+	text-align: center;
+	top: 61px;
+	left: 106px;
+	font-size: 11px;
+}
+
+#countdown-label {
+	position: absolute;
+	height: 20px;
+	width: 90px;
+	font-size: 22px;
+	top: 22px;
+	left: auto;
+	padding: 42px;
+}
+
+#timer-bg {
+	position: absolute;
+	height: 60px;
+	top: 45px;
+	left: 50px;
+	width: 94px;
+	border-top-width: 0px;
+	border-right-width: 7px;
+	border-bottom-width: 0px;
+	border-left-width: 7px;
+}
+
+#SecretCover1 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	left: 185px;
+	top: 95px;
+	visibility: hidden;
+}
+
+#SecretCover2 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	top: 169px;
+	left: 185px;
+	visibility: hidden;
+}
+
+#SecretCover3 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	left: 185px;
+	top: 243px;
+	visibility: hidden;
+}
+
+#SecretCover4 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	top: 314px;
+	left: 185px;
+	visibility: hidden;
+}
+
+#winnerAnnouncement {
+	font-weight: 700;
+	left: 24px;
+	visibility: hidden;
+	top: 292px;
+}
+
+#People {
+	width: 177px;
+	height: 171px;
+	position: absolute;
+	margin-top: 0px;
+	top: 305px;
+	left: -12px;
+	visibility: hidden;
+}
+
+#Restaurants {
+	height: 136px;
+	position: absolute;
+	margin-top: 0px;
+	top: 305px;
+	width: 199px;
+	left: 1px;
+	visibility: hidden;
+}
+
+#Trees {
+	width: 184px;
+	height: 140px;
+	position: absolute;
+	margin-top: 0px;
+	left: 0px;
+	visibility: hidden;
+	top: 314px;
+}
+
+#Clouds {
+	width: 191px;
+	height: 130px;
+	position: absolute;
+	margin-top: 0px;
+	top: 305px;
+	left: 5px;
+	visibility: hidden;
+}
+
+#GasStations {
+	width: 192px;
+	height: 149px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	top: 310px;
+	left: 5px;
+}
+
+#text84 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	top: 55px;
+	height: 30px;
+}
+
+#columnLayout23 {
+	display: table;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	right: 318px;
+	bottom: 420px;
+	width: 312px;
+	text-align: center;
+	height: 30px;
+	left: 4px;
+	top: 153px;
+}
+
+#columnLayout25 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 54%;
+}
+
+#columnLayout102 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 46%;
+}
+
+#text91 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 24px;
+	top: 33px;
+	left: 66px;
+	right: 49px;
+	font-family: 'Marker Felt';
+}
+
+#text37 {
+	left: 212px;
+	top: 245px;
+}
+
+#mainGameLabel {
+	left: 115px;
+	top: 315px;
+}
+
+#box {
+	position: absolute;
+	margin-top: 0px;
+	background- top: 351px;
+	left: 197px;
+	height: 60px;
+	width: 105px;
+	border- border-style: solid;
+	border-width: 1px;
+}
+
+#button8 {
+	width: 101px;
+	left: 205px;
+	top: 375px;
+}
+
+#text5 {
+	text-align: center;
+	position: absolute;
+	width: 100px;
+	left: 114px;
+	top: 106px;
+	visibility: hidden;
+}
+
+.histavatarsprite, .avatarsprite, .carsprite {
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	overflow: hidden;
+	margin-top: 0px;
+	width: 30px;
+	height: 30px;
+	visibility: hidden;
+}
+
+.histavatarsprite {
+	left: 170px;
+}
+
+.histavatarspriteimg, .avatarspriteimg, .carspriteimg {
+	width: 30px;
+	position: absolute;
+}
+
+.avatarsprite {
+	width: 57px;
+	height: 57px;
+	visibility: visible;
+}
+
+.avatarspriteimg {
+	width: 57px;
+}
+
+.avatarsprite li, .histavatarsprite li, .spritelist {
+	margin: 0; padding: 0; list-style: none;
+}
+
+.carsprite {
+	width: 127px;
+	height: 50px;
+	left: 300px;
+}
+
+.carspriteimg {
+	width: 127px;
+}
+
+.avatarSelect {
+	position: absolute;
+	margin-top: 0px;
+	height: 50px;
+	overflow: hidden;
+	width: 50px;
+	left: 55px;
+	border-style: dotted;
+	border-width: 1px;
+}
+
+.avatarSelectimg {
+	width: 50px;
+	position: absolute;
+}
+
+.guessAvatar, .hofAvatar {
+	width: 57px;
+	height: 57px;
+	overflow: hidden;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	visibility: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 9px;
+}
+
+.hofAvatar {
+	position: relative;
+}
+
+.guessAvatarimg, .hofAvatarimg {
+	width: 57px;
+	position: absolute;
+}
+
+.ESspriteDigits {
+	position: absolute;
+	text-align: right;
+	overflow: hidden;
+	font-weight: 700;
+	left: 145px;
+	top: 27px;
+	width: 30px;
+	height: 50px;
+}
+
+.ESspriteDigitsimg {
+	height: 45px;
+	position: absolute;
+}
+
+#esminones {
+	left: 175px;
+}
+
+#essectens {
+	left: 210px;
+}
+
+#essecones {
+	left: 240px;
+}
+
+#avatar1 {
+	top: 132px;
+}
+
+#avatar2 {
+	top: 188px;
+}
+
+#avatar3 {
+	top: 246px;
+	visibility: hidden;
+}
+
+#avatar4 {
+	top: 302px;
+	visibility: hidden;
+}
+
+#histavatar1, #histchallenge1 {
+	top: 110px;
+}
+
+#histavatar2, #histchallenge2 {
+	top: 146px;
+}
+
+#histavatar3, #histchallenge3 {
+	top: 182px;
+}
+
+#histavatar4, #histchallenge4 {
+	top: 218px;
+}
+
+#histavatar5, #histchallenge5 {
+	top: 254px;
+}
+
+#histavatar6, #histchallenge6 {
+	top: 290px;
+}
+
+#histavatar7, #histchallenge7 {
+	top: 326px;
+}
+
+#histavatar8, #histchallenge8 {
+	top: 362px;
+}
+
+.tlindicator {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+
+#indicator10, #indicator20, #indicator30, #indicator40, #indicator50, #indicator60, #indicator70, #indicator80 {
+	left: 206px;
+}
+
+#indicator11, #indicator21, #indicator31, #indicator41, #indicator51, #indicator61, #indicator71, #indicator81 {
+	left: 232px;
+}
+
+#indicator12, #indicator22, #indicator32, #indicator42, #indicator52, #indicator62, #indicator72, #indicator82 {
+	left: 259px;
+}
+
+#indicator10, #indicator11, #indicator12 {
+	top: 110px;
+}
+
+#indicator20, #indicator21, #indicator22 {
+	top: 146px;
+}
+
+#indicator30, #indicator31, #indicator32 {
+	top: 182px;
+}
+
+#indicator40, #indicator41, #indicator42 {
+	top: 218px;
+}
+
+#indicator50, #indicator51, #indicator52 {
+	top: 254px;
+}
+
+#indicator60, #indicator61, #indicator62 {
+	top: 290px;
+}
+
+#indicator70, #indicator71, #indicator72 {
+	top: 326px;
+}
+
+#indicator80, #indicator81, #indicator82 {
+	top: 362px;
+}
+
+#avatarSelect {
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	min-height: 416px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#players1 {
+	display: none;
+	position: relative;
+	font-size: 16px;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#text129 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	height: 35px;
+	width: 269px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: center;
+	left: 25px;
+	top: 55px;
+}
+
+#text134 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 13px;
+	width: 311px;
+	height: 34px;
+	position: absolute;
+	left: 7px;
+	margin-top: 0px;
+	top: 90px;
+}
+
+#button16 {
+	font-weight: 700;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 0px;
+	position: absolute;
+	width: 82px;
+	height: 22px;
+	font-size: 10px;
+	left: 227px;
+	top: 348px;
+}
+
+#forwardButtonEst1 {
+	width: 195px;
+	left: 104px;
+	top: 380px;
+}
+
+#gameSelect1 {
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	background-attachment: fixed;
+	min-height: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+#scorestxt {
+	position: relative;
+	width: 320px;
+	margin-left: 0px;
+}
+
+#avatar9 {
+	left: 30px;
+	top: 92px;
+}
+
+#avatar10 {
+	left: 30px;
+	top: 162px;
+}
+
+#avatar11 {
+	left: 30px;
+	top: 233px;
+}
+
+#avatar12 {
+	top: 306px;
+	left: 30px;
+}
+
+#avatar13 {
+	top: 92px;
+	left: 130px;
+}
+
+#avatar14 {
+	top: 162px;
+	left: 130px;
+}
+
+#avatar15 {
+	top: 233px;
+	left: 130px;
+}
+
+#avatar16 {
+	top: 306px;
+	left: 130px;
+}
+
+#avatar17 {
+	top: 92px;
+	left: 230px;
+}
+
+#avatar18 {
+	top: 162px;
+	left: 230px;
+}
+
+#avatar19 {
+	top: 233px;
+	left: 230px;
+}
+
+#avatar20 {
+	top: 306px;
+	left: 230px;
+}
+
+#TLradioButton {
+	position: absolute;
+	left: 183px;
+	top: 294px;
+}
+
+#TLradioButton1 {
+	position: absolute;
+	left: 183px;
+	top: 324px;
+}
+
+#text104 {
+	font-size: 17px;
+	position: absolute;
+	top: 294px;
+	left: 210px;
+}
+
+#text105 {
+	font-size: 17px;
+	position: absolute;
+	top: 325px;
+	left: 210px;
+}
+
+#challengemodetext2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 15px;
+	visibility: hidden;
+	left: 104px;
+	top: 223px;
+	height: 80px;
+	right: 5px;
+}
+
+#challengemodeimage {
+	position: absolute;
+	margin-top: 0px;
+	width: 87px;
+	height: 87px;
+	top: 213px;
+	left: 10px;
+	visibility: hidden;
+}
+
+#challengemodetext1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 15px;
+	visibility: hidden;
+	top: 152px;
+	height: 60px;
+	left: 58px;
+	right: 17px;
+}
+
+#text6 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 58px;
+	font-size: 15px;
+	top: 122px;
+	right: 161px;
+	bottom: 319px;
+}
+
+#lastGuessNum {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 700;
+	font-size: 23px;
+	letter-spacing: 65px;
+	position: absolute;
+	margin-top: 0px;
+	height: 26px;
+	top: 262px;
+	width: 245px;
+	left: 75px;
+}
+
+#lastchallengelight {
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 0px;
+	position: absolute;
+	width: 111px;
+	height: 111px;
+	top: 251px;
+	left: 104px;
+	visibility: hidden;
+}
+
+.histchallengespriteimg {
+	width: 35px;
+	position: absolute;
+}
+
+.histchallengesprite {
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	overflow: hidden;
+	position: absolute;
+	margin-top: -4px;
+	width: 35px;
+	height: 35px;
+	visibility: hidden;
+	left: 237px;
+}
+
+.histchallengesprite li {
+	margin: 0; padding: 0; list-style: none;
+}
+
+#lastchallengelightimg {
+	width: 111px;
+}
+
+.tlHistLabels {
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 0px;
+	margin-right: 2px;
+	min-height: 26px;
+	position: absolute;
+	margin-top: 0px;
+	font-weight: 700;
+	right: 327px;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 26px;
+	text-align: left;
+	letter-spacing: 17px;
+	width: 109px;
+	left: 217px;
+}
+
+.tlHistInds {
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-left: 0px;
+	margin-right: 2px;
+	min-height: 26px;
+	position: absolute;
+	margin-top: 0px;
+	font-weight: 700;
+	right: 327px;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 26px;
+	text-align: right;
+	width: 33px;
+	left: 198px;
+}
+
+#EHist1, #DHist1 {
+	top: 114px;
+}
+
+#EHist2, #DHist2 {
+	top: 150px;
+}
+
+#EHist3, #DHist3 {
+	top: 186px;
+}
+
+#EHist4, #DHist4 {
+	top: 222px;
+}
+
+#EHist5, #DHist5 {
+	top: 258px;
+}
+
+#EHist6, #DHist6 {
+	top: 294px;
+}
+
+#EHist7, #DHist7 {
+	top: 330px;
+}
+
+#EHist8, #DHist8 {
+	top: 367px;
+}
+
+#PCradio1 {
+	width: 80px;
+	font-family: HelveticaNeue;
+	height: 19px;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 13pt;
+	left: 143px;
+	top: 87px;
+}
+
+#PCradio2 {
+	font-family: HelveticaNeue;
+	height: 19px;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 13pt;
+	width: 124px;
+	left: 143px;
+	top: 128px;
+}
+
+#PCradio3 {
+	width: 80px;
+	font-family: HelveticaNeue;
+	height: 19px;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 13pt;
+	left: 143px;
+	top: 170px;
+}
+
+#div5 {
+	position: absolute;
+	top: 2px;
+	left: 18px;
+	text-align: left;
+	vertical-align: middle;
+	right: -26px;
+	bottom: -13px;
+}
+
+#div6 {
+	position: absolute;
+	top: 2px;
+	left: 18px;
+	text-align: left;
+	vertical-align: middle;
+	right: -32px;
+	bottom: -13px;
+}
+
+#PCmultValue {
+	height: 20px;
+	-webkit-appearance: menulist-button;
+	position: absolute;
+	margin-top: 0px;
+	width: 44px;
+	left: 263px;
+	top: 173px;
+}
+
+#br_message {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	margin-top: 0px;
+	position: absolute;
+	left: 21px;
+	top: 56px;
+	right: 7px;
+}
+
+#map_start {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	left: 17px;
+	top: 45px;
+}
+
+#map_destination {
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 185px;
+	position: absolute;
+	left: 14px;
+	margin-top: 0px;
+	font-size: 14px;
+	top: 98px;
+}
+
+#map_canvas {
+	height: 330px;
+	position: absolute;
+	left: 0px;
+	margin-top: 0px;
+	top: 129px;
+}
+
+#forwardButton {
+	font-weight: 700;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	width: 66px;
+	height: 28px;
+	left: 229px;
+	top: 95px;
+}
+
+#title5 {
+	position: relative;
+}
+
+.title {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 22pt;
+	margin-left: 60px;
+	font-family: 'Marker Felt';
+	letter-spacing: 1px;
+	margin-top: 10px;
+	height: 30px;
+	width: 260px;
+	margin-right: 0px;
+}
+
+#title13, #vstarttitle, #vvPassTitle, #vvQTitle, #vvFinishTitle, #text119, #text147, #estSecTitle, #estOpenTitle, #estBonTitle, #estBonResTitle {
+	color: white;
+}
+
+#title5, #title6, #title8, #title9, #title10, #title12, #tlInstrTitle {
+	color: yellow;
+}
+
+#halltitle {
+	position: relative;
+}
+
+#hallplayers {
+	position: relative;
+}
+
+.hofpname, .hofpscore, .hofrank {
+	margin-top: 23px;
+	font-size: 18px;
+}
+
+.hofrank {
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+.scoresLeftColumn, .hofLeftColumn{
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 23.12%;
+}
+
+.hofLeftColumn {
+	width: 27%;	
+}
+
+.scoresNameColumn, .hofNameColumn {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 25.31%;
+}
+
+.hofNameColumn {
+	width: 45%;	
+}
+
+.scoresCarColumn {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 35.31%;
+}
+
+.scoresPointColumn, .hofPointColumn {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.scoresRankColumn, .hofRankColumn {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.hofRankColumn {
+	width: 5%;
+}
+
+
+#player2,#player3,#player4 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	margin-left: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: left;
+	font-weight: 700;
+	font-size: 12pt;
+	margin-top: 25px;
+	margin-right: 0px;
+	min-height: 20px;
+}
+
+#psp2txt2,#psp2txt3 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 12pt;
+	margin-left: 0px;
+	margin-top: 23px;
+	width: 320px;
+	margin-right: 0px;
+	height: 20px;
+}
+
+#psp2txt3 {
+	position: absolute;
+	top: 65px;
+}
+
+#PCnextName,#TLnextName {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: relative;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	text-align: center;
+	font-size: 12pt;
+	margin-left: 0px;
+	margin-top: 14px;
+	width: 320px;
+	margin-right: 0px;
+	height: 20px;
+}
+
+#TLnextName {
+	top: 160px;
+	left: 5px;
+}
+
+#MakeEstimatesSecret,#MakeEstimatesOpen,#EstimationHints {
+	display: none;
+	position: relative;
+	width: 320px;
+	background-image: url(Images/estimationbg2.jpg);
+	min-height: 460px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#TLpassScreen1,#estimation1,#MakeEstimatesSecret1 {
+	display: block;
+}
+
+#div14,#div16 {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	width: 8%;
+}
+
+#EstimateError, #EstimateError1, #EstimateError2, #OpenEstimateError {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 15px;
+	color: red;
+	font-weight: 700;
+	left: 14px;
+	top: 378px;
+	right: 16px;
+	text-align: center;
+	visibility: hidden;
+}
+
+#EstimateError, #OpenEstimateError {
+	top: 8px;
+	left: 70px;
+}
+
+#text97,#text98 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-right: 0px;
+	margin-left: 0px;
+	min-height: 20px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	top: 150px;
+	left: 42px;
+}
+
+#text98 {
+	left: 197px;
+}
+
+#api_view1,#api_view2 {
+	min-height: 416px;
+	display: none;
+	position: relative;
+	background-image: url(Images/bg_01.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.lozengeBtn {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+}
+
+#forwardButton1 {
+	top: 233px;
+	left: 128px;
+	width: 85px;
+}
+
+#button49 {
+	top: 380px;
+	left: 118px;
+	width: 92px;
+}
+
+#button31 {
+	width: 83px;
+	top: 380px;
+	left: 216px;
+}
+
+#buttonChangePlayers {
+	width: 92px;
+	top: 380px;
+	left: 20px;
+}
+
+#buttonHallOfFame {
+	width: 115px;
+	top: 10px;
+	left: 200px;
+}
+
+#button21 {
+	top: 366px;
+	left: 110px;
+	width: 110px;
+}
+
+
+#psp2txt2 {
+	position: absolute;
+	margin-top: 0px;
+	top: 50px;
+	left: 63px;
+	width: auto;
+}
+
+#PCnextName {
+	left: 0px;
+	top: 145px;
+	margin-top: 0px;
+}
+
+#forwardButton2 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 171px;
+	left: 106px;
+	width: 106px;
+}
+
+#forwardButton3 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 95px;
+	top: 211px;
+	left: 162px;
+}
+
+#button3 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 151px;
+	left: 202px;
+	height: 62px;
+	width: 62px;
+	font-size: 22px;
+}
+
+#button9 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	left: 202px;
+	top: 212px;
+	font-size: 22px;
+	width: 62px;
+	height: 61px;
+}
+
+#backButton11 {
+	top: 134px;
+	left: 5px;
+}
+
+#forwardButton4, #forwardButton5 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 375px;
+	width: 135px;
+	left: 175px;
+}
+
+#button7, #button10 {
+	top: 375px;
+	width: 152px;
+	left: 9px;
+}
+
+#tlinstrbtn {
+	width: 152px;
+	top: 360px;
+	left: 30px;
+}
+
+#rectangleShape {
+	position: absolute;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	top: 151px;
+	width: 117px;
+	height: 121px;
+	left: 83px;
+	-webkit-border-image: url(Parts/Images/rectangleShape.png) 0 2 0 2
+		stretch stretch;
+}
+
+#EstimateCounter1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	text-align: center;
+	padding: 7px;
+	font-size: 56px;
+	left: 2px;
+	top: 23px;
+	right: 2px;
+	bottom: 22px;
+}
+
+#button37 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 30px;
+	font-size: 20px;
+	top: 62px;
+	left: 56px;
+}
+
+#button37 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	margin-top: 0px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 167px;
+	top: 62px;
+}
+
+#button38 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	height: 31px;
+	width: 30px;
+	font-size: 20px;
+	left: 167px;
+	top: 91px;
+}
+
+#rectangleShape1 {
+	position: absolute;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	height: 59px;
+	width: 50px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	top: 62px;
+	left: 115px;
+	-webkit-border-image: url(Parts/Images/rectangleShape1.png) 0 2 0 2
+		stretch stretch;
+}
+
+#EstimateCounter2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 22px;
+	left: 3px;
+	top: 7px;
+	text-align: center;
+	padding: 7px;
+	right: 1px;
+	bottom: 8px;
+}
+
+#forwardButtonEst2 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	position: absolute;
+	margin-top: 0px;
+	width: 102px;
+	top: 370px;
+	left: 208px;
+}
+
+#button15 {
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 91px;
+	opacity: 1;
+	color: rgb(51, 51, 51);
+	position: absolute;
+	left: 113px;
+	top: 255px;
+	margin-top: 0px;
+}
+
+#forwardButton6 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 60px;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 360px;
+	left: 234px;
+}
+
+#button11 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 60px;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	left: 60px;
+	top: 133px;
+}
+
+#button {
+	top: 350px;
+	width: 100px;
+	left: 38px;
+}
+
+#button4 {
+	width: 93px;
+	left: 116px;
+	top: 370px;
+}
+
+#button6 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 120px;
+	left: 99px;
+	top: 301px;
+}
+
+#ambutton1 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 71px;
+	margin-top: 0px;
+	position: absolute;
+	top: 13px;
+	left: 6px;
+}
+
+#psrulesbutton2 {
+	width: 103px;
+	left: 197px;
+	top: 360px;
+}
+
+#button5 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	position: absolute;
+	margin-top: 0px;
+	top: 14px;
+	width: 74px;
+	left: 236px;
+}
+
+#br_primeButton1 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	position: absolute;
+	margin-top: 0px;
+	height: 87px;
+	font-size: 17px;
+	left: 0px;
+	top: 319px;
+	width: 130px;
+}
+
+#br_notPrimeButton1 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	position: absolute;
+	margin-top: 0px;
+	height: 87px;
+	font-size: 17px;
+	left: 189px;
+	top: 319px;
+	width: 130px;
+}
+
+.backButton {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	white-space: nowrap;
+	width: 70px;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	top: 10px;
+	left: 15px;
+}
+
+#destination_miles {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	width: 279px;
+	top: 63px;
+	left: 23px;
+	height: 82px;
+}
+
+#forwardButton7 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 84px;
+	left: 213px;
+	top: 205px;
+}
+
+#SecretCover6 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	left: 185px;
+	top: 170px;
+}
+
+#SecretCover8 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	left: 185px;
+	top: 310px;
+}
+
+.secretLozengeButton {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	height: 35px;
+	width: 62px;
+	left: 245px;
+	top: 153px;
+	opacity: 1;
+	visibility: hidden;
+	line-height: 15px;
+}
+
+.secretSkinnyLozengeButton {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	height: 35px;
+	width: 62px;
+	left: 245px;
+	top: 153px;
+	opacity: 1;
+	visibility: hidden;
+	line-height: 15px;
+}
+
+#button2, #button18 {
+	top: 113px;
+}
+
+#button39, #button19 {
+	top: 182px;
+}
+
+#button40, #button32 {
+	top: 252px;
+}
+
+#button41, #button20 {
+	top: 328px;
+}
+
+.estimatePlayerNameLabel {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	text-align: center;
+	left: 71px;
+	top: 115px;
+	width: 100px;
+	height: 20px;
+}
+
+#estimatePlayerName5, #estimatePlayerName9, #estimatePlayerName13 {
+	top: 115px;
+}
+
+#estimatePlayerName6, #estimatePlayerName10, #estimatePlayerName14 {
+	top: 185px;
+}
+
+#estimatePlayerName7, #estimatePlayerName11, #estimatePlayerName15 {
+	top: 255px;
+}
+
+#estimatePlayerName8, #estimatePlayerName12, #estimatePlayerName16 {
+	top: 325px;
+}
+
+#estimatePlayerName9, #estimatePlayerName10, #estimatePlayerName11, #estimatePlayerName12 {
+	width: 235px;
+	left: 85px;
+	text-align: left;
+}
+
+#SecretCover5 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	left: 185px;
+	top: 100px;
+}
+
+#EstimateAvatar1, #OpenEstimateAvatar1, #EstimateAvatar5, #EstimateAvatar9, #EstimateAvatar13, #vvEstimateAvatar1, #EstimateAvatar17 {
+	width: 57px;
+	height: 57px;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	visibility: hidden;
+	margin-top: 95px;
+}
+
+#EstimateAvatar17 {
+	margin-top: 125px;
+}
+
+#EstimateAvatar6, #EstimateAvatar7, #EstimateAvatar8, #EstimateAvatar10, #EstimateAvatar11, #EstimateAvatar12, #EstimateAvatar14, #EstimateAvatar15, #EstimateAvatar16, #vvEstimateAvatar2, #vvEstimateAvatar3, #vvEstimateAvatar4, #EstimateAvatar18, #EstimateAvatar19, #EstimateAvatar20, #EstimateAvatar2, #EstimateAvatar3, #EstimateAvatar4, #OpenEstimateAvatar2, #OpenEstimateAvatar3, #OpenEstimateAvatar4 {
+	width: 57px;
+	height: 57px;
+	display: block;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: relative;
+	margin-top: 15px;
+	visibility: hidden;
+}
+
+#EstimateAvatar18, #EstimateAvatar19, #EstimateAvatar20 {
+	margin-top: 5px;
+}
+
+.playerEstimateTextfield {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	width: 42px;
+	visibility: hidden;
+	left: 190px;
+	top: 115px;
+}
+
+#PlayerEstimate1, #PlayerEstimate5 {
+	top: 115px;
+}
+
+#PlayerEstimate2, #PlayerEstimate6 {
+	top: 185px;
+}
+
+#PlayerEstimate3, #PlayerEstimate7 {
+	top: 259px;
+}
+
+#PlayerEstimate4, #PlayerEstimate8 {
+	top: 331px;
+}
+
+#SecretCover7 {
+	width: 130px;
+	height: 50px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	left: 185px;
+	top: 240px;
+}
+
+#EstimateError1 {
+	right: 121px;
+	height: 40px;
+}
+
+#text2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	font-size: 17px;
+	font-weight: 700;
+	top: 45px;
+	left: 14px;
+	right: 12px;
+	bottom: 363px;
+}
+
+.bgPage {
+	display: none;
+	background-image: url(Images/bg_01.jpg);
+	position: relative;
+	min-height: 416px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#guessInput {
+	background-image: url(Images/traffic_bg_2.jpg);
+}
+
+
+#TLpassScreen {
+	background-image: url(Images/traffic_bg_2.jpg);
+}
+
+#text3 {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	height: 26px;
+	top: 46px;
+}
+
+#button42, #button43, #button48 {
+	font-weight: 700;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 101px;
+	position: absolute;
+	margin-top: 0px;
+	left: 205px;
+	top: 377px;
+}
+
+#button48 {
+	left: 224px;
+	width: 91px;
+}
+
+#miles_answer {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	top: 51px;
+	height: 40px;
+	font-size: 15px;
+}
+
+#winnerAvatar1 {
+	left: 9px;
+	top: 236px;
+}
+
+#winnerAvatar2 {
+	top: 236px;
+	left: 90px;
+}
+
+#winnerAvatar3 {
+	top: 236px;
+	left: 180px;
+}
+
+#winnerAvatar4 {
+	left: 258px;
+	top: 236px;
+}
+
+#estBonusResp {
+	visibility: visible;
+	top: 280px;
+}
+
+#estBonusAvatar, #estBonusResAvatar {
+	top: 50px;
+}
+
+.tFieldStump {
+	position: absolute;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	left: 162px;
+	width: 26px;
+	text-align: center;
+	visibility: hidden;
+}
+
+#PlayerEstimate9, #PlayerEstimate13 {
+	top: 100px;
+}
+
+#PlayerEstimate10, #PlayerEstimate14 {
+	top: 170px;
+}
+
+#PlayerEstimate11, #PlayerEstimate15 {
+	top: 240px;
+}
+
+#PlayerEstimate12, #PlayerEstimate16 {
+	top: 310px;
+}
+
+#PlayerEstimate13, #PlayerEstimate14, #PlayerEstimate15, #PlayerEstimate16 {
+	left: 245px;
+}
+
+.thinLongSecretButton {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	height: 20px;
+	width: 62px;
+	opacity: 1;
+	left: 200px;
+	visibility: hidden;
+}
+
+#button44 {
+	top: 130px;
+}
+
+#button45 {
+	top: 200px;
+}
+
+#button46 {
+	top: 270px;
+}
+
+#button47 {
+	top: 340px;
+}
+
+#mainHoursText {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 9px;
+	width: 306px;
+	top: 43px;
+	height: 84px;
+}
+
+.bigHorizSecretImg {
+	position: absolute;
+	margin-top: 0px;
+	left: 153px;
+	width: 165px;
+	height: 69px;
+	visibility: hidden;
+}
+
+#SecretCover9 {
+	top: 90px;
+}
+
+#SecretCover10 {
+	top: 160px;
+}
+
+#SecretCover11 {
+	top: 230px;
+}
+
+#SecretCover12 {
+	top: 300px;
+}
+
+#EstimateError2 {
+	left: 9px;
+	top: 407px;
+	right: 21px;
+	bottom: 13px;
+}
+
+#HoursCap1 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 141px;
+	visibility: hidden;
+	bottom: 321px;
+	right: 83px;
+	left: 200px;
+	text-align: center;
+}
+
+#inner_image57, #inner_image58, #inner_image59, #inner_image60 {
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+#MinsCap1 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 141px;
+	left: 281px;
+	right: 2px;
+	bottom: 321px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#MinsCap2 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 281px;
+	top: 214px;
+	right: 2px;
+	bottom: 248px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#HoursCap2 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 214px;
+	visibility: hidden;
+	bottom: 248px;
+	right: 83px;
+	left: 200px;
+	text-align: center;
+}
+
+#HoursCap4 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 363px;
+	visibility: hidden;
+	bottom: 99px;
+	right: 83px;
+	left: 200px;
+	text-align: center;
+}
+
+#MinsCap4 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 281px;
+	top: 363px;
+	right: 2px;
+	bottom: 99px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#MinsCap3 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 281px;
+	top: 290px;
+	right: 2px;
+	bottom: 172px;
+	visibility: hidden;
+	text-align: center;
+}
+
+#HoursCap3 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 290px;
+	visibility: hidden;
+	bottom: 172px;
+	right: 83px;
+	left: 200px;
+	text-align: center;
+}
+
+#title16 {
+	margin-top: 0px;
+	top: 11px;
+}
+
+#mins_hours_ans {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	font-size: 15px;
+	height: 44px;
+	top: 92px;
+}
+
+#mins_hours_exp {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	top: 46px;
+	height: 62px;
+}
+
+#estimatePlayerName17 {
+	top: 138px;
+	width: 200px;
+	height: 40px;
+}
+
+#estimatePlayerName18 {
+	top: 202px;
+	width: 200px;
+	height: 40px;
+}
+
+#estimatePlayerName19 {
+	top: 262px;
+	width: 200px;
+	height: 40px;
+}
+
+#estimatePlayerName20 {
+	top: 317px;
+	width: 200px;
+	height: 40px;
+}
+
+#timeSoFar {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 432px;
+	left: 5px;
+	height: 44px;
+	width: 129px;
+}
+
+#mainGameButton {
+	position: absolute;
+	top: 245px;
+	left: 125px;
+}
+
+#chart_canvas {
+	position: absolute;
+	margin-top: 0px;
+	top: 84px;
+	left: 0px;
+}
+
+#title17 {
+	margin-top: 0px;
+	left: 10px;
+	height: 31px;
+}
+
+#chart_desc {
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-weight: 400;
+	font-style: normal;
+	width: 284px;
+	position: absolute;
+	margin-top: 0px;
+	text-align: left;
+	left: 22px;
+	top: 46px;
+	height: 42px;
+}
+
+#button50 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 77px;
+	top: 377px;
+	left: 140px;
+}
+
+#destination_miles1 {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	width: 279px;
+	height: 100px;
+	left: 23px;
+	top: 139px;
+}
+
+#title18 {
+	height: 29px;
+	left: 0px;
+	top: 13px;
+	margin-top: 0px;
+}
+
+#forwardButton8 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 84px;
+	left: 213px;
+	top: 275px;
+}
+
+#button51 {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 146px;
+	left: 21px;
+	top: 275px;
+}
+
+#cont_message {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	margin-top: 0px;
+	width: 279px;
+	top: 63px;
+	left: 23px;
+	height: 65px;
+}
+
+#Trucks {
+	visibility: hidden;
+	height: 150px;
+	width: 320px;
+	position: absolute;
+	left: 0px;
+	top: 300px;
+	margin-top: 0px;
+}
+
+#Motorcycles {
+	-webkit-margin-top-collapse: collapse;
+	-webkit-margin-bottom-collapse: collapse;
+	margin-top: 0px;
+	width: 320px;
+	position: absolute;
+	left: 0px;
+	top: 305px;
+	bottom: 5px;
+	visibility: hidden;
+}
+
+#Houses {
+	margin-top: 0px;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	width: 320px;
+	height: 150px;
+	position: absolute;
+	left: 0px;
+	top: 291px;
+	visibility: hidden;
+}
+
+#MakeEstimatesSecret {
+	min-height: 416px;
+}
+
+#MakeEstimatesOpen {
+	min-height: 416px;
+}
+
+#EstimationHints {
+	min-height: 416px;
+}
+
+#inner_image2 {
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	position: absolute;
+	left: 227px;
+	width: 60px;
+	height: 60px;
+	top: 180px;
+}
+
+#victoryVanStart {
+	display: none;
+	position: relative;
+	min-height: 416px;
+}
+
+#vstartinstruct {
+	left: 124px;
+	top: 86px;
+	width: 200px;
+	height: 120px;
+}
+
+#vstartnext {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 367px;
+	left: 217px;
+	width: 61px;
+}
+
+#vvestimatePlayerName4 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	text-align: center;
+	left: 71px;
+	top: 322px;
+	right: 94px;
+	bottom: 103px;
+}
+
+#vvestimatePlayerName3 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	text-align: center;
+	left: 71px;
+	top: 247px;
+	right: 102px;
+	bottom: 178px;
+}
+
+
+#vvdriversAge {
+	top: 375px;
+	width: 42px;
+	left: 158px;
+	visibility: visible;
+}
+
+#vvPlayerEstimate1, #vvPlayerEstimate2, #vvPlayerEstimate3, #vvPlayerEstimate4 {
+	width: 42px;
+	left: 239px;
+}
+
+#vvPlayerEstimate1 {
+	top: 106px;
+}
+
+#vvPlayerEstimate2 {
+	top: 176px;
+}
+
+#vvPlayerEstimate3 {
+	top: 245px;
+}
+
+#vvPlayerEstimate4 {
+	top: 320px;
+}
+
+#vvestimatePlayerName1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	text-align: center;
+	left: 72px;
+	top: 108px;
+	right: 101px;
+	bottom: 317px;
+}
+
+#vvestimatePlayerName2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-margin-top-collapse: separate;
+	-webkit-margin-bottom-collapse: separate;
+	font-size: 15px;
+	position: absolute;
+	margin-top: 0px;
+	visibility: hidden;
+	text-align: center;
+	left: 71px;
+	top: 178px;
+	right: 102px;
+	bottom: 247px;
+}
+
+#EstimateError30 {
+	text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: 700;
+	left: 50px;
+	top: 357px;
+	text-align: center;
+    visibility: hidden;
+}
+
+#vvPassStatsCorrect {
+	top: 340px;
+	left: 210px;
+	width: 110px;
+}
+
+#vvPassStatsPoints {
+	top: 350px;
+	left: 200px;
+	visibility: hidden;
+}
+
+#vvagequestionfwd {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 60px;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 375px;
+	left: 240px;
+}
+
+#vvQuestionTemplate {
+	display: none;
+	position: relative;
+	min-height: 416px;
+}
+
+#vvPassPhoneTo {
+	display: none;
+	position: relative;
+	min-height: 416px;
+}
+
+#vvSocialQuesitonTemplate {
+	min-height: 416px;
+	display: none;
+	position: relative;
+}
+
+#vvGameFinished {
+	display: none;
+	position: relative;
+	min-height: 416px;
+}
+
+#vvnextAvatar {
+	left: 230px;
+	top: 257px;
+}
+
+#vvPassButton {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 60px;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	top: 370px;
+	left: 135px;
+}
+
+#vvagemessage {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 10px;
+	top: 58px;
+	width: 301px;
+	height: 40px;
+}
+
+#vvPassTo {
+	width: 208px;
+	text-align: center;
+	height: 20px;
+	top: 239px;
+	left: 140px;
+}
+
+#vvPassPlayerName {
+	top: 320px;
+	width: 97px;
+	font-weight: 900;
+	left: 210px;
+	text-align: center;
+}
+
+#vvPassRightWrong {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	height: 20px;
+	width: 104px;
+	left: 106px;
+	top: 54px;
+	visibility: hidden;
+}
+
+#vvPassLastProblem {
+	color: black;
+	font-size: 13px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 77px;
+	left: 15px;
+	height: 90px;
+	width: 291px;
+}
+
+#vvPassYourAnswer {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 15px;
+	top: 168px;
+	width: 289px;
+	height: 23px;
+}
+
+#vvPassCorrectAnswer {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 194px;
+	left: 15px;
+	height: 20px;
+	width: 291px;
+}
+
+#vvQTitle {
+	width: 200px;
+}
+
+#vvQQuestion {
+	left: 16px;
+	top: 105px;
+	width: 289px;
+	height: 116px;
+}
+
+#vvQAnswerText {
+	position: absolute;
+	width: 70px;
+	color: black;
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	top: 279px;
+	left: 213px;
+}
+
+#vvQAnswerLabel {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	height: 20px;
+	width: 70px;
+	top: 257px;
+	left: 213px;
+}
+
+.vvqrad {
+	font-family: HelveticaNeue;
+	font-size: 10pt;
+	height: 19px;
+	position: absolute;
+	margin-top: 0px;
+	left: 45px;
+	width: 165px;
+}
+
+#vvQuestionRadio {
+	top: 206px;
+}
+
+#vvQuestionRadio1 {
+	top: 235px;
+}
+
+#vvQuestionRadio2 {
+	top: 264px;
+}
+
+#vvQuestionRadio3 {
+	top: 292px;
+}
+
+#vvQuestionRadio4 {
+	top: 322px;
+}
+
+.vvqradiv {
+	position: absolute;
+	top: -2px;
+	left: -25px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#vvqradiodiv {
+	right: -3px;
+}
+
+#vvQSendAnswer {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 109px;
+	top: 365px;
+	left: 185px;
+}
+
+.paraText17pt {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 30px;
+	width: 260px;
+}
+
+.paraText15px {
+	color: black;
+	font-size: 15px;
+	text-overflow: clip;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 30px;
+	width: 260px;
+}
+
+#vvFinishMessage {
+	height: 20px;
+	top: 85px;
+}
+
+#vvFinishNumCorrect {
+	height: 60px;
+	top: 120px;
+}
+
+#vvFinishMVPText {
+	top: 171px;
+	left: 245px;
+}
+
+#vvFinishSpiritText {
+	top: 267px;
+	left: 215px;
+}
+
+#vvFinishMVP {
+	left: 235px;
+	top: 185px;
+}
+
+#vvFinishSpirit {
+	left: 235px;
+	top: 282px;
+}
+
+#vvFinishMVPName {
+	left: 215px;
+	width: 100px;
+	top: 240px;
+	text-align: center;
+}
+
+#vvFinishSpiritName {
+	left: 215px;
+	top: 341px;
+	width: 100px;
+	text-align: center;
+}
+
+#vvFinishContinue {
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 30px;
+	-webkit-dashboard-region: dashboard-region(control rectangle);
+	cursor: default;
+	-webkit-user-select: none;
+	position: absolute;
+	margin-top: 0px;
+	width: 84px;
+	top: 364px;
+	left: 217px;
+}
+
+#vvageDriverName {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	top: 370px;
+	left: 46px;
+	width: 111px;
+}
+
+#vvPassTimeLeftText, #vvQTimeLeftText {
+	color: black;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	left: 24px;
+	top: 356px;
+	height: 20px;
+	width: 74px;
+}
+
+#vvPassColon, #vvQColon {
+	top: 380px;
+	left: 56px;
+	height: 20px;
+	width: 10px;
+	text-align: center;
+}
+
+#vvPassMinID, #vvQMinID {
+	top: 380px;
+	left: 35px;
+	height: 20px;
+	width: 24px;
+}
+
+#vvPassSecsID, #vvQSecsID {
+	top: 380px;
+	left: 65px;
+	height: 20px;
+	width: 24px;
+}
+
+.vvTimer {
+	color: black;
+	font-size: 20px;
+	text-overflow: ellipsis;
+	font-weight: bold;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 0px;
+	text-align: center;
+}

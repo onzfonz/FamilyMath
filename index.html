@@ -1,0 +1,641 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html manifest="mobile/OfflineApp.manifest">
+<head>
+    <!--[if IE]><script>document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script><![endif]-->
+    <base href="mobile/">
+    <script id="DC_baseScript">if(navigator.userAgent.indexOf('AppleWebKit/') == -1) document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script>
+    <title>GoRoadTrip</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1 user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/Transitions.css">
+    <link rel="apple-touch-icon-precomposed" href="Images/WebClipIcon.png">
+    <!--<script type="text/javascript" src="http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js"></script>
+    <script type="text/javascript">firebug.env.height=100</script>-->
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../Parts/ButtonHandler.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jscharts.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+</script>
+</head>
+<body onload="load();">
+    <div id="stackLayout"><div id="homepage" onclick="startGame(event)">
+            <div id="text25" onclick="startGame(event)"></div>
+            <div id="text"></div>
+        </div><div id="gameSelect">
+            <div id="title4"></div>
+            <div id="text22"></div>
+            <img src="Images/traffic%20lightsjpg.jpg" id="img2" onclick="startTrafficLights(event)">
+            <div id="text23" onclick="startTrafficLights(event)"></div>
+            <img src="Images/pitstop.jpg" id="img3" onclick="gotoPitStop(event)">
+            <div id="text24"></div>
+            <div id="text32"></div>
+            <div id="text33"></div>
+            <img src="Images/prime_logo.jpg" id="img" onclick="startPrimeCars(event)">
+            <div id="text35" onclick="startPrimeCars(event)"></div>
+            <div id="text36"></div>
+            <img src="Images/Pondering_icon.jpg" id="inner_image2" onclick="startEstimStat(event)">
+            <div id="text37" onclick="startEstimStat(event)"></div>
+            <div id="text48"></div>
+            <div id="button31"></div>
+            <div id="button49"></div>
+        </div>
+        <div id="distances">
+            <div id="title1"></div>
+            <div id="text84"></div>
+            <div id="button8"></div>
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar5">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar6">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar7">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar8">
+            <div id="estimatePlayerName5"></div>
+            <input id="PlayerEstimate5" type="text" name="" value="">
+            <input id="PlayerEstimate6" type="text" name="" value="">
+            <input id="PlayerEstimate7" type="text" name="" value="">
+            <input id="PlayerEstimate8" type="text" name="" value="">
+            <div id="estimatePlayerName7"></div>
+            <div id="estimatePlayerName6"></div>
+            <div id="estimatePlayerName8"></div>
+            <div id="button2"></div>
+            <div id="button39"></div>
+            <div id="button40"></div>
+            <div id="button41"></div>
+            <div id="EstimateError1"></div>
+            <div id="SecretCover5">
+                <img src="../Images/secretcover.gif" id="inner_image70">
+            </div>
+            <div id="SecretCover6">
+                <img src="../Images/secretcover.gif" id="inner_image71">
+            </div>
+            <div id="SecretCover7">
+                <img src="../Images/secretcover.gif" id="inner_image72">
+            </div>
+            <div id="SecretCover8">
+                <img src="../Images/secretcover.gif" id="inner_image73">
+            </div>
+        </div>
+        <div id="mainHours">
+            <div id="title14"></div>
+            <div id="mainHoursText"></div>
+            <div id="button43"></div>
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar13">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar14">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar15">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar16">
+            <div id="estimatePlayerName13"></div>
+            <div id="estimatePlayerName14"></div>
+            <div id="estimatePlayerName15"></div>
+            <div id="estimatePlayerName16"></div>
+            <input id="PlayerEstimate9" type="text" name="" value="" maxlength="0">
+            <input id="PlayerEstimate10" type="text" name="" value="">
+            <input id="PlayerEstimate11" type="text" name="" value="">
+            <input id="PlayerEstimate12" type="text" name="" value="">
+            <div id="button44"></div>
+            <div id="button45"></div>
+            <div id="button46"></div>
+            <div id="button47"></div>
+            <div id="EstimateError2"></div>
+            <input id="PlayerEstimate13" type="text" name="" value="">
+            <input id="PlayerEstimate14" type="text" name="" value="">
+            <input id="PlayerEstimate15" type="text" name="" value="">
+            <input id="PlayerEstimate16" type="text" name="" value="">
+            <div id="HoursCap1"></div>
+            <div id="MinsCap1"></div>
+            <div id="HoursCap2"></div>
+            <div id="MinsCap2"></div>
+            <div id="HoursCap3"></div>
+            <div id="MinsCap3"></div>
+            <div id="MinsCap4"></div>
+            <div id="HoursCap4"></div>
+            <div id="SecretCover9">
+                <img src="Images/secretcover2.png" id="inner_image57">
+            </div>
+            <div id="SecretCover10">
+                <img src="../Images/secretcover2.png" id="inner_image58">
+            </div>
+            <div id="SecretCover11">
+                <img src="../Images/secretcover2.png" id="inner_image59">
+            </div>
+            <div id="SecretCover12">
+                <img src="../Images/secretcover2.png" id="inner_image60">
+            </div>
+        </div><div id="mainHoursPrelim">
+            <div id="estimatePlayerName17"></div>
+            <div id="estimatePlayerName18"></div>
+            <div id="estimatePlayerName19"></div>
+            <div id="estimatePlayerName20"></div>
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar17">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar18">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar19">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar20">
+            <div id="button48"></div>
+            <div id="mins_hours_exp"></div>
+            <div id="title16"></div>
+            <div id="mins_hours_ans"></div>
+            <div id="timeSoFar"></div>
+            <div id="button50"></div>
+        </div><div id="time_chart">
+            <div id="chart_canvas" style="width: 100%; height: 380px; ">
+            </div>
+            <div id="title17"></div>
+            <div id="chart_desc"></div>
+            <div id="backButton15"></div>
+        </div><div id="distancesAnswer">
+            <div id="estimatePlayerName12"></div>
+            <div id="estimatePlayerName11"></div>
+            <div id="estimatePlayerName10"></div>
+            <div id="estimatePlayerName9"></div>
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar12">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar11">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar10">
+            <img src="../Images/WebClipIcon.png" id="EstimateAvatar9">
+            <div id="button42"></div>
+            <div id="text3"></div>
+            <div id="title2"></div>
+            <div id="miles_answer"></div>
+        </div><div id="trafficLights">
+            <div id="tl">
+                <div id="GuessSelection">
+                    <div id="text49"></div>
+                    <div id="text50"></div>
+                    <select id="adjectivepopup" apple-style-relative="height: 20px;" onchange="disableInvalidNouns(event)">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <select id="nounpopup" apple-style-relative="height: 20px;" onchange="disableInvalidAdjs(event)">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <div id="checkbox">
+                        <input type="checkbox" name="Checkbox" checked="checked" id="secretmode">
+                        <div id="div2"> Keep estimates secret </div>
+                    </div>
+                    <select id="estimatetimepopup" apple-style-relative="height: 20px;">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <div id="ambuttonEst1"></div>
+                    <div id="title13"></div>
+                    <div id="button16"></div>
+                    <div id="forwardButtonEst1"></div>
+                </div>
+                <div id="MakeEstimatesSecret">
+                    <div id="text51"></div>
+                    <img src="Images/WebClipIcon.png" id="EstimateAvatar1">
+                    <img src="Images/WebClipIcon.png" id="EstimateAvatar2">
+                    <img src="Images/WebClipIcon.png" id="EstimateAvatar3">
+                    <img src="Images/WebClipIcon.png" id="EstimateAvatar4">
+                    <div id="estimatePlayerName1"></div>
+                    <input id="PlayerEstimate1" type="text" name="" value="">
+                    <input id="PlayerEstimate2" type="text" name="" value="">
+                    <input id="PlayerEstimate3" type="text" name="" value="">
+                    <input id="PlayerEstimate4" type="text" name="" value="">
+                    <div id="estimatePlayerName3"></div>
+                    <div id="estimatePlayerName2"></div>
+                    <div id="estimatePlayerName4"></div>
+                    <div id="button18"></div>
+                    <div id="button19"></div>
+                    <div id="button32"></div>
+                    <div id="button20"></div>
+                    <div id="EstimateError"></div>
+                    <div id="SecretCover1">
+                        <img src="Images/secretcover.gif" id="inner_image53">
+                    </div>
+                    <div id="SecretCover2">
+                        <img src="Images/secretcover.gif" id="inner_image54">
+                    </div>
+                    <div id="SecretCover3">
+                        <img src="Images/secretcover.gif" id="inner_image55">
+                    </div>
+                    <div id="SecretCover4">
+                        <img src="Images/secretcover.gif" id="inner_image56">
+                    </div>
+                    <div id="forwardButton4"></div>
+                    <div id="backButton12"></div>
+                    <div id="button10"></div>
+                </div>
+                <div id="MakeEstimatesOpen">
+                    <img src="Images/WebClipIcon.png" id="OpenEstimateAvatar1">
+                    <div id="OpenestimatePlayerName1"></div>
+                    <input id="OpenPlayerEstimate1" type="text" name="" value="">
+                    <img src="Images/WebClipIcon.png" id="OpenEstimateAvatar2">
+                    <div id="OpenestimatePlayerName2"></div>
+                    <input id="OpenPlayerEstimate2" type="text" name="" value="">
+                    <img src="Images/WebClipIcon.png" id="OpenEstimateAvatar3">
+                    <div id="OpenestimatePlayerName3"></div>
+                    <input id="OpenPlayerEstimate3" type="text" name="" value="">
+                    <img src="Images/WebClipIcon.png" id="OpenEstimateAvatar4">
+                    <div id="OpenestimatePlayerName4"></div>
+                    <input id="OpenPlayerEstimate4" type="text" name="" value="">
+                    <div id="OpenEstimateError"></div>
+                    <div id="backButton13"></div>
+                    <div id="button7"></div>
+                    <div id="forwardButton5"></div>
+                    <div id="text2"></div>
+                </div>
+                <div id="EstimationHints">
+                    <div id="text118"></div>
+                    <div id="text119"></div>
+                    <div id="text120"></div>
+                    <div id="text121"></div>
+                    <div id="text122"></div>
+                    <div id="text123"></div>
+                    <div id="text124"></div>
+                    <div id="text125"></div>
+                    <div id="text52"></div>
+                    <div id="text83"></div>
+                    <div id="backButton10"></div>
+                </div>
+                <div id="ContestBegun">
+                    <div id="Houses">
+                        <img src="Images/house_white.gif" id="inner_image25">
+                    </div>
+                    <div id="Cars">
+                        <img src="Images/car_white.gif" id="inner_image26">
+                    </div>
+                    <div id="Motorcycles">
+                        <img src="Images/motorcycle_white.gif" id="inner_image39">
+                    </div>
+                    <div id="Trucks">
+                        <img src="Images/truck_white.gif" id="inner_image52">
+                    </div>
+                    <div id="GasStations">
+                        <img src="Images/Gas%20Station.gif" id="inner_image65">
+                    </div>
+                    <div id="Clouds">
+                        <img src="Images/Cloud.gif" id="inner_image64">
+                    </div>
+                    <div id="Trees">
+                        <img src="Images/Tree.gif" id="inner_image63">
+                    </div>
+                    <div id="Restaurants">
+                        <img src="Images/Restaurant.gif" id="inner_image62">
+                    </div>
+                    <div id="People">
+                        <img src="Images/People.gif" id="inner_image61">
+                    </div>
+                    <div id="text127"></div>
+                    <div id="text126"></div>
+                    <div id="box"></div>
+                    <div id="timer">
+                        <div id="timer-bg"></div>
+                        <div id="countdown-label">
+                            <div id="label-minutes"></div>
+                            <div id="label-seconds"></div>
+                        </div><div id="countdown-time">
+                            <div id="remaining-minutes">00</div>
+                            <div id="remaining-seconds">00</div>
+                            <div id="timer-colons">
+                                <div id="colon3">:</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="button3"></div>
+                    <div id="button9"></div>
+                    <div id="backButton11"></div>
+                    <div id="rectangleShape">
+                        <div id="EstimateCounter1"></div>
+                    </div>
+                </div>
+                <div id="EstimationResults">
+                    <div id="text140"></div>
+                    <div id="text144"></div>
+                    <div id="text146"></div>
+                    <div id="text147"></div>
+                    <div id="PlayerEstimated1"></div>
+                    <div id="PlayerEstimated2"></div>
+                    <div id="PlayerEstimated3"></div>
+                    <div id="PlayerEstimated4"></div>
+                    <img src="../Images/WebClipIcon.png" id="winnerAvatar1">
+                    <img src="../Images/WebClipIcon.png" id="winnerAvatar2">
+                    <img src="../Images/WebClipIcon.png" id="winnerAvatar3">
+                    <img src="../Images/WebClipIcon.png" id="winnerAvatar4">
+                    <div id="winnerAnnouncement"></div>
+                    <div id="winnerExplanation"></div>
+                    <div id="rectangleShape1">
+                        <div id="EstimateCounter2"></div>
+                    </div>
+                    <div id="button37"></div>
+                    <div id="button38"></div>
+                    <div id="forwardButtonEst2"></div>
+                </div>
+                <div id="inputNumber">
+                    <div id="title6"></div>
+                    <div id="text34"></div>
+                    <select apple-style-relative="height: 20px;" id="vgPlayerPopup">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <div id="text9"></div>
+                    <input type="text" name="" value="" id="inputField">
+                    <div id="errorText"></div>
+                    <div id="text38"></div>
+                    <div id="button15"></div>
+                    <div id="forwardButton6"></div>
+                </div><div id="guessInput">
+                    <div id="title9"></div>
+                    <div id="text11"></div>
+                    <img src="Images/WebClipIcon.png" id="currPlayerAvatar">
+                    <div id="guessjackpottext"></div>
+                    <input type="text" name="" value="" id="numberInput">
+                    <div id="guessErrorText"></div>
+                    <div id="text5"></div>
+                    <img src="Images/WebClipIcon.png" id="histavatar1">
+                    <img src="Images/WebClipIcon.png" id="histavatar2">
+                    <img src="Images/WebClipIcon.png" id="histavatar3">
+                    <img src="Images/WebClipIcon.png" id="histavatar4">
+                    <img src="Images/WebClipIcon.png" id="histavatar8">
+                    <img src="Images/WebClipIcon.png" id="histavatar7">
+                    <img src="Images/WebClipIcon.png" id="histavatar6">
+                    <img src="Images/WebClipIcon.png" id="histavatar5">
+                    <img src="Images/challengelights030.png" id="histchallenge8">
+                    <img src="Images/challengelights030.png" id="histchallenge7">
+                    <img src="Images/challengelights030.png" id="histchallenge6">
+                    <img src="Images/challengelights030.png" id="histchallenge5">
+                    <img src="Images/challengelights030.png" id="histchallenge4">
+                    <img src="Images/challengelights030.png" id="histchallenge3">
+                    <img src="Images/challengelights030.png" id="histchallenge2">
+                    <img src="Images/challengelights030.png" id="histchallenge1">
+                    <div id="indicator22"></div>
+                    <div id="indicator21"></div>
+                    <div id="indicator20"></div>
+                    <div id="indicator12"></div>
+                    <div id="indicator11"></div>
+                    <div id="indicator10"></div>
+                    <div id="indicator40"></div>
+                    <div id="indicator41"></div>
+                    <div id="indicator42"></div>
+                    <div id="indicator32"></div>
+                    <div id="indicator31"></div>
+                    <div id="indicator30"></div>
+                    <div id="indicator50"></div>
+                    <div id="indicator51"></div>
+                    <div id="indicator52"></div>
+                    <div id="indicator60"></div>
+                    <div id="indicator61"></div>
+                    <div id="indicator62"></div>
+                    <div id="indicator70"></div>
+                    <div id="indicator71"></div>
+                    <div id="indicator72"></div>
+                    <div id="indicator82"></div>
+                    <div id="indicator81"></div>
+                    <div id="indicator80"></div>
+                    <div id="EHist1"></div>
+                    <div id="EHist2"></div>
+                    <div id="EHist3"></div>
+                    <div id="EHist4"></div>
+                    <div id="EHist5"></div>
+                    <div id="EHist6"></div>
+                    <div id="EHist7"></div>
+                    <div id="EHist8"></div>
+                    <div id="DHist1"></div>
+                    <div id="DHist2"></div>
+                    <div id="DHist3"></div>
+                    <div id="DHist4"></div>
+                    <div id="DHist5"></div>
+                    <div id="DHist6"></div>
+                    <div id="DHist7"></div>
+                    <div id="DHist8"></div>
+                    <div id="button11"></div>
+                    <div id="button"></div>
+                </div><div id="TLpassScreen">
+                    <div id="title8"></div>
+                    <div id="psp2txt3"></div>
+                    <img src="Images/WebClipIcon.png" id="TLnextAvatar">
+                    <div id="TLnextName"></div>
+                    <div id="lastGuessText"></div>
+                    <div id="light1"></div>
+                    <div id="light2"></div>
+                    <div id="light3"></div>
+                    <div id="lastGuessNum"></div>
+                    <img src="Images/challengelights030.png" id="lastchallengelight">
+                    <div id="button4"></div>
+                </div><div id="winScreen">
+                    <div id="winText"></div>
+                    <img src="Images/avatar_bunny.jpg" id="winAvatar">
+                    <div id="indicator1"></div>
+                    <div id="indicator2"></div>
+                    <div id="indicator"></div>
+                    <div id="originalNumText"></div>
+                    <div id="title11"></div>
+                    <div id="button6"></div>
+                </div><div id="tlHome">
+                    <div id="title5"></div>
+                    <div id="text1"></div>
+                    <div id="text19"></div>
+                    <div id="text21"></div>
+                    <div id="indicator3"></div>
+                    <div id="text26"></div>
+                    <div id="indicator4"></div>
+                    <div id="indicator5"></div>
+                    <div id="text27"></div>
+                    <div id="text28"></div>
+                    <div id="text29"></div>
+                    <div id="text30"></div>
+                    <div id="text31"></div>
+                    <div id="TLradioButton1" onclick="changeTLmode(event)">
+                        <input type="radio" name="Radio" checked="unchecked" id="TLhardmode">
+                    </div>
+                    <div id="TLradioButton" onclick="changeTLmode(event)">
+                        <input type="radio" name="Radio" checked="checked" id="TLeasymode">
+                    </div>
+                    <div id="text104" onclick="changeTLmodeToEasy(event)"></div>
+                    <div id="text105" onclick="changeTLmodeToHard(event)"></div>
+                    <div id="challengemodetext1"></div>
+                    <div id="challengemodetext2"></div>
+                    <div id="text6"></div>
+                    <img src="Images/challengelights210.png" id="challengemodeimage">
+                    <div id="ambutton1"></div>
+                    <div id="psrulesbutton2"></div>
+                </div></div>
+        </div>
+        <div id="PCcontent"><div id="content1">
+                <div id="br_notPrimeButton1"></div>
+                <div id="br_primeButton1"></div>
+                <div id="button5"></div>
+                <div id="title7"></div>
+                <div id="br_pointsText"></div>
+                <img src="Images/Car.png" id="br_Car">
+                <div id="br_carNumberText"></div>
+                <div id="br_mistakesText"></div>
+                <div id="br_message"></div>
+            </div></div>
+        <div id="PChome">
+            <div id="title12"></div>
+            <div id="text12"></div>
+            <div id="br_primeCarsInstructions"></div>
+            <div id="text39"></div>
+            <div id="PCradio1">
+                <input type="radio" name="PCgame" checked="checked" id="PCrad1" value="1">
+                <div id="div3" onclick="changePCmodeToPrime(event)">Prime Numbers</div>
+            </div>
+            <div id="PCradio2">
+                <input type="radio" name="PCgame" id="PCrad2" value="2">
+                <div id="div5" onclick="changePCmodeToEven(event)">Even or Odd</div>
+            </div>
+            <div id="PCradio3">
+                <input type="radio" name="PCgame" id="PCrad3" value="3">
+                <div id="div6" onclick="changePCmodeToMultiple(event)">Multiples Of</div>
+            </div>
+            <select id="PCmultValue" apple-style-relative="height: 20px;">
+                <option id="option">3</option>
+                <option id="option1">4</option>
+                <option id="option2">5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <div id="forwardButton3"></div>
+            <div id="backButton9"></div>
+        </div>
+        <div id="PCpassScreen">
+            <div id="title10"></div>
+            <div id="psp2txt2"></div>
+            <img src="Images/WebClipIcon.png" id="PCnextAvatar">
+            <div id="PCnextName"></div>
+            <div id="forwardButton2"></div>
+        </div>
+        <div id="players">
+            <div id="title3"></div>
+            <div id="text20"></div>
+            <div id="text14"></div>
+            <select apple-style-relative="height: 20px;" id="popup" onchange="selectPlayers(event)">
+                <option id="text15">2</option>
+                <option id="text16">3</option>
+                <option id="text17">4</option>
+            </select>
+            <div id="text13"></div>
+            <input type="text" name="" value="Player 1" id="name1" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 2" id="name2" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 3" id="name3" onfocus="VPclearTextField(event)">
+            <input type="text" name="" value="Player 4" id="name4" onfocus="VPclearTextField(event)">
+            <img src="Images/gray2.png" id="avatar1" onclick="selectAvatar1(event)">
+            <img src="Images/gray2.png" id="avatar2" onclick="selectAvatar2(event)">
+            <img src="Images/gray2.png" id="avatar3" onclick="selectAvatar3(event)">
+            <img src="Images/gray2.png" id="avatar4" onclick="selectAvatar4(event)">
+            <div id="button21"></div>
+        </div>
+        <div id="scores">
+            <div id="scorestxt"></div>
+            <div id="amcolumnLayout48">
+                <div id="columnLayout86"><div id="amcolumn61">
+                        <img src="Images/WebClipIcon.png" id="p1avatar">
+                    </div></div><div id="columnLayout87"><div id="amcolumn62">
+                        <div id="player1"></div>
+                    </div></div><div id="columnLayout88"><div id="amcolumn63">
+                        <div id="p1scoregauge"></div>
+                        <div id="score1"></div>
+                    </div></div></div>
+            <div id="amcolumnLayout53">
+                <div id="columnLayout89"><div id="amcolumn65">
+                        <img src="Images/WebClipIcon.png" id="p2avatar">
+                    </div></div><div id="columnLayout90"><div id="amcolumn66">
+                        <div id="player2"></div>
+                    </div></div><div id="columnLayout91"><div id="amcolumn67">
+                        <div id="p2scoregauge"></div>
+                        <div id="score2"></div>
+                    </div></div></div>
+            <div id="amcolumnLayout58">
+                <div id="columnLayout92"><div id="amcolumn69">
+                        <img src="Images/WebClipIcon.png" id="p3avatar">
+                    </div></div><div id="columnLayout93"><div id="amcolumn70">
+                        <div id="player3"></div>
+                    </div></div><div id="columnLayout94"><div id="amcolumn71">
+                        <div id="p3scoregauge"></div>
+                        <div id="score3"></div>
+                    </div></div></div>
+            <div id="amcolumnLayout63">
+                <div id="columnLayout95"><div id="amcolumn73">
+                        <img src="Images/WebClipIcon.png" id="p4avatar">
+                    </div></div><div id="columnLayout96"><div id="amcolumn74">
+                        <div id="player4"></div>
+                    </div></div><div id="columnLayout97"><div id="amcolumn75">
+                        <div id="p4scoregauge"></div>
+                        <div id="score4"></div>
+                    </div></div></div>
+            <div id="scorecontbutton"></div>
+        </div>
+        <div id="users">
+            <div id="columnLayout22">
+                <div style="position: relative; display: table-cell; vertical-align: top; height: auto; width: 53%; "><div id="column8">
+                        <input type="text" name="" value="" id="firstname" onfocus="VPclearTextField(event)">
+                    </div></div><div style="position: relative; display: table-cell; vertical-align: top; height: auto; width: 47%; "><div id="column1">
+                        <input type="text" name="" value="" id="lastname" onfocus="VPclearTextField(event)">
+                    </div></div></div>
+            <div id="columnLayout23">
+                <div id="columnLayout25"><div id="column10">
+                        <div id="text97"></div>
+                    </div></div><div id="columnLayout102"><div id="column11">
+                        <div id="text98"></div>
+                    </div></div></div>
+            <div id="text91"></div>
+            <div id="forwardButton1"></div>
+        </div>
+        <div id="avatarSelect">
+            <div id="title15"></div>
+            <div id="text129"></div>
+            <div id="text134"></div>
+            <img src="Images/avatar_umm.png" id="avatar9" onclick="changeAvatar1(event)">
+            <img src="Images/avatar_dragon.png" id="avatar10" onclick="changeAvatar2(event)">
+            <img src="Images/avatar_giraffe.png" id="avatar11" onclick="changeAvatar3(event)">
+            <img src="Images/avatar_alligator.png" id="avatar12" onclick="changeAvatar4(event)">
+            <img src="Images/avatar_bear.png" id="avatar13" onclick="changeAvatar5(event)">
+            <img src="Images/avatar_cat.png" id="avatar14" onclick="changeAvatar6(event)">
+            <img src="Images/avatar_goat.png" id="avatar15" onclick="changeAvatar7(event)">
+            <img src="Images/avatar_panda.png" id="avatar16" onclick="changeAvatar8(event)">
+            <img src="Images/avatar_monkey.png" id="avatar17" onclick="changeAvatar9(event)">
+            <img src="Images/avatar_fox.png" id="avatar18" onclick="changeAvatar10(event)">
+            <img src="Images/avatar_lion.png" id="avatar19" onclick="changeAvatar11(event)">
+            <img src="Images/avatar_bunny.png" id="avatar20" onclick="changeAvatar12(event)">
+            <div id="backButton7"></div>
+        </div><div id="api_view1">
+            <div id="map_start"></div>
+            <div id="map_canvas" style="width: 100%; height: 380px; ">
+            </div>
+            <input id="map_destination" type="text" name="" value="">
+            <div id="forwardButton"></div>
+        </div><div id="api_view2">
+            <div id="backButton14"></div>
+            <div id="destination_miles"></div>
+            <div id="forwardButton7"></div>
+        </div><div id="continue_trip">
+            <div id="destination_miles1"></div>
+            <div id="cont_message"></div>
+            <div id="title18"></div>
+            <div id="forwardButton8"></div>
+            <div id="button51"></div>
+        </div></div>
+</body>
+</html>

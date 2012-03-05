@@ -1,0 +1,7517 @@
+body {
+    font-family: Helvetica;
+    background-image: url(Images/backgroundStripes.png);
+    font-size: 16px;
+    min-height: 480px;
+    uiapplicationsharedapplicationstatusbarhidden:YES;
+    selfnavigationcontrollernavigationbarhidden:YES;
+    height: auto;
+    margin: 0px;
+    background-repeat: repeat repeat;
+}
+
+#stackLayout {
+    overflow: hidden;
+    z-index: 0;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    background-image: url(Images/primeGame_bg_01.jpg);
+    background-attachment: fixed;
+    position: absolute;
+    left: 0px;
+    margin-top: 0px;
+    top: 0px;
+    width: 320px;
+    height: 480px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#homepage {
+    display: none;
+    position: relative;
+    margin-left: 0px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/popart.jpg);
+    width: 320px;
+    margin-right: 0px;
+    background-attachment: fixed;
+    min-height: 557px;
+    height: auto;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#text {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    margin-left: 49px;
+    margin-right: 50px;
+    margin-top: 0px;
+    width: auto;
+    min-height: 16px;
+    height: auto;
+}
+
+#distances {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/bg_01.jpg);
+    height: auto;
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+.button2_template {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    width: 70px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    top: 7px;
+    left: 5px;
+}
+
+#text9 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    height: 19px;
+    width: 301px;
+    position: absolute;
+    left: 9px;
+    top: 120px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#inputField {
+    width: 70px;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    left: 121px;
+    top: 157px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#errorText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    height: 20px;
+    width: 238px;
+    position: absolute;
+    left: 40px;
+    top: 207px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#numberInput {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    display: block;
+    width: 70px;
+    font-size: 20pt;
+    margin-left: 121px;
+    margin-top: 3px;
+}
+
+#guessjackpottext {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 227px;
+    width: auto;
+    min-height: 49px;
+    height: auto;
+}
+
+#guessErrorText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: -2px;
+    margin-left: 63px;
+    width: auto;
+    margin-right: 66px;
+    min-height: 23px;
+    height: auto;
+}
+
+#winScreen {
+    display: none;
+    width: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    background-image: url(Images/traffic_bg_2.jpg);
+    background-attachment: fixed;
+    min-height: 481px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#players {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    background-image: url(Images/bg_01.jpg);
+    height: auto;
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title3 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    width: 320px;
+    margin-right: 0px;
+    height: 29px;
+}
+
+#text14 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-right: 100px;
+    height: auto;
+    min-height: 26px;
+    width: auto;
+    padding: 0px;
+}
+
+#popup {
+    -webkit-appearance: menulist-button;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 11px;
+    width: 42px;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    height: 26px;
+    left: 230px;
+    top: 89px;
+}
+
+#text13 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 13px;
+    margin-left: 7px;
+    margin-top: 8px;
+    width: 311px;
+    margin-right: 2px;
+    height: 34px;
+}
+
+#text20 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: left;
+    margin-left: 7px;
+    margin-top: 9px;
+    height: 35px;
+    width: 269px;
+    margin-right: 44px;
+}
+
+#name4 {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    width: 86px;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 128px;
+    visibility: hidden;
+    top: 339px;
+}
+
+#name3 {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    width: 86px;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 128px;
+    visibility: hidden;
+    top: 285px;
+}
+
+#gameSelect {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/bg_01.jpg);
+    height: auto;
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title4 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-left: 0px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#text22 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 5px;
+    width: 310px;
+    margin-right: 5px;
+    height: 20px;
+    margin-top: 0px;
+}
+
+#img2 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 27px;
+    top: 69px;
+}
+
+#text23 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 13px;
+    left: 12px;
+    text-align: center;
+    width: 86px;
+    height: 16px;
+    top: 129px;
+}
+
+#img3 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 56px;
+    width: 60px;
+    left: 27px;
+    top: 156px;
+}
+
+#text24 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 13px;
+    text-align: center;
+    width: 61px;
+    height: 17px;
+    left: 27px;
+    top: 214px;
+}
+
+#text25 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: -1px;
+    width: auto;
+    min-height: 17px;
+    height: auto;
+    margin-top: 13px;
+}
+
+#trafficLights {
+    width: 100%;
+    display: none;
+    position: relative;
+    height: auto;
+    min-height: 557px;
+}
+
+#name2 {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    margin-top: 0px;
+    width: 86px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 128px;
+    top: 231px;
+}
+
+#tl {
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    margin-left: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-right: 0px;
+    width: auto;
+    min-height: 481px;
+    height: auto;
+}
+
+#tlHome {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    background-image: none;
+    background-attachment: fixed;
+    min-height: 481px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#text1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 20px;
+    width: 310px;
+    margin-right: 0px;
+}
+
+#text19 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+    height: 20px;
+    width: 310px;
+    margin-right: 0px;
+}
+
+#text21 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 3px;
+    width: 310px;
+    margin-right: 0px;
+    height: 20px;
+}
+
+#text26 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    margin-left: 79px;
+    position: relative;
+    height: 34px;
+    width: 221px;
+    margin-right: 20px;
+    margin-top: 28px;
+}
+
+#indicator3 {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 29px;
+    top: 143px;
+}
+
+#indicator4 {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 29px;
+    top: 198px;
+}
+
+#indicator5 {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 29px;
+    top: 252px;
+}
+
+#text27 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    margin-left: 79px;
+    position: relative;
+    margin-top: 21px;
+    height: 34px;
+    width: 221px;
+    margin-right: 20px;
+}
+
+#text28 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    margin-top: 27px;
+    margin-left: 79px;
+    position: relative;
+    height: 21px;
+    width: 221px;
+    margin-right: 20px;
+}
+
+#text29 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 14px;
+    position: absolute;
+    left: 10px;
+    margin-top: 0px;
+    height: 32px;
+    width: 310px;
+    top: 123px;
+}
+
+#text30 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 14px;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 20px;
+    height: 32px;
+    width: 310px;
+    margin-right: 0px;
+}
+
+#text31 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-left: 10px;
+    position: relative;
+    height: 32px;
+    width: 310px;
+    margin-right: 0px;
+}
+
+#guessInput {
+    display: none;
+    position: relative;
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/traffic_bg_2.jpg);
+    background-attachment: fixed;
+    height: 460px;
+    min-height: 481px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#inputNumber {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    font-size: 16px;
+    height: auto;
+    background-image: url(Images/traffic_bg_2.jpg);
+    background-attachment: fixed;
+    min-height: 481px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title6 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    height: 27px;
+    width: 320px;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#text32 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 14px;
+    width: 214px;
+    height: 37px;
+    left: 101px;
+    top: 166px;
+}
+
+#text33 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 14px;
+    left: 101px;
+    width: 214px;
+    height: 39px;
+    top: 79px;
+}
+
+#text34 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    left: 9px;
+    margin-top: 0px;
+    top: 54px;
+    width: auto;
+    height: auto;
+}
+
+#name1 {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 86px;
+    left: 128px;
+    top: 177px;
+}
+
+#avatar3 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 55px;
+    visibility: hidden;
+    width: 50px;
+    height: 48px;
+    top: 276px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#vgPlayerPopup {
+    height: 20px;
+    -webkit-appearance: menulist-button;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 140px;
+    position: absolute;
+    left: 28px;
+    top: 84px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#text38 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    height: 22px;
+    width: 320px;
+    position: absolute;
+    left: 9px;
+    top: 289px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#avatar4 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 55px;
+    visibility: hidden;
+    width: 50px;
+    height: 48px;
+    top: 332px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#PCcontent {
+    width: 100%;
+    display: none;
+    position: relative;
+    min-height: 557px;
+}
+
+#content1 {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    background-image: url(Images/primeGame_bg_01.jpg);
+    margin-left: 0px;
+    margin-top: 0px;
+    background-attachment: fixed;
+    width: 320px;
+    margin-right: 0px;
+    height: 460px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#br_pointsText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    position: absolute;
+    margin-top: 0px;
+    min-height: 27px;
+    left: 18px;
+    top: 246px;
+    right: 10px;
+    width: auto;
+    bottom: 187px;
+    height: auto;
+}
+
+#br_Car {
+    width: 72px;
+    height: 36px;
+    position: relative;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 248px;
+    margin-top: 186px;
+}
+
+#br_carNumberText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-right: 0px;
+    margin-left: 249px;
+    width: auto;
+    min-height: 20px;
+    height: auto;
+    text-align: center;
+}
+
+#br_mistakesText {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 104px;
+    left: 37px;
+    right: 36px;
+    width: auto;
+    height: auto;
+    color: red;
+    text-align: center;
+    text-shadow: none;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#img {
+    height: 60px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 59px;
+    left: 27px;
+    top: 243px;
+}
+
+#text35 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 13px;
+    text-align: center;
+    left: 19px;
+    width: 85px;
+    height: 17px;
+    top: 307px;
+}
+
+#text36 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 14px;
+    left: 101px;
+    width: 214px;
+    height: 37px;
+    top: 255px;
+}
+
+#TLpassScreen {
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 320px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-image: url(Images/traffic_bg_2.jpg);
+    height: auto;
+    background-attachment: fixed;
+    min-height: 481px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#avatar1 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 48px;
+    width: 50px;
+    left: 55px;
+    top: 162px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar2 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 50px;
+    left: 55px;
+    height: 48px;
+    top: 218px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#text11 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    top: 68px;
+    left: 81px;
+    right: 73px;
+    width: auto;
+    height: auto;
+}
+
+#title7 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 0px;
+    top: 17px;
+    left: 62px;
+    width: auto;
+    height: auto;
+}
+
+#PCpassScreen {
+    width: 100%;
+    display: none;
+    position: relative;
+    height: auto;
+    background-image: url(Images/primeGame_bg_01.jpg);
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title8 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-left: 4px;
+    margin-top: 13px;
+    width: 320px;
+    margin-right: -4px;
+    height: 29px;
+}
+
+#title9 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    min-height: 29px;
+    width: auto;
+    margin-top: 13px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+#light1 {
+    width: 48px;
+    height: 48px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 251px;
+    left: 58px;
+}
+
+#light2 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 135px;
+    top: 251px;
+}
+
+#light3 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 251px;
+    left: 213px;
+}
+
+#lastGuessText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 21px;
+    margin-left: 0px;
+    text-align: center;
+    margin-right: 0px;
+    margin-top: 36px;
+    width: auto;
+    min-height: 24px;
+    height: auto;
+}
+
+#currPlayerAvatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    left: 20px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 50px;
+}
+
+#indicator {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 58px;
+    top: 191px;
+}
+
+#indicator1 {
+    width: 48px;
+    height: 48px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 135px;
+    margin-top: 15px;
+}
+
+#indicator2 {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 212px;
+    top: 191px;
+}
+
+#originalNumText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 40px;
+    text-align: center;
+    top: 258px;
+    width: 238px;
+    height: 20px;
+}
+
+#winAvatar {
+    position: relative;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    height: 88px;
+    width: 85px;
+    margin-left: 117px;
+    margin-top: 1px;
+}
+
+#winText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 21px;
+    margin-left: 8px;
+    margin-top: 47px;
+    height: 40px;
+    width: 302px;
+    margin-right: 10px;
+}
+
+#title10 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    width: 320px;
+    height: 29px;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#title11 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 0px;
+    left: 88px;
+    top: 13px;
+    height: 27px;
+    width: 142px;
+}
+
+#PChome {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-image: url(Images/primeGame_bg_01.jpg);
+    height: auto;
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title12 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    position: relative;
+    margin-top: 16px;
+    margin-left: 93px;
+    width: 133px;
+    margin-right: 94px;
+    height: 27px;
+}
+
+#br_primeCarsInstructions {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-left: 10px;
+    width: 293px;
+    margin-right: 17px;
+    height: 74px;
+}
+
+#text12 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 17px;
+    margin-left: 12px;
+    width: 310px;
+    margin-right: -2px;
+    height: 20px;
+}
+
+#text39 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 11px;
+    margin-left: 12px;
+    margin-right: 15px;
+    height: 100px;
+    width: 305px;
+}
+
+#scores {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-image: url(Images/bg_01.jpg);
+    background-attachment: fixed;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat repeat;
+}
+
+#amcolumnLayout48 {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 0px;
+    margin-top: 10px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    height: 76px;
+    width: 320px;
+}
+
+#player1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12pt;
+    margin-top: 28px;
+    width: auto;
+    margin-right: 0px;
+    min-height: 20px;
+    height: auto;
+}
+
+#score1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 6px;
+    width: auto;
+    margin-right: 0px;
+    min-height: 20px;
+    height: auto;
+    font-weight: 700;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#amcolumnLayout53 {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 16px;
+    margin-left: 0px;
+    margin-top: 6px;
+    height: 70px;
+    width: 320px;
+}
+
+#score2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 700;
+    font-size: 12pt;
+    text-align: center;
+    margin-left: -3px;
+    width: auto;
+    margin-right: 3px;
+    min-height: 20px;
+    height: auto;
+}
+
+#amcolumnLayout58 {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 9px;
+    margin-left: 0px;
+    height: 70px;
+    width: 320px;
+}
+
+#amcolumnLayout63 {
+    display: table;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 6px;
+    margin-left: 0px;
+    height: 70px;
+    width: 320px;
+}
+
+#columnLayout95 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 23.75%;
+}
+
+#columnLayout96 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 44.69%;
+}
+
+#columnLayout97 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 31.56%;
+}
+
+#scorecontbutton {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 105px;
+    margin-left: 107px;
+    margin-top: 13px;
+}
+
+#p4scoregauge {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    margin-left: 25px;
+}
+
+#p1scoregauge {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    margin-top: 0px;
+    margin-left: 26px;
+}
+
+#p2scoregauge {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    margin-left: 26px;
+}
+
+#p3scoregauge {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+
+#p4avatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 9px;
+    margin-top: 6px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    visibility: hidden;
+}
+
+#p1avatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 9px;
+    margin-left: 8px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    visibility: hidden;
+}
+
+#PCnextAvatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    left: 130px;
+    top: 99px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#TLnextAvatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 135px;
+}
+
+#firstname {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 78px;
+    top: 9px;
+    left: 41px;
+}
+
+#lastname {
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    display: block;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    width: 67px;
+    left: 202px;
+    top: 9px;
+}
+
+#users {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-attachment: fixed;
+    background-image: url(Images/bg_01.jpg);
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#columnLayout22 {
+    display: table;
+    overflow: hidden;
+    height: 40px;
+    position: absolute;
+    margin-top: 0px;
+    right: 318px;
+    bottom: 420px;
+    width: 312px;
+    left: 4px;
+    top: 168px;
+    text-align: center;
+}
+
+#text48 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 14px;
+    left: 101px;
+    height: 37px;
+    width: 214px;
+    top: 350px;
+}
+
+#GuessSelection {
+    display: none;
+    position: relative;
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/Pondering_bg.jpg);
+    height: auto;
+    min-height: 481px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#EstimationResults {
+    display: none;
+    position: relative;
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/estimationbg2.jpg);
+    height: auto;
+    visibility: visible;
+    min-height: 481px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#ContestBegun {
+    display: none;
+    position: relative;
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/Contest_Begun_Bg.jpg);
+    height: auto;
+    min-height: 481px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#text49 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 77px;
+    top: 243px;
+    height: 17px;
+    width: 161px;
+}
+
+#text50 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 87px;
+    top: 300px;
+    width: auto;
+    height: auto;
+}
+
+#adjectivepopup {
+    height: 20px;
+    -webkit-appearance: menulist-button;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 113px;
+    left: 9px;
+    top: 270px;
+}
+
+#nounpopup {
+    height: 20px;
+    -webkit-appearance: menulist-button;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 137px;
+    width: 151px;
+    top: 270px;
+}
+
+#checkbox {
+    width: 80px;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    height: 18px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 15px;
+    top: 359px;
+}
+
+#div2 {
+    position: absolute;
+    text-align: left;
+    vertical-align: middle;
+    top: 0px;
+    font-size: 15px;
+    left: 20px;
+    right: -103px;
+    width: auto;
+    bottom: -3px;
+    height: auto;
+}
+
+#estimatetimepopup {
+    height: 20px;
+    -webkit-appearance: menulist-button;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 142px;
+    left: 73px;
+    top: 326px;
+}
+
+#title13 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-left: 0px;
+    margin-top: 203px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#text51 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 17px;
+    font-weight: 700;
+    top: 45px;
+    left: 14px;
+    right: 12px;
+    width: auto;
+    bottom: 363px;
+    height: auto;
+}
+
+#EstimateAvatar1 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 105px;
+    visibility: hidden;
+}
+
+#EstimateAvatar4 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 17px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#estimatePlayerName1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 76px;
+    top: 124px;
+    right: 97px;
+    width: auto;
+    bottom: 301px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+#PlayerEstimate1 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    top: 122px;
+    left: 200px;
+    visibility: hidden;
+}
+
+#PlayerEstimate3 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    top: 265px;
+    left: 199px;
+    visibility: hidden;
+}
+
+#PlayerEstimate2 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    top: 191px;
+    left: 199px;
+    visibility: hidden;
+}
+
+#PlayerEstimate4 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    top: 337px;
+    left: 199px;
+    visibility: hidden;
+}
+
+#estimatePlayerName3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    top: 263px;
+    left: 75px;
+    right: 98px;
+    width: auto;
+    bottom: 162px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+#estimatePlayerName2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    top: 194px;
+    left: 75px;
+    right: 98px;
+    width: auto;
+    bottom: 231px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+#estimatePlayerName4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    top: 338px;
+    left: 75px;
+    right: 90px;
+    width: auto;
+    bottom: 87px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+#div3 {
+    display: table-cell;
+    height: auto;
+    min-height: 0px;
+    right: 0px;
+    bottom: 442px;
+    width: 320px;
+    position: absolute;
+    top: 2px;
+    left: 18px;
+    text-align: left;
+    vertical-align: middle;
+    margin: 0px;
+}
+
+#div9 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 11%;
+    height: auto;
+}
+
+#div11 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 13%;
+}
+
+#div12 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 12%;
+    height: auto;
+}
+
+#OpenestimatePlayerName1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 76px;
+    top: 123px;
+    right: 97px;
+    width: auto;
+    bottom: 302px;
+    height: auto;
+    visibility: hidden;
+}
+
+#OpenEstimateAvatar1 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 104px;
+    visibility: hidden;
+}
+
+#OpenPlayerEstimate1 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    left: 200px;
+    top: 121px;
+    visibility: hidden;
+}
+
+#OpenEstimateAvatar2 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 14px;
+    visibility: hidden;
+}
+
+#OpenPlayerEstimate2 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    left: 200px;
+    top: 187px;
+    visibility: hidden;
+}
+
+#OpenestimatePlayerName2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 76px;
+    top: 189px;
+    right: 97px;
+    width: auto;
+    bottom: 236px;
+    height: auto;
+    visibility: hidden;
+}
+
+#OpenestimatePlayerName3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 76px;
+    top: 265px;
+    right: 97px;
+    width: auto;
+    bottom: 160px;
+    height: auto;
+    visibility: hidden;
+}
+
+#OpenEstimateAvatar3 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 17px;
+    visibility: hidden;
+}
+
+#OpenPlayerEstimate3 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    left: 200px;
+    top: 264px;
+    visibility: hidden;
+}
+
+#OpenEstimateAvatar4 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 15px;
+    visibility: hidden;
+}
+
+#OpenestimatePlayerName4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    left: 76px;
+    top: 337px;
+    right: 97px;
+    width: auto;
+    bottom: 88px;
+    height: auto;
+    visibility: hidden;
+}
+
+#OpenPlayerEstimate4 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    left: 200px;
+    top: 335px;
+    visibility: hidden;
+}
+
+#text118 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: 700;
+    left: 22px;
+    top: 167px;
+    right: 1px;
+    width: auto;
+    bottom: 275px;
+    height: auto;
+}
+
+#text119 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    font-family: 'Marker Felt';
+    font-size: 19px;
+    left: 88px;
+    top: 52px;
+    right: 79px;
+    width: auto;
+    bottom: 364px;
+    height: auto;
+}
+
+#text120 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    text-align: center;
+    top: 89px;
+    left: 57px;
+    right: 56px;
+    width: auto;
+    bottom: 354px;
+    height: auto;
+}
+
+#text121 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: 700;
+    top: 107px;
+    text-align: center;
+    left: 91px;
+    right: 90px;
+    width: auto;
+    height: auto;
+}
+
+#text122 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    text-align: center;
+    left: 90px;
+    top: 124px;
+    width: auto;
+    height: auto;
+}
+
+#text123 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    top: 142px;
+    left: 114px;
+    right: 114px;
+    width: auto;
+    bottom: 301px;
+    height: auto;
+}
+
+#text124 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    left: 22px;
+    top: 189px;
+    right: 14px;
+    width: auto;
+    bottom: 201px;
+    height: auto;
+}
+
+#text125 {
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    color: rgb(67, 133, 75);
+    left: 119px;
+    top: 433px;
+    width: auto;
+    height: auto;
+}
+
+#text126 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 90px;
+    top: 122px;
+    width: auto;
+    height: auto;
+}
+
+#text127 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    text-align: center;
+    left: 74px;
+    top: 283px;
+    right: 47px;
+    width: auto;
+    bottom: 157px;
+    height: auto;
+}
+
+#estimation {
+    margin-right: 0px;
+    min-height: 0px;
+}
+
+#estimationstack {
+    margin-right: 0px;
+    width: 320px;
+    min-height: 0px;
+}
+
+#text140 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 72px;
+    left: 24px;
+    width: auto;
+    height: auto;
+}
+
+#text147 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-family: 'Marker Felt';
+    font-size: 19px;
+    top: 32px;
+    left: 58px;
+    right: 72px;
+    width: auto;
+    bottom: 410px;
+    height: auto;
+}
+
+#text144 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 209px;
+    font-size: 17px;
+    top: 71px;
+    right: 0px;
+    width: auto;
+    bottom: 338px;
+    height: auto;
+}
+
+#PlayerEstimated1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    left: 50px;
+    top: 134px;
+    text-align: left;
+    right: 38px;
+    width: auto;
+    bottom: 307px;
+    height: auto;
+}
+
+#text146 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    left: 24px;
+    top: 217px;
+    width: auto;
+    height: auto;
+}
+
+#winnerExplanation {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    left: 24px;
+    color: rgb(60, 135, 225);
+    top: 322px;
+    right: 5px;
+    width: auto;
+    bottom: 35px;
+    height: auto;
+    visibility: hidden;
+}
+
+#text52 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    left: 22px;
+    top: 264px;
+    right: 14px;
+    width: auto;
+    bottom: 143px;
+    height: auto;
+}
+
+#text83 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    left: 22px;
+    top: 327px;
+    right: 14px;
+    width: auto;
+    bottom: 46px;
+    height: auto;
+}
+
+#Cars {
+    width: 200px;
+    height: 146px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 0px;
+    top: 317px;
+    visibility: hidden;
+}
+
+#colon3 {
+    position: absolute;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    color: rgb(255, 255, 255);
+    top: 60px;
+    left: 203px;
+    right: -24px;
+    width: auto;
+    bottom: -75px;
+    height: auto;
+}
+
+#remaining-minutes {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 28px;
+    width: 31px;
+    left: 169px;
+    height: 33px;
+    top: 47px;
+}
+
+#remaining-seconds {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 210px;
+    font-family: Helvetica;
+    font-size: 28px;
+    font-weight: 700;
+    width: 34px;
+    height: 33px;
+    top: 47px;
+}
+
+#countdown-time {
+    position: absolute;
+    width: 183px;
+    top: 2px;
+    left: -101px;
+}
+
+#timer {
+    position: absolute;
+    height: 47px;
+    width: 90px;
+    top: 308px;
+    right: 84px;
+    margin-left: auto;
+    margin-bottom: auto;
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+}
+
+#timer-colons {
+    visibility: visible;
+    top: 1px;
+    left: 0px;
+}
+
+#label-minutes {
+    position: absolute;
+    color: rgb(179, 179, 179);
+    width: 35px;
+    text-align: center;
+    top: 61px;
+    left: 67px;
+    height: auto;
+    font-family: Helvetica;
+    font-size: 11px;
+}
+
+#label-seconds {
+    position: absolute;
+    color: rgb(179, 179, 179);
+    width: 35px;
+    text-align: center;
+    top: 61px;
+    left: 106px;
+    height: auto;
+    font-size: 11px;
+}
+
+#countdown-label {
+    position: absolute;
+    height: 20px;
+    width: 90px;
+    font-size: 22px;
+    top: 22px;
+    left: auto;
+    padding: 42px;
+}
+
+#timer-bg {
+    position: absolute;
+    height: 60px;
+    top: 45px;
+    left: 50px;
+    width: 94px;
+    border-top-width: 0px;
+    border-right-width: 7px;
+    border-bottom-width: 0px;
+    border-left-width: 7px;
+}
+
+#SecretCover1 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 190px;
+    top: 105px;
+    visibility: hidden;
+}
+
+#SecretCover2 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 174px;
+    left: 190px;
+    visibility: hidden;
+}
+
+#SecretCover3 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 190px;
+    top: 248px;
+    visibility: hidden;
+}
+
+#SecretCover4 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 319px;
+    left: 190px;
+    visibility: hidden;
+}
+
+#PlayerEstimated2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    left: 50px;
+    top: 153px;
+    text-align: left;
+    right: 39px;
+    width: auto;
+    bottom: 286px;
+    height: auto;
+}
+
+#PlayerEstimated3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    left: 50px;
+    top: 172px;
+    text-align: left;
+    right: 39px;
+    width: auto;
+    bottom: 267px;
+    height: auto;
+}
+
+#PlayerEstimated4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    left: 50px;
+    top: 193px;
+    text-align: left;
+    right: 39px;
+    width: auto;
+    bottom: 246px;
+    height: auto;
+}
+
+#winnerAnnouncement {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    left: 24px;
+    font-size: 17px;
+    visibility: hidden;
+    top: 292px;
+    right: 10px;
+    width: auto;
+    bottom: 139px;
+    height: auto;
+}
+
+#People {
+    width: 177px;
+    height: 171px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 305px;
+    left: -12px;
+    visibility: hidden;
+}
+
+#Restaurants {
+    height: 136px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 305px;
+    width: 199px;
+    left: 1px;
+    visibility: hidden;
+}
+
+#Trees {
+    width: 184px;
+    height: 140px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 0px;
+    visibility: hidden;
+    top: 314px;
+}
+
+#Clouds {
+    width: 191px;
+    height: 130px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 305px;
+    left: 5px;
+    visibility: hidden;
+}
+
+#GasStations {
+    width: 192px;
+    height: 149px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    top: 310px;
+    left: 5px;
+}
+
+#text84 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    top: 55px;
+    height: 62px;
+}
+
+#columnLayout23 {
+    display: table;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    right: 318px;
+    bottom: 420px;
+    width: 312px;
+    text-align: center;
+    height: 30px;
+    left: 4px;
+    top: 153px;
+}
+
+#columnLayout25 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 54%;
+}
+
+#columnLayout102 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 46%;
+}
+
+#text91 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 24px;
+    top: 33px;
+    left: 66px;
+    right: 49px;
+    width: auto;
+    bottom: 399px;
+    height: auto;
+    font-family: 'Marker Felt';
+}
+
+#text37 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 13px;
+    text-align: center;
+    width: 85px;
+    height: 32px;
+    left: 15px;
+    top: 400px;
+}
+
+#box {
+    position: absolute;
+    margin-top: 0px;
+    background-color: rgb(0, 0, 0);
+    top: 351px;
+    left: 197px;
+    height: 60px;
+    width: 105px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+#button8 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 101px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 205px;
+    top: 432px;
+}
+
+#text5 {
+    margin-right: 320px;
+    margin-left: 0px;
+    min-height: 20px;
+    visibility: visible;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    height: 20px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 100px;
+    left: 114px;
+    top: 106px;
+}
+
+#indicator10 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 38px;
+}
+
+#indicator11 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 64px;
+}
+
+#indicator12 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 89px;
+}
+
+#indicator20 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 38px;
+}
+
+#indicator21 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 64px;
+}
+
+#indicator22 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 89px;
+}
+
+#indicator30 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 38px;
+}
+
+#indicator31 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 64px;
+}
+
+#indicator32 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 89px;
+}
+
+#indicator40 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 38px;
+}
+
+#indicator41 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 64px;
+}
+
+#indicator42 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 89px;
+}
+
+#histavatar1 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 133px;
+}
+
+#histavatar2 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 165px;
+}
+
+#histavatar3 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 197px;
+}
+
+#histavatar4 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 229px;
+}
+
+#histavatar5 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 170px;
+    top: 133px;
+}
+
+#histavatar6 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 170px;
+    top: 165px;
+}
+
+#histavatar7 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 170px;
+    top: 197px;
+}
+
+#histavatar8 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    left: 170px;
+    top: 229px;
+}
+
+#indicator50 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 208px;
+}
+
+#indicator51 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 234px;
+}
+
+#indicator52 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 131px;
+    left: 259px;
+}
+
+#indicator60 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 208px;
+}
+
+#indicator61 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 234px;
+}
+
+#indicator62 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 163px;
+    left: 259px;
+}
+
+#indicator70 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 208px;
+}
+
+#indicator71 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 234px;
+}
+
+#indicator72 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 195px;
+    left: 259px;
+}
+
+#indicator82 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 259px;
+}
+
+#indicator81 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 234px;
+}
+
+#indicator80 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 227px;
+    left: 208px;
+}
+
+#avatarSelect {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-image: url(Images/bg_01.jpg);
+    height: auto;
+    min-height: 557px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#players1 {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    background-image: url(Images/bg_01.jpg);
+    background-attachment: fixed;
+    min-height: 0px;
+    height: auto;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#title15 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    width: 320px;
+    height: 29px;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#text129 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    height: 35px;
+    width: 269px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: center;
+    left: 25px;
+    top: 55px;
+}
+
+#text134 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 13px;
+    width: 311px;
+    height: 34px;
+    position: absolute;
+    left: 7px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 90px;
+}
+
+#avatar11 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    left: 30px;
+    top: 263px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#ambuttonEst1 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 3px;
+    top: 161px;
+}
+
+#button16 {
+    font-family: Helvetica;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    width: 82px;
+    height: 22px;
+    font-size: 10px;
+    left: 227px;
+    top: 348px;
+}
+
+#forwardButtonEst1 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 195px;
+    left: 104px;
+    top: 392px;
+}
+
+#gameSelect1 {
+    width: 100%;
+    display: none;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/bg_01.jpg);
+    background-attachment: fixed;
+    min-height: 0px;
+    height: auto;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
+}
+
+#scorestxt {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    margin-left: 0px;
+    width: 320px;
+    margin-right: 0px;
+    font-size: 25pt;
+    font-family: 'Marker Felt';
+    height: 38px;
+    margin-top: 43px;
+}
+
+#avatar10 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    left: 30px;
+    top: 192px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar9 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    left: 30px;
+    top: 122px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar12 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 336px;
+    left: 30px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar14 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 192px;
+    left: 130px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar13 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 122px;
+    left: 130px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar15 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 263px;
+    left: 130px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar16 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 336px;
+    left: 130px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar19 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 263px;
+    left: 230px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar20 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 336px;
+    left: 230px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar18 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 192px;
+    left: 230px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#avatar17 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 52px;
+    top: 122px;
+    left: 230px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+#TLradioButton {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    height: 19px;
+    position: absolute;
+    left: 38px;
+    bottom: auto;
+    top: 384px;
+    right: 261px;
+    width: auto;
+}
+
+#text104 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 384px;
+    left: 65px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    height: 16px;
+    width: 125px;
+}
+
+#challengemodetext2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    left: 104px;
+    top: 223px;
+    right: 5px;
+    width: auto;
+    bottom: 164px;
+    height: auto;
+}
+
+#text105 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 417px;
+    left: 63px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    width: 125px;
+    height: 22px;
+}
+
+#TLradioButton1 {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 38px;
+    margin-top: 42px;
+    margin-right: 262px;
+    width: auto;
+}
+
+#challengemodeimage {
+    position: absolute;
+    margin-top: 0px;
+    width: 87px;
+    height: 87px;
+    top: 213px;
+    left: 10px;
+    visibility: hidden;
+}
+
+#challengemodetext1 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    visibility: hidden;
+    top: 122px;
+    left: 58px;
+    right: 17px;
+    width: auto;
+    bottom: 247px;
+    height: auto;
+}
+
+#text6 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 58px;
+    font-size: 15px;
+    top: 122px;
+    right: 161px;
+    width: auto;
+    bottom: 319px;
+    height: auto;
+}
+
+#lastGuessNum {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: 65px;
+    position: absolute;
+    margin-top: 0px;
+    height: 26px;
+    top: 262px;
+    width: 245px;
+    left: 75px;
+}
+
+#lastchallengelight {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    width: 111px;
+    height: 111px;
+    top: 251px;
+    left: 104px;
+    visibility: hidden;
+}
+
+#histchallenge1 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    top: 131px;
+    left: 63px;
+    visibility: hidden;
+}
+
+#histchallenge2 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    left: 63px;
+    top: 163px;
+    visibility: hidden;
+}
+
+#histchallenge4 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 227px;
+    width: 35px;
+    height: 35px;
+    left: 63px;
+    visibility: hidden;
+}
+
+#histchallenge3 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 195px;
+    width: 35px;
+    height: 35px;
+    left: 63px;
+    visibility: hidden;
+}
+
+#histchallenge6 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    left: 235px;
+    top: 164px;
+    visibility: hidden;
+}
+
+#histchallenge7 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    left: 235px;
+    top: 196px;
+    visibility: hidden;
+}
+
+#histchallenge8 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    left: 235px;
+    top: 228px;
+    visibility: hidden;
+}
+
+#histchallenge5 {
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    left: 235px;
+    top: 132px;
+    visibility: hidden;
+}
+
+#EHist4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 28px;
+    width: 109px;
+    text-align: left;
+    letter-spacing: 17px;
+    left: 47px;
+    top: 231px;
+}
+
+#EHist1 {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 0px;
+    margin-right: 2px;
+    min-height: 26px;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    right: 327px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 26px;
+    text-align: left;
+    letter-spacing: 17px;
+    width: 109px;
+    left: 47px;
+    top: 134px;
+}
+
+#EHist8 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 28px;
+    width: 98px;
+    text-align: left;
+    letter-spacing: 17px;
+    left: 218px;
+    top: 231px;
+}
+
+#EHist3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    height: 26px;
+    font-weight: 700;
+    width: 109px;
+    text-align: left;
+    letter-spacing: 17px;
+    left: 47px;
+    top: 198px;
+}
+
+#EHist6 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 29px;
+    width: 97px;
+    letter-spacing: 17px;
+    text-align: left;
+    left: 218px;
+    top: 167px;
+}
+
+#EHist5 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    height: 29px;
+    font-weight: 700;
+    text-align: left;
+    width: 97px;
+    letter-spacing: 17px;
+    left: 218px;
+    top: 134px;
+}
+
+#EHist7 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    height: 26px;
+    font-weight: 700;
+    width: 97px;
+    letter-spacing: 17px;
+    text-align: left;
+    left: 218px;
+    top: 198px;
+}
+
+#EHist2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 29px;
+    text-align: left;
+    letter-spacing: 17px;
+    width: 109px;
+    left: 47px;
+    top: 167px;
+}
+
+#DHist4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 28px;
+    text-align: right;
+    width: 33px;
+    left: 28px;
+    top: 235px;
+}
+
+#DHist1 {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 0px;
+    margin-right: 2px;
+    min-height: 26px;
+    position: absolute;
+    margin-top: 0px;
+    font-weight: 700;
+    right: 327px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 26px;
+    text-align: right;
+    width: 33px;
+    left: 28px;
+    top: 137px;
+}
+
+#DHist2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 29px;
+    text-align: right;
+    width: 33px;
+    left: 28px;
+    top: 170px;
+}
+
+#DHist7 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    height: 26px;
+    font-weight: 700;
+    text-align: right;
+    width: 33px;
+    top: 201px;
+    left: 198px;
+}
+
+#DHist6 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 29px;
+    text-align: right;
+    width: 33px;
+    top: 170px;
+    left: 198px;
+}
+
+#DHist8 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    font-weight: 700;
+    height: 28px;
+    text-align: right;
+    width: 33px;
+    top: 235px;
+    left: 198px;
+}
+
+#DHist5 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    left: 198px;
+    height: 29px;
+    width: 33px;
+    top: 137px;
+    font-weight: 700;
+    text-align: right;
+}
+
+#DHist3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    height: 26px;
+    font-weight: 700;
+    text-align: right;
+    width: 33px;
+    left: 28px;
+    top: 201px;
+}
+
+#PCradio1 {
+    width: 80px;
+    font-family: HelveticaNeue;
+    height: 19px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    font-size: 13pt;
+    left: 83px;
+    top: 277px;
+}
+
+#PCradio2 {
+    font-family: HelveticaNeue;
+    height: 19px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    font-size: 13pt;
+    width: 124px;
+    left: 83px;
+    top: 318px;
+}
+
+#div5 {
+    position: absolute;
+    top: 2px;
+    left: 18px;
+    text-align: left;
+    vertical-align: middle;
+    right: -26px;
+    width: auto;
+    bottom: -13px;
+    height: auto;
+}
+
+#PCradio3 {
+    width: 80px;
+    font-family: HelveticaNeue;
+    height: 19px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    font-size: 13pt;
+    left: 83px;
+    top: 360px;
+}
+
+#div6 {
+    position: absolute;
+    top: 2px;
+    left: 18px;
+    text-align: left;
+    vertical-align: middle;
+    right: -32px;
+    width: auto;
+    bottom: -13px;
+    height: auto;
+}
+
+#PCmultValue {
+    height: 20px;
+    -webkit-appearance: menulist-button;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 44px;
+    left: 203px;
+    top: 363px;
+}
+
+#br_message {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    margin-top: 0px;
+    position: absolute;
+    left: 21px;
+    top: 56px;
+    right: 7px;
+    width: auto;
+    height: auto;
+}
+
+#map_start {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    left: 17px;
+    top: 3px;
+    width: auto;
+    bottom: 416px;
+    height: auto;
+}
+
+#map_destination {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 185px;
+    position: absolute;
+    left: 14px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    font-size: 14px;
+    top: 68px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    left: 0px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 99px;
+}
+
+#forwardButton {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 66px;
+    height: 28px;
+    left: 229px;
+    top: 64px;
+}
+
+#title1, #title5 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#columnLayout86, #columnLayout89 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 23.12%;
+}
+
+#columnLayout87, #columnLayout90, #columnLayout93 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    height: auto;
+    width: 45.31%;
+}
+
+#player2, #player3, #player4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12pt;
+    margin-top: 25px;
+    width: auto;
+    margin-right: 0px;
+    min-height: 20px;
+    height: auto;
+}
+
+#score3, #score4 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-height: 20px;
+    height: auto;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 700;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#p3avatar, #p2avatar {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 6px;
+    margin-left: 8px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    visibility: hidden;
+}
+
+#psp2txt2, #psp2txt3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 12pt;
+    margin-left: 0px;
+    margin-top: 23px;
+    width: 320px;
+    margin-right: 0px;
+    height: 20px;
+}
+
+#PCnextName, #TLnextName {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 12pt;
+    margin-left: 0px;
+    margin-top: 14px;
+    width: 320px;
+    margin-right: 0px;
+    height: 20px;
+}
+
+#MakeEstimatesSecret, #MakeEstimatesOpen, #EstimationHints {
+    display: none;
+    position: relative;
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(Images/estimationbg2.jpg);
+    min-height: 460px;
+    height: auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#EstimateAvatar2, #EstimateAvatar3 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#TLpassScreen1, #pitstoprules1, #estimation1, #MakeEstimatesSecret1 {
+    display: block;
+}
+
+#div14, #div16 {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 8%;
+    height: auto;
+}
+
+#EstimateError, #OpenEstimateError {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: 700;
+    left: 14px;
+    top: 378px;
+    right: 16px;
+    width: auto;
+    bottom: 42px;
+    height: auto;
+    text-align: center;
+    visibility: hidden;
+}
+
+#text97, #text98 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-height: 20px;
+    height: auto;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+}
+
+#api_view1, #api_view2 {
+    width: 100%;
+    min-height: 480px;
+    display: none;
+    position: relative;
+    background-image: url(Images/bg_01.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#button31 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 83px;
+    top: 408px;
+    left: 216px;
+}
+
+#button21 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 396px;
+    left: 110px;
+    width: 110px;
+}
+
+#backButton7 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 14px;
+    top: 412px;
+    width: 70px;
+}
+
+#forwardButton1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 233px;
+    left: 128px;
+    width: 85px;
+}
+
+#psp2txt2 {
+    position: absolute;
+    margin-top: 0px;
+    top: 64px;
+    left: 63px;
+    right: 63px;
+    width: auto;
+    bottom: 475px;
+    height: auto;
+}
+
+#PCnextName {
+    position: absolute;
+    left: 0px;
+    top: 170px;
+    margin-top: 0px;
+    right: -1px;
+    width: auto;
+    bottom: 369px;
+    height: auto;
+}
+
+#forwardButton2 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 221px;
+    left: 106px;
+    width: 106px;
+}
+
+#forwardButton3 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 95px;
+    top: 401px;
+    left: 112px;
+}
+
+#backButton9 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 15px;
+    top: 13px;
+}
+
+#backButton10 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 40px;
+    left: 7px;
+}
+
+#button3 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 151px;
+    left: 202px;
+    height: 62px;
+    width: 62px;
+    font-size: 22px;
+}
+
+#button9 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 202px;
+    top: 212px;
+    font-size: 22px;
+    width: 62px;
+    height: 61px;
+}
+
+#backButton11 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 134px;
+    left: 5px;
+}
+
+#forwardButton4 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 425px;
+    width: 135px;
+    left: 175px;
+}
+
+#backButton12 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 25px;
+    top: 16px;
+}
+
+#button10 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 425px;
+    width: 152px;
+    left: 9px;
+}
+
+#forwardButton5 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 425px;
+    width: 135px;
+    left: 175px;
+}
+
+#backButton13 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 25px;
+    top: 16px;
+}
+
+#button7 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 425px;
+    width: 152px;
+    left: 9px;
+}
+
+#button18 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 124px;
+    width: 55px;
+    height: 20px;
+    left: 259px;
+    visibility: hidden;
+}
+
+#button19 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 20px;
+    top: 193px;
+    left: 259px;
+    visibility: hidden;
+}
+
+#button20 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 20px;
+    left: 259px;
+    top: 339px;
+    visibility: hidden;
+}
+
+#button32 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 55px;
+    height: 20px;
+    top: 263px;
+    left: 259px;
+    visibility: hidden;
+}
+
+#rectangleShape {
+    position: absolute;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    top: 151px;
+    width: 117px;
+    height: 121px;
+    left: 83px;
+    -webkit-border-image: url(Parts/Images/rectangleShape.png) 0 2 0 2 stretch stretch;
+}
+
+#EstimateCounter1 {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 7px;
+    font-size: 56px;
+    left: 2px;
+    top: 23px;
+    right: 2px;
+    width: auto;
+    bottom: 22px;
+    height: auto;
+}
+
+.selected #EstimateCounter1 {
+    color: white;
+}
+
+#button37 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 30px;
+    font-size: 20px;
+    top: 62px;
+    left: 56px;
+}
+
+#button37 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-top: 0px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 167px;
+    right: auto;
+    bottom: auto;
+    top: 62px;
+}
+
+#button38 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 31px;
+    width: 30px;
+    font-size: 20px;
+    left: 167px;
+    top: 91px;
+}
+
+#rectangleShape1 {
+    position: absolute;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 59px;
+    width: 50px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    top: 62px;
+    left: 115px;
+    -webkit-border-image: url(Parts/Images/rectangleShape1.png) 0 2 0 2 stretch stretch;
+}
+
+#EstimateCounter2 {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    left: 3px;
+    top: 7px;
+    text-align: center;
+    padding: 7px;
+    right: 1px;
+    width: auto;
+    bottom: 8px;
+    height: auto;
+}
+
+.selected #EstimateCounter2 {
+    color: white;
+}
+
+#forwardButtonEst2 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 102px;
+    top: 420px;
+    left: 208px;
+}
+
+#button15 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 91px;
+    opacity: 1;
+    color: rgb(51, 51, 51);
+    position: absolute;
+    left: 213px;
+    top: 315px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#forwardButton6 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 240px;
+    left: 234px;
+}
+
+#button11 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 256px;
+    top: 63px;
+}
+
+#button {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 387px;
+    width: 100px;
+    left: 114px;
+}
+
+#button4 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 93px;
+    left: 116px;
+    top: 370px;
+}
+
+#button6 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 120px;
+    left: 99px;
+    top: 301px;
+}
+
+#ambutton1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 71px;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    top: 13px;
+    left: 6px;
+}
+
+#psrulesbutton2 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 103px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 197px;
+    top: 397px;
+}
+
+#button5 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 14px;
+    width: 74px;
+    left: 236px;
+}
+
+#br_primeButton1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 87px;
+    font-size: 17px;
+    left: 0px;
+    top: 289px;
+    width: 130px;
+}
+
+#br_notPrimeButton1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 87px;
+    font-size: 17px;
+    left: 189px;
+    top: 289px;
+    width: 130px;
+}
+
+#backButton14 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 19px;
+    left: 23px;
+}
+
+#destination_miles {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    width: 279px;
+    top: 63px;
+    left: 23px;
+    height: 82px;
+}
+
+.selected #destination_miles {
+    color: white;
+}
+
+#forwardButton7 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 84px;
+    left: 213px;
+    top: 225px;
+}
+
+#title1 {
+    position: absolute;
+    margin-top: 0px;
+    top: 11px;
+    height: 32px;
+    width: 213px;
+    left: 54px;
+}
+
+#SecretCover6 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    left: 185px;
+    top: 203px;
+}
+
+#SecretCover8 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    left: 185px;
+    top: 348px;
+}
+
+#PlayerEstimate8 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    visibility: hidden;
+    left: 194px;
+    top: 366px;
+}
+
+#button2 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    left: 245px;
+    top: 153px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+#estimatePlayerName5 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 71px;
+    top: 153px;
+    right: 102px;
+    width: auto;
+    bottom: 272px;
+    height: auto;
+}
+
+#SecretCover5 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    left: 185px;
+    top: 134px;
+}
+
+#button40 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    left: 245px;
+    top: 292px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+#EstimateAvatar8 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 17px;
+    visibility: hidden;
+    margin-left: 9px;
+}
+
+#EstimateError1, #OpenEstimateError {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: 700;
+    left: 14px;
+    top: 378px;
+    right: 16px;
+    width: auto;
+    bottom: 42px;
+    height: auto;
+    text-align: center;
+    visibility: hidden;
+}
+
+#EstimateAvatar6, #EstimateAvatar7 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar5 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    visibility: hidden;
+    margin-left: 10px;
+    margin-top: 134px;
+}
+
+#EstimateAvatar6, #EstimateAvatar7 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#PlayerEstimate7 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    visibility: hidden;
+    left: 194px;
+    top: 294px;
+}
+
+#button39 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    left: 245px;
+    top: 222px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+#estimatePlayerName6 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 223px;
+    right: 103px;
+    width: auto;
+    bottom: 202px;
+    height: auto;
+}
+
+#estimatePlayerName7 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 292px;
+    right: 103px;
+    width: auto;
+    bottom: 133px;
+    height: auto;
+}
+
+#button41 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    left: 245px;
+    top: 368px;
+    opacity: 1;
+    visibility: hidden;
+}
+
+#estimatePlayerName8 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 367px;
+    right: 95px;
+    width: auto;
+    bottom: 58px;
+    height: auto;
+}
+
+#PlayerEstimate5 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    visibility: hidden;
+    left: 195px;
+    top: 151px;
+}
+
+#PlayerEstimate6 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 42px;
+    visibility: hidden;
+    left: 194px;
+    top: 220px;
+}
+
+#SecretCover7 {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    left: 185px;
+    top: 277px;
+}
+
+#EstimateAvatar6 {
+    width: 57px;
+    height: 57px;
+    margin-left: 9px;
+}
+
+#EstimateAvatar7 {
+    width: 57px;
+    height: 57px;
+    margin-left: 9px;
+}
+
+#EstimateError1 {
+    left: 9px;
+    top: 407px;
+    right: 21px;
+    width: auto;
+    bottom: 13px;
+    height: auto;
+}
+
+#text2 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 17px;
+    font-weight: 700;
+    top: 45px;
+    left: 14px;
+    right: 12px;
+    width: auto;
+    bottom: 363px;
+    height: auto;
+}
+
+#distancesAnswer, #mainHours, #mainHoursPrelim, #time_chart, #continue_trip {
+    width: 100%;
+    display: none;
+    background-image: url(Images/bg_01.jpg);
+    position: relative;
+    min-height: 480px;
+    height: auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#text3 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    height: 26px;
+    top: 46px;
+}
+
+#button42 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 101px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 205px;
+    top: 432px;
+}
+
+#title2, #title5 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#title2 {
+    position: absolute;
+    margin-top: 0px;
+    top: 11px;
+    height: 35px;
+    width: 248px;
+    left: 36px;
+}
+
+#estimatePlayerName9 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 71px;
+    top: 153px;
+    right: 102px;
+    width: auto;
+    bottom: 272px;
+    height: auto;
+}
+
+#EstimateAvatar12 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 9px;
+    top: 367px;
+}
+
+#EstimateAvatar10, #EstimateAvatar11 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar9 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 9px;
+    top: 153px;
+}
+
+#EstimateAvatar10, #EstimateAvatar11 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#estimatePlayerName11 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 292px;
+    right: 103px;
+    width: auto;
+    bottom: 133px;
+    height: auto;
+}
+
+#estimatePlayerName10 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 222px;
+    right: 103px;
+    width: auto;
+    bottom: 203px;
+    height: auto;
+}
+
+#estimatePlayerName12 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 367px;
+    right: 95px;
+    width: auto;
+    bottom: 58px;
+    height: auto;
+}
+
+#EstimateAvatar10 {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: -5px;
+    top: 222px;
+}
+
+#EstimateAvatar11 {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: -5px;
+    top: 292px;
+}
+
+#miles_answer {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    top: 71px;
+    height: 65px;
+    font-size: 15px;
+}
+
+#winnerAvatar1 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 9px;
+    top: 236px;
+}
+
+#winnerAvatar2 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 236px;
+    left: 90px;
+}
+
+#winnerAvatar3 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 236px;
+    left: 180px;
+}
+
+#winnerAvatar4 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 258px;
+    top: 236px;
+}
+
+#PlayerEstimate9 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    left: 162px;
+    top: 136px;
+    width: 26px;
+    text-align: center;
+    visibility: hidden;
+}
+
+#title14, #title5 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#title14 {
+    position: absolute;
+    margin-top: 0px;
+    top: 11px;
+    height: 32px;
+    width: 213px;
+    left: 54px;
+}
+
+#SecretCover12 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    top: 348px;
+    width: 165px;
+    height: 69px;
+    left: 153px;
+}
+
+#mainHoursText {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 9px;
+    width: 306px;
+    top: 43px;
+    height: 84px;
+}
+
+#PlayerEstimate12 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    left: 162px;
+    text-align: center;
+    width: 26px;
+    top: 358px;
+    visibility: hidden;
+}
+
+#estimatePlayerName16 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    text-align: center;
+    left: 67px;
+    top: 371px;
+    right: 169px;
+    width: auto;
+    bottom: 54px;
+    height: auto;
+    visibility: hidden;
+}
+
+#button47 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    opacity: 1;
+    left: 200px;
+    top: 385px;
+    visibility: hidden;
+}
+
+#estimatePlayerName13 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    text-align: center;
+    left: 67px;
+    top: 153px;
+    right: 169px;
+    width: auto;
+    bottom: 272px;
+    height: auto;
+    visibility: hidden;
+}
+
+#SecretCover11 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    top: 277px;
+    width: 165px;
+    height: 69px;
+    left: 153px;
+}
+
+#button45 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    opacity: 1;
+    left: 200px;
+    top: 236px;
+    visibility: hidden;
+}
+
+#PlayerEstimate11 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    left: 162px;
+    text-align: center;
+    width: 26px;
+    top: 284px;
+    visibility: hidden;
+}
+
+#EstimateAvatar14, #EstimateAvatar15 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar14, #EstimateAvatar15 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar14 {
+    width: 57px;
+    height: 57px;
+    margin-left: 10px !important;
+}
+
+#button46 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    opacity: 1;
+    left: 200px;
+    top: 310px;
+    visibility: hidden;
+}
+
+#SecretCover9 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 153px;
+    width: 165px;
+    height: 69px;
+    top: 125px;
+    visibility: hidden;
+}
+
+#EstimateAvatar14, #EstimateAvatar15 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar14, #EstimateAvatar15 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar15 {
+    width: 57px;
+    height: 57px;
+    margin-left: 9px;
+}
+
+#PlayerEstimate10 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    left: 162px;
+    text-align: center;
+    width: 26px;
+    top: 209px;
+    visibility: hidden;
+}
+
+#EstimateError2, #OpenEstimateError {
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: 700;
+    left: 14px;
+    top: 378px;
+    right: 16px;
+    width: auto;
+    bottom: 42px;
+    height: auto;
+    text-align: center;
+    visibility: hidden;
+}
+
+#EstimateError2 {
+    left: 9px;
+    top: 407px;
+    right: 21px;
+    width: auto;
+    bottom: 13px;
+    height: auto;
+}
+
+#EstimateAvatar13 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 134px;
+    visibility: hidden;
+}
+
+#EstimateAvatar16 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 17px;
+    visibility: hidden;
+    margin-left: 9px;
+}
+
+#button43 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 101px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 205px;
+    top: 432px;
+}
+
+#estimatePlayerName15 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    text-align: center;
+    left: 67px;
+    top: 297px;
+    right: 169px;
+    width: auto;
+    bottom: 128px;
+    height: auto;
+    visibility: hidden;
+}
+
+#estimatePlayerName14 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    text-align: center;
+    top: 222px;
+    width: auto;
+    bottom: 203px;
+    height: auto;
+    left: 67px;
+    right: 169px;
+    visibility: hidden;
+}
+
+#button44 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    height: 20px;
+    width: 62px;
+    opacity: 1;
+    top: 164px;
+    left: 200px;
+    visibility: hidden;
+}
+
+#SecretCover10 {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    visibility: hidden;
+    top: 203px;
+    width: 165px;
+    height: 69px;
+    left: 153px;
+}
+
+#PlayerEstimate15 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-align: center;
+    width: 26px;
+    left: 245px;
+    top: 284px;
+    visibility: hidden;
+}
+
+#PlayerEstimate16 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-align: center;
+    width: 26px;
+    left: 245px;
+    top: 358px;
+    visibility: hidden;
+}
+
+#PlayerEstimate14 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-align: center;
+    width: 26px;
+    left: 245px;
+    top: 209px;
+    visibility: hidden;
+}
+
+#PlayerEstimate13 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    top: 136px;
+    left: 245px;
+    width: 26px;
+    text-align: center;
+    visibility: hidden;
+}
+
+#HoursCap1 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 141px;
+    visibility: hidden;
+    width: auto;
+    bottom: 321px;
+    height: auto;
+    right: 83px;
+    left: 200px;
+    text-align: center;
+}
+
+.selected #HoursCap1 {
+    color: white;
+}
+
+#inner_image57 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#inner_image58 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#inner_image59 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#inner_image60 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#MinsCap1 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 141px;
+    left: 281px;
+    right: 2px;
+    width: auto;
+    bottom: 321px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+.selected #MinsCap1 {
+    color: white;
+}
+
+#MinsCap2 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 281px;
+    top: 214px;
+    right: 2px;
+    width: auto;
+    bottom: 248px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+.selected #MinsCap2 {
+    color: white;
+}
+
+#HoursCap2 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 214px;
+    visibility: hidden;
+    width: auto;
+    bottom: 248px;
+    height: auto;
+    right: 83px;
+    left: 200px;
+    text-align: center;
+}
+
+.selected #HoursCap2 {
+    color: white;
+}
+
+#HoursCap4 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 363px;
+    visibility: hidden;
+    width: auto;
+    bottom: 99px;
+    height: auto;
+    right: 83px;
+    left: 200px;
+    text-align: center;
+}
+
+.selected #HoursCap4 {
+    color: white;
+}
+
+#MinsCap4 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 281px;
+    top: 363px;
+    right: 2px;
+    width: auto;
+    bottom: 99px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+.selected #MinsCap4 {
+    color: white;
+}
+
+#MinsCap3 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 281px;
+    top: 290px;
+    right: 2px;
+    width: auto;
+    bottom: 172px;
+    height: auto;
+    visibility: hidden;
+    text-align: center;
+}
+
+.selected #MinsCap3 {
+    color: white;
+}
+
+#HoursCap3 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 290px;
+    visibility: hidden;
+    width: auto;
+    bottom: 172px;
+    height: auto;
+    right: 83px;
+    left: 200px;
+    text-align: center;
+}
+
+.selected #HoursCap3 {
+    color: white;
+}
+
+#estimatePlayerName18 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 222px;
+    right: 103px;
+    width: auto;
+    bottom: 203px;
+    height: auto;
+}
+
+#button48 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 436px;
+    width: 91px;
+    left: 224px;
+}
+
+#title16, #title5 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#title16 {
+    position: absolute;
+    margin-top: 0px;
+    top: 11px;
+    width: 300px;
+    left: 10px;
+    height: 31px;
+}
+
+#estimatePlayerName20 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 367px;
+    right: 95px;
+    width: auto;
+    bottom: 58px;
+    height: auto;
+}
+
+#EstimateAvatar17 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 9px;
+    top: 153px;
+}
+
+#mins_hours_ans {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    font-size: 15px;
+    height: 44px;
+    top: 92px;
+}
+
+#EstimateAvatar18, #EstimateAvatar19 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar18, #EstimateAvatar19 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar18 {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: -5px;
+    top: 222px;
+    margin-top: 4px !important;
+}
+
+#EstimateAvatar18, #EstimateAvatar19 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar18, #EstimateAvatar19 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 14px;
+    visibility: hidden;
+}
+
+#EstimateAvatar19 {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: -5px;
+    top: 292px;
+}
+
+#mins_hours_exp {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    top: 46px;
+    height: 42px;
+}
+
+#estimatePlayerName19 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 70px;
+    top: 292px;
+    right: 103px;
+    width: auto;
+    bottom: 133px;
+    height: auto;
+}
+
+#estimatePlayerName17 {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0px;
+    visibility: hidden;
+    text-align: center;
+    left: 71px;
+    top: 153px;
+    right: 102px;
+    width: auto;
+    bottom: 272px;
+    height: auto;
+}
+
+#EstimateAvatar20 {
+    width: 57px;
+    height: 57px;
+    display: block;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    visibility: hidden;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 9px;
+    top: 367px;
+}
+
+#timeSoFar {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 432px;
+    left: 5px;
+    height: 44px;
+    width: 129px;
+}
+
+.selected #timeSoFar {
+    color: white;
+}
+
+#button49 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 408px;
+    left: 118px;
+    width: 92px;
+}
+
+#chart_canvas {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 89px;
+    left: 0px;
+}
+
+#title17, #title5 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    margin-top: 13px;
+    height: 29px;
+    width: 320px;
+    margin-right: 0px;
+}
+
+#title17 {
+    position: absolute;
+    margin-top: 0px;
+    top: 11px;
+    width: 300px;
+    left: 10px;
+    height: 31px;
+}
+
+#chart_desc {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    font-weight: 400;
+    font-style: normal;
+    width: 284px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    text-align: left;
+    left: 22px;
+    top: 46px;
+    height: 42px;
+}
+
+#button50 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 77px;
+    top: 436px;
+    left: 140px;
+}
+
+#backButton15 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 11px;
+    left: 22px;
+}
+
+#destination_miles1 {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    width: 279px;
+    height: 82px;
+    left: 23px;
+    top: 139px;
+}
+
+.selected #destination_miles1 {
+    color: white;
+}
+
+#title18 {
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Marker Felt';
+    letter-spacing: 1px;
+    width: 320px;
+    height: 29px;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#forwardButton8 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 84px;
+    left: 213px;
+    top: 225px;
+}
+
+#button51 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.589844) 0px -1px 0px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
+    -webkit-dashboard-region: dashboard-region(control rectangle);
+    cursor: default;
+    -webkit-user-select: none;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 136px;
+    left: 31px;
+    top: 225px;
+}
+
+#cont_message {
+    color: black;
+    font-family: Helvetica;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: absolute;
+    margin-top: 0px;
+    width: 279px;
+    top: 63px;
+    left: 23px;
+    height: 65px;
+}
+
+.selected #cont_message {
+    color: white;
+}
+
+#Trucks {
+    visibility: hidden;
+    height: 150px;
+    width: 320px;
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+}
+
+#Motorcycles {
+    -webkit-margin-top-collapse: collapse;
+    -webkit-margin-bottom-collapse: collapse;
+    margin-top: 0px;
+    width: 320px;
+    position: absolute;
+    right: auto;
+    left: 0px;
+    top: 305px;
+    bottom: 5px;
+    height: auto;
+    visibility: hidden;
+}
+
+#Houses {
+    margin-top: 0px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    width: 320px;
+    height: 150px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 0px;
+    top: 291px;
+    visibility: hidden;
+}
+
+#MakeEstimatesSecret {
+    min-height: 481px;
+}
+
+#MakeEstimatesOpen {
+    min-height: 481px;
+}
+
+#EstimationHints {
+    min-height: 481px;
+}
+
+#inner_image2 {
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 27px;
+    width: 60px;
+    height: 60px;
+    margin-top: 276px;
+}
